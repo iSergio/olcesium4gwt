@@ -16,7 +16,7 @@
 package org.ol3cesium.client.ol.geom;
 
 /**
- *The coordinate layout for geometries, indicating whether a 3rd or 4th z ('Z') 
+ * The coordinate layout for geometries, indicating whether a 3rd or 4th z ('Z') 
  * or measure ('M') coordinate is available. Supported values are 'XY', 'XYZ', 'XYM', 'XYZM'.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

@@ -19,7 +19,7 @@ import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Coordinate;
 
 /**
- *
+ * Linear ring geometry. Only used as part of polygon; cannot be rendered on its own.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class LinearRing extends SimpleGeometry {

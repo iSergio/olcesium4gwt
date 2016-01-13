@@ -20,7 +20,7 @@ import org.ol3cesium.client.ol.Coordinate;
 import org.ol3cesium.client.ol.Extent;
 
 /**
- *
+ * Multi-point geometry.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class MultiPoint extends SimpleGeometry {

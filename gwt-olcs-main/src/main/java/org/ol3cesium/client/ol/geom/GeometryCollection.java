@@ -19,7 +19,7 @@ import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Extent;
 
 /**
- *
+ * An array of ol.geom.Geometry objects.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class GeometryCollection extends Geometry {

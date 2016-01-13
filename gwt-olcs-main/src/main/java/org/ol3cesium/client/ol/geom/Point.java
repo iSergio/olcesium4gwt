@@ -19,7 +19,7 @@ import org.ol3cesium.client.ol.Coordinate;
 import org.ol3cesium.client.ol.Extent;
 
 /**
- *
+ * Point geometry.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Point extends SimpleGeometry {

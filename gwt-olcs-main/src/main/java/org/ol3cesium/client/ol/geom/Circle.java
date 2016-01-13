@@ -20,7 +20,7 @@ import org.ol3cesium.client.ol.Extent;
 import org.ol3cesium.client.ol.proj.Projection;
 
 /**
- *
+ * Circle geometry.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Circle extends SimpleGeometry {

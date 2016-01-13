@@ -22,10 +22,17 @@ import org.ol3cesium.client.ol.event.GeometryChangeEventListener;
 import org.ol3cesium.client.ol.proj.Projection;
 
 /**
- *
+ * Abstract base class; normally only used for creating subclasses and not 
+ * instantiated in apps. Base class for vector geometries.
+ * 
+ * To get notified of changes to the geometry, register a listener for the 
+ * generic change event on your geometry instance.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Geometry extends Object {
+    /**
+     * The geometry type.
+     */
     public static class TYPE {
         public static String POINT               = "Point";
         public static String LINE_STRING         = "LineString";
