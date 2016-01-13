@@ -18,9 +18,9 @@ Building the library
 
     $ git clone https://github.com/richkadel/jsfunction-gwt && cd jsfunction-gwt && mvn install
 
- * Build [cesium-gwt](https://github.com/richkadel/cesium-gwt.git)
+ * Build [cesium-gwt](https://github.com/iSergio/cesium-gwt). If you need examples use original repo of [cesium-gwt](https://github.com/richkadel/cesium-gwt.git) (In examples uses some functional, which i added in my fork)
 
-    $ git clone https://github.com/richkadel/cesium-gwt.git && cd cesium-gwt && mvn install
+    $ git clone https://github.com/iSergio/cesium-gwt && cd cesium-gwt && mvn install
 
  * Build [gwt-olcs](https://github.com/iSergio/gwt-olcs.git)
 
