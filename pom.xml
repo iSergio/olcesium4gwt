@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <properties>
+        <gwtVersion>2.7.0</gwtVersion>
+        <gwtOlcsVersion>0.1.0-SNAPSHOT</gwtOlcsVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.cesiumjs</groupId>
+    <artifactId>gwt-olcs</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>gwt-olcs-main</module>
+        <module>gwt-olcs-test</module>
+    </modules>
+</project>
