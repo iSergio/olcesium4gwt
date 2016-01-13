@@ -1,5 +1,5 @@
-/* 
- * Copyright 2016 iserge.
+/*
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,20 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.ol.format;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
+import org.ol3cesium.client.ol.Feature;
 
 /**
- * An attribution for a layer source.
+ *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class GMLBaseFormat extends XMLFeatureFormat {
+    protected GMLBaseFormat() {
         //
     }
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    /**
+     * Read all features from a GML FeatureCollection.
+     * @param source Source.
+     * @return Features.
+     */
+    public static final native JsArray<Feature> readFeatures(String source) /*-{
+        return this.readFeatures(source);
     }-*/;
 }

@@ -18,7 +18,7 @@ package org.ol3cesium.client.ol;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- *
+ * 
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Coordinate extends JavaScriptObject{

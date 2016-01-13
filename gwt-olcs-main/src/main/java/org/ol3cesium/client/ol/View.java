@@ -23,7 +23,9 @@ import org.ol3cesium.client.ol.proj.Projection;
 import org.ol3cesium.client.olx.ViewOptions;
 
 /**
- *
+ * An ol.View object represents a simple 2D view of the map.
+ * 
+ * This is the object to act upon to change the center, resolution, and rotation of the map.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class View extends Object {

@@ -15,11 +15,12 @@
  */
 package org.ol3cesium.client.ol.format;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import org.ol3cesium.client.olx.format.WKTFormatOptions;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Feature;
 import org.ol3cesium.client.ol.geom.Geometry;
-import org.ol3cesium.client.ol.proj.Projection;
+import org.ol3cesium.client.olx.format.ReadFormatOptions;
+import org.ol3cesium.client.olx.format.WriteFormatOptions;
 
 /**
  * Geometry format for reading and writing data in the WellKnownText (WKT) format.
@@ -53,7 +54,7 @@ public class WKTFormat extends TextFeatureFormat {
      * @param options Read options.
      * @return Feature.
      */
-    public final native Feature readFeature(String source, WKTFormatReadOptions options) /*-{
+    public final native Feature readFeature(String source, ReadFormatOptions options) /*-{
         return this.readFeature(source);
     }-*/;
     
@@ -72,7 +73,7 @@ public class WKTFormat extends TextFeatureFormat {
      * @param options Read options.
      * @return Features.
      */
-    public final native JsArray<Feature> readFeatures(String source, WKTFormatReadOptions options) /*-{
+    public final native JsArray<Feature> readFeatures(String source, ReadFormatOptions options) /*-{
         return this.readFeatures(source, options);
     }-*/;
     
@@ -91,7 +92,7 @@ public class WKTFormat extends TextFeatureFormat {
      * @param options Read options.
      * @return Geometry.
      */
-    public final native Feature readGeometry(String source, WKTFormatReadOptions options) /*-{
+    public final native Feature readGeometry(String source, ReadFormatOptions options) /*-{
         return this.readGeometry(source);
     }-*/;
     
@@ -110,7 +111,7 @@ public class WKTFormat extends TextFeatureFormat {
      * @param options Read options.
      * @return WKT String.
      */
-    public final native String writeFeature(Feature feature, WKTFormatWriteOptions options) /*-{
+    public final native String writeFeature(Feature feature, WriteFormatOptions options) /*-{
         return this.writeFeature(feature);
     }-*/;
     
@@ -129,7 +130,7 @@ public class WKTFormat extends TextFeatureFormat {
      * @param options Read options.
      * @return WKT String.
      */
-    public final native String writeFeature(JsArray<Feature> features, WKTFormatWriteOptions options) /*-{
+    public final native String writeFeature(JsArray<Feature> features, WriteFormatOptions options) /*-{
         return this.writeFeatures(features);
     }-*/;
     
@@ -141,82 +142,4 @@ public class WKTFormat extends TextFeatureFormat {
     public final native String writeGeometry(Geometry geometry) /*-{
         return this.writeGeometry(geometry);
     }-*/;
-    
-    public static class WKTFormatReadOptions extends JavaScriptObject {
-        protected WKTFormatReadOptions() {
-            //
-        }
-        
-        public static native WKTFormatReadOptions create() /*-{
-            return {};
-        }-*/;
-        
-        /**
-         * Projection of the data we are reading. 
-         * If not provided, the projection will be derived from the data 
-         * (where possible) or the defaultDataProjection of the format is 
-         * assigned (where set). If the projection can not be derived from 
-         * the data and if no defaultDataProjection is set for a format, 
-         * the features will not be reprojected.
-         * @param dataProjection 
-         */
-        public final native void setDataProjection(Projection dataProjection) /*-{
-            this.dataProjection = dataProjection;
-        }-*/;
-        
-        /**
-         * Projection of the feature geometries created by the format reader. 
-         * If not provided, features will be returned in the dataProjection.
-         * @param featureProjection 
-         */
-        public final native void setFeatureProjection(Projection featureProjection) /*-{
-            this.featureProjection = featureProjection;
-        }-*/;
-        
-        /**
-         * Projection of the data we are reading. 
-         * If not provided, the projection will be derived from the data 
-         * (where possible) or the defaultDataProjection of the format is 
-         * assigned (where set). If the projection can not be derived from 
-         * the data and if no defaultDataProjection is set for a format, 
-         * the features will not be reprojected.
-         * @param dataProjection 
-         */
-        public final native void setDataProjection(String dataProjection) /*-{
-            this.dataProjection = dataProjection;
-        }-*/;
-        
-        /**
-         * Projection of the feature geometries created by the format reader. 
-         * If not provided, features will be returned in the dataProjection.
-         * @param featureProjection 
-         */
-        public final native void setFeatureProjection(String featureProjection) /*-{
-            this.featureProjection = featureProjection;
-        }-*/;
-    }
-    
-    public static class WKTFormatWriteOptions extends WKTFormatReadOptions {
-        protected WKTFormatWriteOptions() {
-            //
-        }
-        
-        public static final native WKTFormatWriteOptions create() /*-{
-            return {};
-        }-*/;
-        
-        /**
-         * When writing geometries, follow the right-hand rule for linear ring orientation. 
-         * This means that polygons will have counter-clockwise exterior rings and 
-         * clockwise interior rings. By default, coordinates are serialized as they 
-         * are provided at construction. If true, the right-hand rule will be applied. 
-         * If false, the left-hand rule will be applied (clockwise for exterior and 
-         * counter-clockwise for interior rings). Note that not all formats support this. 
-         * The GeoJSON format does use this property when writing geometries.
-         * @param rightHanded 
-         */
-        public final native void setRightHanded(boolean rightHanded) /*-{
-            this.rightHanded = rightHanded;
-        }-*/;
-    }
 }

@@ -1,2 +1,0 @@
-# Module org.ol3cesium.demo.GwtOlCsShowcase
-# RPC service class, partial path of RPC policy file

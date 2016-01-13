@@ -18,7 +18,9 @@ package org.ol3cesium.client.ol;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- *
+ * Colors can be defined as a ol.Color array, or as strings in rgb(r,g,b) or 
+ * rgba(r,g,b,a) format, or in hex #rrggbb or #rgb format. 
+ * Color names, like 'red', 'blue' or 'green', may also be used with the Canvas renderer.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Color extends JavaScriptObject {

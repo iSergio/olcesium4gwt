@@ -18,7 +18,7 @@ package org.ol3cesium.client.ol;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- *
+ * Implementation of inertial deceleration for map movement.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Kinetic extends JavaScriptObject {

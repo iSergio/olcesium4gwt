@@ -27,7 +27,8 @@ import org.ol3cesium.client.ol.layer.GroupLayer;
 import org.ol3cesium.client.olx.MapOptions;
 
 /**
- *
+ * The map is the core component of OpenLayers. For a map to render, a view, 
+ * one or more layers, and a target container are needed
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Map extends Object {

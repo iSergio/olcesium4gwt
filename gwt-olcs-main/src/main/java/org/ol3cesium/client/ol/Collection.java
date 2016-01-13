@@ -21,7 +21,10 @@ import org.ol3cesium.client.ol.event.CollectionAddEventListener;
 import org.ol3cesium.client.ol.event.CollectionRemoveEventListener;
 
 /**
- *
+ * An expanded version of standard JS Array, adding convenience methods for manipulation. 
+ * Add and remove changes to the Collection trigger a Collection event. 
+ * Note that this does not cover changes to the objects within the Collection; 
+ * they trigger events on the appropriate object, not on the Collection as a whole.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  * @param <T>
  */

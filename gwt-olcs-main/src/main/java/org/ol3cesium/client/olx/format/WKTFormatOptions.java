@@ -13,20 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.olx.format;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An attribution for a layer source.
+ *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class WKTFormatOptions extends JavaScriptObject {
+    protected WKTFormatOptions() {
         //
     }
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    public static final native WKTFormatOptions create() /*-{
+        return {};
+    }-*/;
+    
+    /**
+     * Whether to split GeometryCollections into multiple features on reading. 
+     * Default is false.
+     * @param splitCollection 
+     */
+    public final native void setSplitCollection(boolean splitCollection) /*-{
+        this.splitCollection = splitCollection;
     }-*/;
 }

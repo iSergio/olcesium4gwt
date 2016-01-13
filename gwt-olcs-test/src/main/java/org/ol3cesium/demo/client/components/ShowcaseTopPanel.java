@@ -47,6 +47,7 @@ public class ShowcaseTopPanel extends HorizontalPanel {
         String text = "<div class=\"brand\"><a href=\"http://openlayers.org\">Ol3-Cesium</a>, <a href=\"https://github.com/richkadel/cesium-gwt\">Cesium-GWT</a> and <a href=\"http://openlayers.org/ol3-cesium/\">OpenLayers 3</a> Examples</div>";
         anchor.setHTML(SafeHtmlUtils.fromTrustedString(text));
         super.add(anchor);
+        super.add(searchPanel);
 
         super.setCellWidth(logo, "10px");
     }

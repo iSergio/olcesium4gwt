@@ -1,5 +1,5 @@
-/* 
- * Copyright 2016 iserge.
+/*
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,20 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.ol.format;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import org.ol3cesium.client.olx.format.GMLFormatOptions;
 
 /**
- * An attribution for a layer source.
+ * Feature format for reading and writing data in the GML format, version 2.1.2.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class GML2Format extends GMLBaseFormat {
+    protected GML2Format() {
         //
     }
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    public static final native GML2Format create() /*-{
+        return new ol.format.GML2();
+    }-*/;
+    
+    public static final native GML2Format create(GMLFormatOptions options) /*-{
+        return new ol.format.GML2(options);
     }-*/;
 }

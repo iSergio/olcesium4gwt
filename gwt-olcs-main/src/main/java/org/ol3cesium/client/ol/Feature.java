@@ -21,7 +21,22 @@ import org.ol3cesium.client.ol.geom.Geometry;
 import org.ol3cesium.client.ol.style.Style;
 
 /**
- *
+ * A vector object for geographic features with a geometry and other attribute 
+ * properties, similar to the features in vector file formats like GeoJSON.
+ * 
+ * Features can be styled individually with setStyle; otherwise they use 
+ * the style of their vector layer.
+ * 
+ * Note that attribute properties are set as ol.Object properties on the 
+ * feature object, so they are observable, and have get/set accessors.
+ * 
+ * Typically, a feature has a single geometry property. You can set the 
+ * geometry using the setGeometry method and get it with getGeometry. 
+ * It is possible to store more than one geometry on a feature using attribute properties. 
+ * By default, the geometry used for rendering is identified by the property name geometry. 
+ * If you want to use another geometry property for rendering, use the 
+ * setGeometryName method to change the attribute property associated 
+ * with the geometry for the feature.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Feature extends Object {

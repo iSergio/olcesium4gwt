@@ -19,7 +19,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 
 /**
- *
+ * Class to create objects that can be used with ol.geom.Polygon.circular.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Sphere extends JavaScriptObject {

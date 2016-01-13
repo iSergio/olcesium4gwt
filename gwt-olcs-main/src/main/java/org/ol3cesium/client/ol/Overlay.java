@@ -20,7 +20,10 @@ import com.google.gwt.dom.client.Element;
 import org.ol3cesium.client.olx.OverlayOptions;
 
 /**
- *
+ * An element to be displayed over the map and attached to a single map location. 
+ * Like ol.control.Control, Overlays are visible widgets. Unlike Controls, 
+ * they are not in a fixed position on the screen, but are tied to a geographical 
+ * coordinate, so panning the map will move an Overlay but not a Control.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Overlay extends Object {

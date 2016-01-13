@@ -1,5 +1,5 @@
-/* 
- * Copyright 2016 iserge.
+/*
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,20 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.olx.format;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An attribution for a layer source.
+ *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class IGCFormatOptions extends JavaScriptObject {
+    protected IGCFormatOptions() {
         //
     }
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    public static final native IGCFormatOptions create() /*-{
+        return {};
+    }-*/;
+    
+    /**
+     * Altitude mode. Possible values are barometric, gps, and none. Default is none.
+     * @param altitudeMode 
+     */
+    public final native void setAltitudeMode(String altitudeMode) /*-{
+        this.altitudeMode = altitudeMode;
     }-*/;
 }

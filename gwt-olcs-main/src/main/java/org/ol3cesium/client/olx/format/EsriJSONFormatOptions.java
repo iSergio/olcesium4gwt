@@ -1,5 +1,5 @@
-/* 
- * Copyright 2016 iserge.
+/*
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,20 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.olx.format;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An attribution for a layer source.
+ *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class EsriJSONFormatOptions extends JavaScriptObject {
+    protected EsriJSONFormatOptions() {
         //
     }
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    public static final native EsriJSONFormatOptions create() /*-{
+        return {};
+    }-*/;
+    
+    /**
+     * 
+     * @param geometryName Geometry name to use when creating features.
+     */
+    public final native void setGeometryName(String geometryName) /*-{
+        this.geometryName = geometryName;
     }-*/;
 }
