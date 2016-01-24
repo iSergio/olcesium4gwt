@@ -331,11 +331,9 @@ public class Map extends Object {
         });
         this.beforeRender(pan, bounce);
         var opts = {};
-            console.log(geometry.getType());
         if (geometry.getType() != 'MultiPolygon' || geometry.getType() != 'Polygon') {
             opts = {maxZoom: zoom};
         }
-            console.log(opts);
         this.getView().fit(geometry, this.getSize(), opts);
     }-*/;
     

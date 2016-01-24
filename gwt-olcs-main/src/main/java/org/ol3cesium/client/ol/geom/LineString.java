@@ -53,6 +53,30 @@ public class LineString extends SimpleGeometry {
     }-*/;
     
     /**
+     * Return the coordinate at the provided fraction along the linestring. 
+     * The fraction is a number between 0 and 1, where 0 is the start of the 
+     * linestring and 1 is the end.
+     * @param fraction Fraction.
+     * @return Coordinate of the interpolated point.
+     */
+    public final native Coordinate getCoordinateAt(double fraction) /*-{
+        return this.getCoordinateAt(fraction);
+    }-*/;
+    
+    /**
+     * Return the coordinate at the provided fraction along the linestring. 
+     * The fraction is a number between 0 and 1, where 0 is the start of the 
+     * linestring and 1 is the end.
+     * @param fraction Fraction.
+     * @param dest Optional coordinate whose values will be modified. 
+     * If not provided, a new coordinate will be returned.
+     * @return Coordinate of the interpolated point.
+     */
+    public final native Coordinate getCoordinateAt(double fraction, Coordinate dest) /*-{
+        return this.getCoordinateAt(fraction, dest);
+    }-*/;
+    
+    /**
      * Returns the coordinate at m using linear interpolation, or null if no such coordinate exists.
      * 
      * opt_extrapolate controls extrapolation beyond the range of Ms in the MultiLineString. 

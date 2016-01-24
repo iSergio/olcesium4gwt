@@ -30,7 +30,12 @@ public class OLCesium extends JavaScriptObject {
     }
     
     public static final native OLCesium create(OLCesiumOptions options) /*-{
-        return new olcs.OLCesium(options);
+        var olCesium = new olcs.OLCesium(options);
+        return olCesium;
+    }-*/;
+    
+    public final native void disableRootEvents(boolean disableRootEvents) /*-{
+        this.canvas_.disableRootEvents = true;
     }-*/;
     
     /**
@@ -73,7 +78,7 @@ public class OLCesium extends JavaScriptObject {
     }-*/;
     
     /**
-     * Block Cesium rendering to save resources.
+     * Block Cesium rendering to save resources. Block if you use tab widget or overlay widgets.
      * @param block True to block.
      */
     public final native void setBlockCesiumRendering(boolean block) /*-{

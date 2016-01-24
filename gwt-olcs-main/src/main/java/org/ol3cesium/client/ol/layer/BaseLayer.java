@@ -123,7 +123,7 @@ public class BaseLayer extends Object {
      * @param extent The extent of the layer
      */
     public final native void setExtent(Extent extent) /*-{
-        return this.stExtent(extent);
+        return this.setExtent(extent);
     }-*/;
     
     /**

@@ -253,7 +253,6 @@ public class MapOptions extends JavaScriptObject {
      * @param target 
      */
     public final native void setTarget(Element target) /*-{
-        console.log(target);
         this.target = target;
     }-*/;
     
