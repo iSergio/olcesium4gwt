@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol.proj;
+package org.ol3cesium.client.olx;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import org.ol3cesium.client.ol.Extent;
+import org.ol3cesium.client.ol.proj.Units;
 
 /**
  *

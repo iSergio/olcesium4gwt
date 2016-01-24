@@ -24,6 +24,24 @@ import org.ol3cesium.client.ol.geom.Geometry;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Style extends JavaScriptObject {
+    /**
+     * Icon anchor units.
+     */
+    public static final class IconAnchorUnits {
+        public static final String FRACTION = "fraction";
+        public static final String PIXELS   = "pixels";
+    }
+
+    /**
+     * Icon origin.
+     */
+    public static final class IconOrigin {
+        public static final String BOTTOM_LEFT  = "bottom-left";
+        public static final String BOTTOM_RIGHT = "bottom-right";
+        public static final String TOP_LEFT     = "top-left";
+        public static final String TOP_RIGHT    = "top-right";
+    }
+    
     protected Style() {
         //
     }

@@ -1,5 +1,5 @@
-/* 
- * Copyright 2016 iserge.
+/*
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.ol3cesium.client.ol;
+package org.ol3cesium.client.olx;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import org.ol3cesium.client.olx.AttributionOptions;
 
 /**
- * An attribution for a layer source.
+ *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
-    protected Attribution() {
+public class DeviceOrientationOptions extends JavaScriptObject {
+    protected DeviceOrientationOptions() {
         //
     }
     
-    public static final native Attribution create(AttributionOptions options) /*-{
-        return new ol.Attribution(options);
+    public static final native DeviceOrientationOptions create() /*-{
+        return {};
     }-*/;
-
-    public static final native Attribution create(String html) /*-{
-        return new ol.Attribution({html: html});
+    
+    public static final native DeviceOrientationOptions create(boolean tracking) /*-{
+        return {tracking: tracking};
+    }-*/;
+    
+    public final native void setTracking(boolean tracking) /*-{
+        this.tracking = tracking;
     }-*/;
 }

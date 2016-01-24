@@ -15,6 +15,7 @@
  */
 package org.ol3cesium.client.ol.proj;
 
+import org.ol3cesium.client.olx.ProjectionOptions;
 import com.google.gwt.core.client.JavaScriptObject;
 import org.ol3cesium.client.ol.Coordinate;
 import org.ol3cesium.client.ol.Extent;
