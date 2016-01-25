@@ -63,7 +63,7 @@ public class DragBoxInteraction extends PointerInteraction {
             this.__dragBoxInteractionEventListenerRegistered = true;
             this.__dragBoxInteractionEventListeners = [];
             this.__notifyDragBoxInteractionEventListeners = function(event) {
-                var length = this.__dragBoxLayerChangeEventListeners.length;
+                var length = this.__dragBoxInteractionEventListeners.length;
                 for (var i = 0; i < length; i++) {
                     var listener = this.__dragBoxInteractionEventListeners[i];
                     listener.@org.ol3cesium.client.ol.event.DragBoxInteractionEventListener::onDragBoxInteraction(Lorg/ol3cesium/client/ol/event/DragBoxInteractionEvent;)(event);
