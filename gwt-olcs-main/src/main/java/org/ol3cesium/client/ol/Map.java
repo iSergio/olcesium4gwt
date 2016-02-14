@@ -360,6 +360,9 @@ public class Map extends Object {
     }-*/;
     
     public final native void removeMouseMoveEventListener(MouseMoveEventListener mouseMoveEventListener) /*-{
+        if (!this.__mouseMoveEventListeners) {
+            return;
+        }
         var index = this.__mouseMoveEventListeners.indexOf(mouseMoveEventListener);
         if (index > -1) {
             this.__mouseMoveEventListeners.splice(mouseMoveEventListener, 1);
@@ -388,6 +391,9 @@ public class Map extends Object {
     }-*/;
     
     public final native void removeMapClickEventListener(MapClickEventListener mapClickEventListener) /*-{
+        if (!this.__mapClickEventListeners) {
+            return;
+        }
         var index = this.__mapClickEventListeners.indexOf(mapClickEventListener);
         if (index > -1) {
             this.__mapClickEventListeners.splice(mapClickEventListener, 1);
@@ -416,6 +422,9 @@ public class Map extends Object {
     }-*/;
     
     public final native void removeMapPointerMoveEventListener(MapPointerMoveEventListener mapPointerMoveEventListener) /*-{
+        if (!this.__mapPointerMoveEventListeners) {
+            return;
+        }
         var index = this.__mapPointerMoveEventListeners.indexOf(mapPointerMoveEventListener);
         if (index > -1) {
             this.__mapPointerMoveEventListeners.splice(mapPointerMoveEventListener, 1);
