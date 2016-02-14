@@ -50,7 +50,15 @@ public class SimpleGeometry extends Geometry {
      * Return the layout of the geometry.
      * @return Layout.
      */
-    public native final GeometryLayout getLayout() /*-{
+    public final GeometryLayout getLayout() {
+        return GeometryLayout.fromString(getLayoutNative());
+    }
+    
+    /**
+     * Return the layout of the geometry.
+     * @return Layout.
+     */
+    public native final String getLayoutNative() /*-{
         return this.getLayout();
     }-*/;
     
