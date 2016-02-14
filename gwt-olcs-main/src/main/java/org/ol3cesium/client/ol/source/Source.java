@@ -26,11 +26,6 @@ import org.ol3cesium.client.ol.Object;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Source extends Object {
-    public static final String STATE_UNDEFINED = "undefined";
-    public static final String STATE_LOADING   = "loading";
-    public static final String STATE_READY     = "ready";
-    public static final String STATE_ERROR     = "error";
-    
     public static final String WMTS_REQUEST_ENCODING_KVP = "KVP";
     public static final String WMTS_REQUEST_ENCODING_REST = "REST";
     
@@ -70,7 +65,15 @@ public class Source extends Object {
      * Get the state of the source, see ol.source.State for possible states.
      * @return State.
      */
-    public final native String getState() /*-{
+    public final SourceState getState() {
+        return SourceState.fromString(getStateNative());
+    }
+    
+    /**
+     * Get the state of the source, see ol.source.State for possible states.
+     * @return State.
+     */
+    public final native String getStateNative() /*-{
         return this.getState();
     }-*/;
     
