@@ -85,6 +85,9 @@ public class GroupLayer extends BaseLayer {
 //    }-*/;
     
     public final native void removeGroupLayerChangeEventListener(GroupLayerChangeEventListener groupLayerChangeEventListener) /*-{
+        if (!this.__groupLayerChangeEventListeners) {
+            return;
+        }
         var index = this.__groupLayerChangeEventListeners.indexOf(groupLayerChangeEventListener);
         if (index > -1) {
             this.__groupLayerChangeEventListeners.splice(groupLayerChangeEventListener, 1);

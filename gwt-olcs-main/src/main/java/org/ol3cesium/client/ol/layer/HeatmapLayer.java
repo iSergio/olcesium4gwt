@@ -120,6 +120,9 @@ public class HeatmapLayer extends VectorLayer {
     }-*/;
     
     public final native void removeHeatmapLayerChangeEventListener(HeatmapLayerChangeEventListener heatmapLayerChangeEventListener) /*-{
+        if (!this.__heatmapLayerChangeEventListeners) {
+            return;
+        }
         var index = this.__heatmapLayerChangeEventListeners.indexOf(heatmapLayerChangeEventListener);
         if (index > -1) {
             this.__heatmapLayerChangeEventListeners.splice(heatmapLayerChangeEventListener, 1);

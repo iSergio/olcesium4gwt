@@ -113,6 +113,9 @@ public class TileLayer extends Layer {
     }-*/;
     
     public final native void removeTileLayerChangeEventListener(TileLayerChangeEventListener tileLayerChangeEventListener) /*-{
+        if (!this.__tileLayerChangeEventListeners) {
+            return;
+        }
         var index = this.__tileLayerChangeEventListeners.indexOf(tileLayerChangeEventListener);
         if (index > -1) {
             this.__tileLayerChangeEventListeners.splice(tileLayerChangeEventListener, 1);

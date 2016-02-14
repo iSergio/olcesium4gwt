@@ -111,6 +111,9 @@ public class VectorTileLayer extends VectorLayer {
     }-*/;
     
     public final native void removeTileLayerChangeEventListener(VectorTileLayerChangeEventListener vectorTileLayerChangeEventListener) /*-{
+        if (!this.__vectorTileLayerChangeEventListeners) {
+            return;
+        }
         var index = this.__vectorTileLayerChangeEventListeners.indexOf(vectorTileLayerChangeEventListener);
         if (index > -1) {
             this.__vectorTileLayerChangeEventListeners.splice(vectorTileLayerChangeEventListener, 1);

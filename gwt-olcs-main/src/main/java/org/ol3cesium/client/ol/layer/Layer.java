@@ -96,6 +96,9 @@ public abstract class Layer extends BaseLayer {
     }-*/;
     
     public final native void removeLayerChangeEventListener(LayerChangeEventListener layerChangeEventListener) /*-{
+        if (!this.__layerChangeEventListeners) {
+            return;
+        }
         var index = this.__layerChangeEventListeners.indexOf(layerChangeEventListener);
         if (index > -1) {
             this.__layerChangeEventListeners.splice(layerChangeEventListener, 1);

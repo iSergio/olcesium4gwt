@@ -195,6 +195,9 @@ public class BaseLayer extends Object {
     }-*/;
     
     public final native void removeBaseLayerChangeEventListener(BaseLayerChangeEventListener baseLayerChangeEventListener) /*-{
+        if (!this.__baseLayerChangeEventListeners) {
+            return;
+        }
         var index = this.__baseLayerChangeEventListeners.indexOf(baseLayerChangeEventListener);
         if (index > -1) {
             this.__baseLayerChangeEventListeners.splice(baseLayerChangeEventListener, 1);
