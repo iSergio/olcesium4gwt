@@ -19,24 +19,13 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayNumber;
 import com.google.gwt.dom.client.Element;
 import org.ol3cesium.client.ol.Coordinate;
+import org.ol3cesium.client.ol.OverlayPositioning;
 
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class OverlayOptions extends JavaScriptObject {
-    public static class POSITIONING {
-        public static String BOTTOM_LEFT   = "bottom-left";
-        public static String BOTTOM_CENTER = "bottom-center";
-        public static String BOTTOM_RIGHT  = "bottom-right";
-        public static String CENTER_LEFT   = "center-left";
-        public static String CENTER_CENTER = "center-center";
-        public static String CENTER_RIGHT  = "center-right";
-        public static String TOP_LEFT      = "top-left";
-        public static String TOP_CENTER    = "top-center";
-        public static String TOP_RIGHT     = "top-right";
-    }
-    
     protected OverlayOptions() {
         //
     }
@@ -96,8 +85,8 @@ public class OverlayOptions extends JavaScriptObject {
      * Default is 'top-left'.
      * @param positioning 
      */
-    public final native void setPositioning(String positioning) /*-{
-        this.positioning = positioning;
+    public final native void setPositioning(OverlayPositioning positioning) /*-{
+        this.positioning = positioning.toString();
     }-*/;
 
     /**

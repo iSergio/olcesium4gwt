@@ -20,6 +20,7 @@ import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
+import java.util.List;
 import org.ol3cesium.client.ol.Collection;
 import org.ol3cesium.client.ol.Overlay;
 import org.ol3cesium.client.ol.RendererType;
@@ -210,7 +211,7 @@ public class MapOptions extends JavaScriptObject {
      * @param renderer 
      */
     public final native void setRenderer(RendererType renderer) /*-{
-        this.renderer = renderer;
+        this.renderer = renderer.toString();
     }-*/;
     
     /**
@@ -231,9 +232,14 @@ public class MapOptions extends JavaScriptObject {
      * Note that at present only the Canvas renderer supports vector data.
      * @param renderer 
      */
-    public final native void setRenderer(JsArray<RendererType> renderer) /*-{
-        this.renderer = renderer;
-    }-*/;
+    public final void setRenderer(List<RendererType> renderer) {
+        JsArrayString jsArrayString = JavaScriptObject.createArray().cast();
+        for (int i = 0; i < renderer.size(); i++) {
+            RendererType rendererType = renderer.get(i);
+            jsArrayString.set(i, rendererType.toString());
+        }
+        setRenderer(jsArrayString);
+    }
     
     /**
      * Renderer. By default, Canvas, DOM and WebGL renderers are tested for 
