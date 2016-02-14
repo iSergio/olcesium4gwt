@@ -119,6 +119,9 @@ public class DrawInteraction extends PointerInteraction {
     }-*/;
     
     public final native void removeDrawInteractionEventListener(DrawInteractionEventListener drawInteractionEventListener) /*-{
+        if (!this.__drawInteractionEventListeners) {
+            return;
+        }
         var index = this.__drawInteractionEventListeners.indexOf(drawInteractionEventListener);
         if (index > -1) {
             this.__drawInteractionEventListeners.splice(drawInteractionEventListener, 1);
