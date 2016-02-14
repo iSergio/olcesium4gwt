@@ -57,12 +57,16 @@ public class StrokeStyle extends JavaScriptObject {
     public final native Color getColor() /*-{
         return this.getColor();
     }-*/;
+    
+    public final LineCapStyle getLineCap() {
+        return LineCapStyle.fromString(getLineCapNative());
+    }
 
     /**
      * Get the line cap type for the stroke.
      * @return Line cap.
      */
-    public final native LineCapStyle getLineCap() /*-{
+    public final native String getLineCapNative() /*-{
         return this.getLineCap();
     }-*/;
     
@@ -74,11 +78,14 @@ public class StrokeStyle extends JavaScriptObject {
         return this.getLineDash();
     }-*/;
 
+    public final LineJoinStyle getLineJoin() {
+        return LineJoinStyle.fromString(getLineJoinNative());
+    }
     /**
      * Get the line join type for the stroke.
      * @return Line join.
      */
-    public final native LineJoinStyle getLineJoin() /*-{
+    public final native String getLineJoinNative() /*-{
         return this.getLineJoin();
     }-*/;
 

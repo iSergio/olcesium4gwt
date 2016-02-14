@@ -17,6 +17,8 @@ package org.ol3cesium.client.ol.style;
 
 import org.ol3cesium.client.olx.style.TextStyleOptions;
 import com.google.gwt.core.client.JavaScriptObject;
+import org.ol3cesium.client.olx.style.TextStyleOptions.TextAlign;
+import org.ol3cesium.client.olx.style.TextStyleOptions.TextBaseline;
 
 /**
  *
@@ -103,15 +105,31 @@ public class TextStyle extends JavaScriptObject {
      * Get the text alignment.
      * @return Text align.
      */
-    public final native String getTextAlign() /*-{
+    public final TextAlign getTextAlign() {
+        return TextAlign.fromString(getTextAlignNative());
+    }
+    
+    /**
+     * Get the text alignment.
+     * @return Text align.
+     */
+    public final native String getTextAlignNative() /*-{
         return this.getTextAlign();
     }-*/;
+    
+    /**
+     * Get the text baseline.
+     * @return Text baseline.
+     */
+    public final TextBaseline getTextBaseline() {
+        return TextBaseline.fromString(getTextBaselineNative());
+    }
 
     /**
      * Get the text baseline.
      * @return Text baseline.
      */
-    public final native String getTextBaseline() /*-{
+    public final native String getTextBaselineNative() /*-{
         return this.getTextBaseline();
     }-*/;
     
