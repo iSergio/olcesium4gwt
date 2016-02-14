@@ -264,6 +264,16 @@ public class View extends Object {
         }
         this.__viewChangeEventListeners.push(viewChangeEventListener);
     }-*/;
+    
+    public final native void removeViewChangeEventListener(ViewChangeEventListener viewChangeEventListener) /*-{
+        if (!this.__viewChangeEventListeners) {
+            return;
+        }
+        var index = this.__viewChangeEventListeners.indexOf(viewChangeEventListener);
+        if (index > -1) {
+            this.__viewChangeEventListeners.splice(viewChangeEventListener, 1);
+        }
+    }-*/;
 
     public static class FitOptions extends JavaScriptObject {
         protected FitOptions() {
