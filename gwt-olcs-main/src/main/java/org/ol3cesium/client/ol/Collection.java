@@ -140,6 +140,9 @@ public class Collection<T extends JavaScriptObject> extends Object {
     }-*/;
     
     public final native void removeCollectionAddEventListener(CollectionAddEventListener collectionAddEventListener) /*-{
+        if (!this.__collectionAddEventListeners) {
+            return;
+        }
         var index = this.__collectionAddEventListeners.indexOf(collectionAddEventListener);
         if (index > -1) {
             this.__collectionAddEventListeners.splice(collectionAddEventListener, 1);
@@ -167,6 +170,9 @@ public class Collection<T extends JavaScriptObject> extends Object {
     }-*/;
     
     public final native void removeCollectionRemoveEventListener(CollectionRemoveEventListener collectionRemoveEventListener) /*-{
+        if (!this.__collectionRemoveEventListeners) {
+            return;
+        }
         var index = this.__collectionRemoveEventListeners.indexOf(collectionRemoveEventListener);
         if (index > -1) {
             this.__collectionRemoveEventListeners.splice(collectionRemoveEventListener, 1);
