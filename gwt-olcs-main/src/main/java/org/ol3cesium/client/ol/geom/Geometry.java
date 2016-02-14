@@ -30,21 +30,6 @@ import org.ol3cesium.client.ol.proj.Projection;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Geometry extends Object {
-    /**
-     * The geometry type.
-     */
-    public static class TYPE {
-        public static String POINT               = "Point";
-        public static String LINE_STRING         = "LineString";
-        public static String LINEAR_RING         = "LinearRing";
-        public static String POLYGON             = "Polygon";
-        public static String MULTI_POINT         = "MultiPoint";
-        public static String MULTI_LINE_STRING   = "MultiLineString";
-        public static String MULTI_POLYGON       = "MultiPolygon";
-        public static String GEOMETRY_COLLECTION = "GeomentryCollection";
-        public static String CIRCLE              = "Circle";
-    }
-    
     protected Geometry() {
         //
     }
@@ -128,7 +113,11 @@ public class Geometry extends Object {
         return this.transform(source, destination);
     }-*/;
     
-    public final native String getType() /*-{
+    public final GeometryType getType() {
+        return GeometryType.fromString(getTypeNative());
+    }
+    
+    public final native String getTypeNative() /*-{
         return this.getType();
     }-*/;
     

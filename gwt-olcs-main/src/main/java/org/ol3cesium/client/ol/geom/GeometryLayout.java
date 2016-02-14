@@ -20,9 +20,34 @@ package org.ol3cesium.client.ol.geom;
  * or measure ('M') coordinate is available. Supported values are 'XY', 'XYZ', 'XYM', 'XYZM'.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class GeometryLayout {
-    public static final String XY   = "XY";
-    public static final String XYZ  = "XYZ";
-    public static final String XYM  = "XYM";
-    public static final String XYZM = "XYZM";
+public enum GeometryLayout {
+    XY("XY"), XYZ("XYZ"), XYM("XYM"), XYZM("XYZM"), UNKNOWN("unknown");
+    
+    private final String _value;
+    
+    private GeometryLayout(String value) {
+        _value = value;
+    }
+    
+    public static GeometryLayout fromString(String string) {
+        if (XY.toString().equalsIgnoreCase(string)) {
+            return XY;
+        }
+        else if (XYZ.toString().equalsIgnoreCase(string)) {
+            return XYZ;
+        }
+        else if (XYM.toString().equalsIgnoreCase(string)) {
+            return XYM;
+        }
+        else if (XYZM.toString().equalsIgnoreCase(string)) {
+            return XYZM;
+        } else {
+            return UNKNOWN;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return _value;
+    }
 }
