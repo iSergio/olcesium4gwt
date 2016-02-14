@@ -24,8 +24,62 @@ import org.ol3cesium.client.ol.Color;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class StrokeStyleOptions extends JavaScriptObject {
-    public static enum LineCapStyle {BUTT, ROUND, SQUARE};
-    public static enum LineJoinStyle {BEVEL, ROUND, MITER};
+    public static enum LineCapStyle {
+        BUTT("butt"), ROUND("round"), SQUARE("square"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private LineCapStyle(String value) {
+            _value = value;
+        }
+        
+        public static LineCapStyle fromString(String string) {
+            if (LineCapStyle.BUTT.toString().equalsIgnoreCase(string)) {
+                return LineCapStyle.BUTT;
+            } 
+            else if (LineCapStyle.ROUND.toString().equalsIgnoreCase(string)) {
+                return LineCapStyle.ROUND;
+            }
+            else if (LineCapStyle.SQUARE.toString().equalsIgnoreCase(string)) {
+                return LineCapStyle.SQUARE;
+            } else {
+                return LineCapStyle.UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
+    };
+    public static enum LineJoinStyle {
+        BEVEL("bevel"), ROUND("round"), MITER("miter"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private LineJoinStyle(String value) {
+            _value = value;
+        }
+        
+        public static LineJoinStyle fromString(String string) {
+            if (LineJoinStyle.BEVEL.toString().equalsIgnoreCase(string)) {
+                return LineJoinStyle.BEVEL;
+            }
+            else if (LineJoinStyle.ROUND.toString().equalsIgnoreCase(string)) {
+                return LineJoinStyle.ROUND;
+            }
+            else if (LineJoinStyle.MITER.toString().equalsIgnoreCase(string)) {
+                return LineJoinStyle.MITER;
+            } else {
+                return LineJoinStyle.UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
+    };
     
     protected StrokeStyleOptions() {
         //
@@ -58,7 +112,7 @@ public class StrokeStyleOptions extends JavaScriptObject {
      * @param capStyle Line cap style: butt, round, or square. Default is round.
      */
     public final native void setLineCap(LineCapStyle capStyle) /*-{
-        this.capStyle = capStyle;
+        this.capStyle = capStyle.toString();
     }-*/;
 
     /**
@@ -66,7 +120,7 @@ public class StrokeStyleOptions extends JavaScriptObject {
      * @param lineJoin Line join style: bevel, round, or miter. Default is round.
      */
     public final native void setLineJoin(LineJoinStyle lineJoin) /*-{
-        this.lineJoin = lineJoin;
+        this.lineJoin = lineJoin.toString();
     }-*/;
 
     /**

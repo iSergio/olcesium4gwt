@@ -27,6 +27,72 @@ import org.ol3cesium.client.ol.Size;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class IconStyleOptions extends JavaScriptObject {
+    /**
+     * Icon anchor units.
+     */
+    public enum IconAnchorUnits {
+        FRACTION("fraction"), PIXELS("pixels"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private IconAnchorUnits(String value) {
+            _value = value;
+        }
+        
+        public static IconAnchorUnits formString(String string) {
+            if (FRACTION.toString().equalsIgnoreCase(string)) {
+                return FRACTION;
+            }
+            else if (PIXELS.toString().equalsIgnoreCase(string)) {
+                return PIXELS;
+            } else {
+                return UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
+    }
+
+    /**
+     * Icon origin.
+     */
+    public enum IconOrigin {
+        BOTTOM_LEFT("bottom-left"), BOTTOM_RIGHT("bottom-right"), 
+        TOP_LEFT("top-left"), TOP_RIGHT("top-right"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private IconOrigin(String value) {
+            _value = value;
+        }
+        
+        public static IconOrigin fromString(String string) {
+            if (BOTTOM_LEFT.toString().equalsIgnoreCase(string)) {
+                return BOTTOM_LEFT;
+            }
+            else if (BOTTOM_RIGHT.toString().equalsIgnoreCase(string)) {
+                return BOTTOM_RIGHT;
+            }
+            else if (TOP_LEFT.toString().equalsIgnoreCase(string)) {
+                return TOP_LEFT;
+            }
+            else if (TOP_RIGHT.toString().equalsIgnoreCase(string)) {
+                return TOP_RIGHT;
+            } else {
+                return UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
+        
+    }
+    
     protected IconStyleOptions() {
         //
     }
@@ -56,8 +122,8 @@ public class IconStyleOptions extends JavaScriptObject {
      * @param anchorOrigin Origin of the anchor: bottom-left, bottom-right, 
      * top-left or top-right. Default is top-left.
      */
-    public final native void setAnchorOrigin(String anchorOrigin) /*-{
-        this.anchorOrigin = anchorOrigin;
+    public final native void setAnchorOrigin(IconOrigin anchorOrigin) /*-{
+        this.anchorOrigin = anchorOrigin.toString();
     }-*/;
 
     /**
@@ -66,8 +132,8 @@ public class IconStyleOptions extends JavaScriptObject {
      * A value of 'fraction' indicates the x value is a fraction of the icon.
      * A value of 'pixels' indicates the x value in pixels. Default is 'fraction'.
      */
-    public final native void setAnchorXUnits(String anchorXUnits) /*-{
-        this.anchorXUnits = anchorXUnits;
+    public final native void setAnchorXUnits(IconAnchorUnits anchorXUnits) /*-{
+        this.anchorXUnits = anchorXUnits.toString();
     }-*/;
 
     /**
@@ -76,8 +142,8 @@ public class IconStyleOptions extends JavaScriptObject {
      * A value of 'fraction' indicates the y value is a fraction of the icon. 
      * A value of 'pixels' indicates the y value in pixels. Default is 'fraction'.
      */
-    public final native void setAnchorYUnits(String anchorYUnits) /*-{
-        this.anchorYUnits = anchorYUnits;
+    public final native void setAnchorYUnits(IconAnchorUnits anchorYUnits) /*-{
+        this.anchorYUnits = anchorYUnits.toString();
     }-*/;
     
     /**
@@ -140,8 +206,8 @@ public class IconStyleOptions extends JavaScriptObject {
      * @param offsetOrigin Origin of the offset: bottom-left, bottom-right, 
      * top-left or top-right. Default is top-left.
      */
-    public final native void setOffsetOrigin(String offsetOrigin) /*-{
-        this.offsetOrigin = offsetOrigin;
+    public final native void setOffsetOrigin(IconOrigin offsetOrigin) /*-{
+        this.offsetOrigin = offsetOrigin.toString();
     }-*/;
     
     /**

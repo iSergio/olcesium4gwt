@@ -24,21 +24,77 @@ import org.ol3cesium.client.ol.style.StrokeStyle;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class TextStyleOptions extends JavaScriptObject {
-    public static class ALIGN {
-        public static String LEFT   = "left";
-        public static String RIGHT  = "right";
-        public static String CENTER = "center";
-        public static String END    = "end";
-        public static String START  = "start";
+    public enum TextAlign {
+        LEFT("left"), RIGHT("right"), CENTER("center"), END("end"), START("start"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private TextAlign(String value) {
+            _value = value;
+        }
+        
+        public static TextAlign fromString(String string) {
+            if (LEFT.toString().equalsIgnoreCase(string)) {
+                return LEFT;
+            }
+            else if (RIGHT.toString().equalsIgnoreCase(string)) {
+                return RIGHT;
+            }
+            else if (CENTER.toString().equalsIgnoreCase(string)) {
+                return CENTER;
+            }
+            else if (END.toString().equalsIgnoreCase(string)) {
+                return END;
+            }
+            else if (START.toString().equalsIgnoreCase(string)) {
+                return START;
+            } else {
+                return UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
     }
     
-    public static class BASELINE {
-        public static String BORROM      = "bottom";
-        public static String TOP         = "top";
-        public static String MIDDLE      = "middle";
-        public static String ALPHABETIC  = "alphabetic";
-        public static String HANGING     = "hanging";
-        public static String IDEOGRAPHIC = "ideographic";
+    public enum TextBaseline {
+        BOTTOM("bottom"), TOP("top"), MIDDLE("middle"), ALPHABETIC("alphabetic"), HANGING("hanging"), IDEOGRAPHIC("ideographic"), UNKNOWN("unknown");
+        
+        private final String _value;
+        
+        private TextBaseline(String value) {
+            _value = value;
+        }
+        
+        public static TextBaseline fromString(String string) {
+            if (BOTTOM.toString().equalsIgnoreCase(string)) {
+                return BOTTOM;
+            }
+            else if (TOP.toString().equalsIgnoreCase(string)) {
+                return TOP;
+            }
+            else if (MIDDLE.toString().equalsIgnoreCase(string)) {
+                return MIDDLE;
+            }
+            else if (ALPHABETIC.toString().equalsIgnoreCase(string)) {
+                return ALPHABETIC;
+            }
+            else if (HANGING.toString().equalsIgnoreCase(string)) {
+                return HANGING;
+            }
+            else if (IDEOGRAPHIC.toString().equalsIgnoreCase(string)) {
+                return IDEOGRAPHIC;
+            } else {
+                return UNKNOWN;
+            }
+        }
+        
+        @Override
+        public String toString() {
+            return _value;
+        }
     }
 
     protected TextStyleOptions() {
@@ -105,8 +161,8 @@ public class TextStyleOptions extends JavaScriptObject {
      * Text alignment. Possible values: 'left', 'right', 'center', 'end' or 'start'. Default is 'start'.
      * @param textAlign 
      */
-    public final native void setTextAlign(String textAlign) /*-{
-        this.textAlign = textAlign;
+    public final native void setTextAlign(TextAlign textAlign) /*-{
+        this.textAlign = textAlign.toString();
     }-*/;
 
     /**
@@ -114,8 +170,8 @@ public class TextStyleOptions extends JavaScriptObject {
      * 'hanging', 'ideographic'. Default is 'alphabetic'.
      * @param textBaseline 
      */
-    public final native void setTextBaseline(String textBaseline) /*-{
-        this.textBaseline = textBaseline;
+    public final native void setTextBaseline(TextBaseline textBaseline) /*-{
+        this.textBaseline = textBaseline.toString();
     }-*/;
 
     /**
