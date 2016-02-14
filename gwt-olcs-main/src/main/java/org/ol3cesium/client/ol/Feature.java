@@ -172,6 +172,9 @@ public class Feature extends Object {
     }-*/;
     
     public final native void removeFeatureChangeEventListener(FeatureChangeEventListener featureChangeEventListener) /*-{
+        if (!this.__featureChangeEventListeners) {
+            return;
+        }
         var index = this.__featureChangeEventListeners.indexOf(featureChangeEventListener);
         if (index > -1) {
             this.__featureChangeEventListeners.splice(featureChangeEventListener, 1);
