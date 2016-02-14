@@ -42,7 +42,15 @@ public class ScaleLineControl extends Control {
      * Return the units to use in the scale line.
      * @return The units to use in the scale line.
      */
-    public final native String getUnits() /*-{
+    public final ScaleLineUnits getUnits() {
+        return ScaleLineUnits.fromString(getUnitsNative());
+    }
+    
+    /**
+     * Return the units to use in the scale line.
+     * @return The units to use in the scale line.
+     */
+    public final native String getUnitsNative() /*-{
         return this.getUnits();
     }-*/;
     
