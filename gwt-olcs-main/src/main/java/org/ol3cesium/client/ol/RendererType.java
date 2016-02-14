@@ -15,18 +15,35 @@
  */
 package org.ol3cesium.client.ol;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class RendererType extends JavaScriptObject {
-    protected RendererType() {
-        //
+public enum RendererType {
+    CANVAS("canvas"), DOM("dom"), WEBGL("webgl"), UNKNOWN("unknown");
+    
+    private final String _value;
+    
+    private RendererType(String value) {
+        _value = value;
     }
     
-    public static final String CANVAS = "canvas";
-    public static final String DOM    = "dom";
-    public static final String WEBGL  = "webgl";
+    public static RendererType fromString(String string) {
+        if (CANVAS.toString().equalsIgnoreCase(string)) {
+            return CANVAS;
+        }
+        else if (DOM.toString().equalsIgnoreCase(string)) {
+            return DOM;
+        }
+        else if (WEBGL.toString().equalsIgnoreCase(string)) {
+            return WEBGL;
+        } else {
+            return UNKNOWN;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return _value;
+    }
 }
