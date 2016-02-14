@@ -20,6 +20,7 @@ import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
 import org.ol3cesium.client.ol.Attribution;
 import org.ol3cesium.client.ol.proj.Projection;
+import org.ol3cesium.client.ol.source.WMTSRequestEncoding;
 import org.ol3cesium.client.ol.source.WMTSSource;
 
 /**
@@ -98,8 +99,8 @@ public class WMTSSourceOptions extends JavaScriptObject {
      * 
      * @param requestEncoding Request encoding. Default is KVP.
      */
-    public final native void setRequestEncoding(String requestEncoding) /*-{
-        this.requestEncoding = requestEncoding;
+    public final native void setRequestEncoding(WMTSRequestEncoding requestEncoding) /*-{
+        this.requestEncoding = requestEncoding.toString();
     }-*/;
 
     /**

@@ -19,6 +19,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Attribution;
 import org.ol3cesium.client.ol.Size;
+import org.ol3cesium.client.ol.source.ZoomifyTiezSizeCalculation;
 
 /**
  *
@@ -80,8 +81,8 @@ public class ZoomifySourceOptions extends JavaScriptObject {
      * 
      * @param tierSizeCalculation Tier size calculation method: default or truncated.
      */
-    public final native void setTierSizeCalculation(String tierSizeCalculation) /*-{
-        this.tierSizeCalculation = tierSizeCalculation;
+    public final native void setTierSizeCalculation(ZoomifyTiezSizeCalculation tierSizeCalculation) /*-{
+        this.tierSizeCalculation = tierSizeCalculation.toString();
     }-*/;
 
     /**

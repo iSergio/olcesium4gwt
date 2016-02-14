@@ -16,6 +16,7 @@
 package org.ol3cesium.client.olx.source;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import org.ol3cesium.client.ol.source.WMSServerType;
 import org.ol3cesium.client.ol.tilegrid.TileGrid;
 
 /**
@@ -90,7 +91,7 @@ public class TileWMSSourceOptions extends TileImageSourceOptions {
      * The type of the remote WMS server. Currently only used when hidpi is true. Default is undefined.
      * @param serverType {@link ServerTypeWMSSource}
      */
-    public final native void setServerType(String serverType) /*-{
-        this.serverType = serverType;
+    public final native void setServerType(WMSServerType serverType) /*-{
+        this.serverType = serverType.toString();
     }-*/;
 }
