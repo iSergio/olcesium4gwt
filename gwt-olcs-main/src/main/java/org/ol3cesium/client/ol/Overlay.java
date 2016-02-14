@@ -75,11 +75,15 @@ public class Overlay extends Object {
         return this.getPosition();
     }-*/;
     
+    public final OverlayPositioning getPositioning() {
+        return OverlayPositioning.fromString(getPositioningNative());
+    }
+    
     /**
      * Get the current positioning of this overlay.
      * @return How the overlay is positioned relative to its point on the map.
      */
-    public final native String getPositioning() /*-{
+    public final native String getPositioningNative() /*-{
         return this.getPositioning();
     }-*/;
     
@@ -119,7 +123,7 @@ public class Overlay extends Object {
      * Set the positioning for this overlay.
      * @param positioning how the overlay is positioned relative to its point on the map.
      */
-    public final native void setPositioning(String positioning) /*-{
-        this.setPositioning(positioning);
+    public final native void setPositioning(OverlayPositioning positioning) /*-{
+        this.setPositioning(positioning.toString());
     }-*/;
 }
