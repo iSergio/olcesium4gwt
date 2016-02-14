@@ -17,6 +17,7 @@ package org.ol3cesium.client.olx.control;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
+import org.ol3cesium.client.ol.control.ScaleLineUnits;
 
 /**
  *
@@ -55,15 +56,7 @@ public class ScaleLineOptions extends JavaScriptObject {
         this.target = target;
     }-*/;
     
-    public final native void setUnits(String units) /*-{
-        this.units = units;
+    public final native void setUnits(ScaleLineUnits units) /*-{
+        this.units = units.toString();
     }-*/;
-    
-    public final class ScaleLineUnits {
-        public static final String DEGREES  = "degrees";
-        public static final String IMPERIAL = "imperial";
-        public static final String NAUTICAL = "nautical";
-        public static final String METRIC   = "metric";
-        public static final String US       = "us";
-    }
 }
