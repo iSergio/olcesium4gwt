@@ -85,7 +85,15 @@ public class WMTSSource extends TileImageSource {
      * Return the request encoding, either "KVP" or "REST".
      * @return Request encoding.
      */
-    public final native String getRequestEncoding() /*-{
+    public final WMTSRequestEncoding getRequestEncoding() {
+        return WMTSRequestEncoding.fromString(getRequestEncodingNative());
+    }
+    
+    /**
+     * Return the request encoding, either "KVP" or "REST".
+     * @return Request encoding.
+     */
+    public final native String getRequestEncodingNative() /*-{
         return this.getRequestEncoding();
     }-*/;
     
