@@ -77,12 +77,16 @@ public class Projection extends JavaScriptObject {
     public final native double getPointResolution(double resolution, Coordinate point) /*-{
         return this.getPointResolution(resolution, point);
     }-*/;
+    
+    public final Units getUnits() {
+        return Units.fromString(getUnitsNative());
+    }
 
     /**
      * Get the units of this projection.
      * @return Units.
      */
-    public final native Units getUnits() /*-{
+    public final native String getUnitsNative() /*-{
         return this.getUnits();
     }-*/;
     

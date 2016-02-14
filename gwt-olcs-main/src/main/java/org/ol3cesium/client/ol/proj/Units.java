@@ -19,6 +19,42 @@ package org.ol3cesium.client.ol.proj;
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Units {
+public enum Units {
+    DEGREES("degrees"), FEET("ft"), METERS("m"), 
+    PIXELS("pixels"), TILE_PIXELS("tile-pixels"), USFEET("us-ft"), 
+    UNKNOWN("unknown");
     
+    private final String _value;
+    
+    private Units(String value) {
+        _value = value;
+    }
+    
+    public static Units fromString(String string) {
+        if (DEGREES.toString().equalsIgnoreCase(string)) {
+            return DEGREES;
+        }
+        else if (FEET.toString().equalsIgnoreCase(string)) {
+            return FEET;
+        }
+        else if (METERS.toString().equalsIgnoreCase(string)) {
+            return METERS;
+        }
+        else if (PIXELS.toString().equalsIgnoreCase(string)) {
+            return PIXELS;
+        }
+        else if (TILE_PIXELS.toString().equalsIgnoreCase(string)) {
+            return TILE_PIXELS;
+        }
+        else if (USFEET.toString().equalsIgnoreCase(string)) {
+            return USFEET;
+        } else {
+            return UNKNOWN;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return _value;
+    }
 }
