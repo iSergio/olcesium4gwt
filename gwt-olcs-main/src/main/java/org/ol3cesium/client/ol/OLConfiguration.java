@@ -53,7 +53,7 @@ public class OLConfiguration {
     
     public List<String> getStyles() {
         if (_styles == null) {
-            _styles = new ArrayList<String>();
+            _styles = new ArrayList<>();
         }
         return _styles;
     }

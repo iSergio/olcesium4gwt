@@ -19,9 +19,8 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayNumber;
 import org.ol3cesium.client.ol.Attribution;
-import org.ol3cesium.client.ol.Size;
 import org.ol3cesium.client.ol.proj.Projection;
-import org.ol3cesium.client.ol.tilegrid.TileGrid;
+import org.ol3cesium.client.ol.source.WMSServerType;
 
 /**
  *
@@ -68,8 +67,8 @@ public class ImageWMSSourceOptions extends JavaScriptObject {
      * The type of the remote WMS server. Currently only used when hidpi is true. Default is undefined.
      * @param serverType {@link ServerTypeWMSSource}
      */
-    public final native void setServerType(String serverType) /*-{
-        this.serverType = serverType;
+    public final native void setServerType(WMSServerType serverType) /*-{
+        this.serverType = serverType.toString();
     }-*/;
     
 //    imageLoadFunction	ol.ImageLoadFunctionType | undefined	experimental
