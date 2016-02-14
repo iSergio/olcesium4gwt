@@ -19,6 +19,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Collection;
 import org.ol3cesium.client.ol.Feature;
+import org.ol3cesium.client.ol.geom.GeometryType;
 import org.ol3cesium.client.ol.source.VectorSource;
 import org.ol3cesium.client.ol.style.Style;
 
@@ -75,8 +76,8 @@ public class DrawInteractionOptions extends JavaScriptObject {
      * 'MultiPolygon' or 'Circle'). Required.
      * @param type 
      */
-    public final native void setType(String type) /*-{
-        this.type = type;
+    public final native void setType(GeometryType type) /*-{
+        this.type = type.toString();
     }-*/;
 
     /**
