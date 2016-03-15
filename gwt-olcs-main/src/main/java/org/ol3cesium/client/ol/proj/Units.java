@@ -15,6 +15,10 @@
  */
 package org.ol3cesium.client.ol.proj;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
@@ -24,10 +28,27 @@ public enum Units {
     PIXELS("pixels"), TILE_PIXELS("tile-pixels"), USFEET("us-ft"), 
     UNKNOWN("unknown");
     
+    private static final Map<String, Double> INCHES_PER_UNIT;
+    static {
+        Map<String, Double> aMap = new HashMap<>();
+        aMap.put("ft", 12.0);
+        aMap.put("m", 39.37);
+        aMap.put("degrees", 4374754.0);
+        INCHES_PER_UNIT = Collections.unmodifiableMap(aMap);
+    }
+    
     private final String _value;
     
     private Units(String value) {
         _value = value;
+    }
+    
+    public static double getInchesPerUnit(Units units) {
+        return INCHES_PER_UNIT.get(units.toString());
+    }
+    
+    public double getInchesPerUnit() {
+        return INCHES_PER_UNIT.get(_value);
     }
     
     public static Units fromString(String string) {
