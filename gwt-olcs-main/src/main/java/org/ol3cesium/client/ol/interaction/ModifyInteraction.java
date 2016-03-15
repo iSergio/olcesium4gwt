@@ -49,7 +49,7 @@ public class ModifyInteraction extends PointerInteraction {
             this.__modifyInteractionEventListenerRegistered = true;
             this.__modifyInteractionEventListeners = [];
             this.__notifyModifyInteractionEventListeners = function(event) {
-                var length = this.__modifyLayerChangeEventListeners.length;
+                var length = this.__modifyInteractionEventListeners.length;
                 for (var i = 0; i < length; i++) {
                     var listener = this.__modifyInteractionEventListeners[i];
                     listener.@org.ol3cesium.client.ol.event.ModifyInteractionEventListener::onModifyInteraction(Lorg/ol3cesium/client/ol/event/ModifyInteractionEvent;)(event);
