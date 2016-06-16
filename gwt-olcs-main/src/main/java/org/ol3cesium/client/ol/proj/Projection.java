@@ -129,4 +129,39 @@ public class Projection extends JavaScriptObject {
     public final native void setWorldExtent(Extent worldExtent) /*-{
         this.setWorldExtent(worldExtent);
     }-*/;
+    
+    /**
+     * Normalize coordinates if wrapX used
+     * @param coordinate to normalize
+     * @return normalized coordinate
+     */
+    public final native Coordinate normalizeCoordinate(Coordinate coordinate) /*-{
+        var normalizedCoordinate = coordinate;
+        var extent = this.getExtent();
+        var worldWidth = ol.extent.getWidth(extent);
+        var x = normalizedCoordinate[0];
+        if (x < extent[0] || x > extent[2]) {
+            var worldsAway = Math.ceil((extent[0] - x) / worldWidth);
+            normalizedCoordinate = [x + worldWidth * worldsAway, normalizedCoordinate[1]];
+        }
+        return normalizedCoordinate;
+    }-*/;
+    
+    /**
+     * Normalize coordinates if wrapX used
+     * @param coordinate to normalize
+     * @param projection coordinate projection
+     * @return normalized coordinate
+     */
+    public static final native Coordinate normalizeCoordinate(Coordinate coordinate, Projection projection) /*-{
+        var normalizedCoordinate = coordinate;
+        var extent = projection.getExtent();
+        var worldWidth = ol.extent.getWidth(extent);
+        var x = normalizedCoordinate[0];
+        if (x < extent[0] || x > extent[2]) {
+            var worldsAway = Math.ceil((extent[0] - x) / worldWidth);
+            normalizedCoordinate = [x + worldWidth * worldsAway, normalizedCoordinate[1]];
+        }
+        return normalizedCoordinate;
+    }-*/;
 }
