@@ -22,7 +22,9 @@ import org.ol3cesium.client.ol.proj.Projection;
 import org.ol3cesium.client.ol.Object;
 
 /**
- *
+ * Abstract base class; normally only used for creating subclasses and not 
+ * instantiated in apps. Base class for ol.layer.Layer sources.
+ * A generic change event is triggered when the state of the source changes.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class Source extends Object {
@@ -75,6 +77,13 @@ public class Source extends Object {
      */
     public final native String getStateNative() /*-{
         return this.getState();
+    }-*/;
+    
+    /**
+     * Refreshes the source and finally dispatches a 'change' event.
+     */
+    public final native void refresh() /*-{
+        this.refresh();
     }-*/;
     
     /**

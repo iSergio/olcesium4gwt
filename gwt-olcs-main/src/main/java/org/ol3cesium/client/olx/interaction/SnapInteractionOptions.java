@@ -54,5 +54,7 @@ public class SnapInteractionOptions extends JavaScriptObject {
      * Snap to features from this source. Either this option or features should be provided
      * @param source
      */
-    public final native void setSource(VectorSource source);
+    public final native void setSource(VectorSource source) /*-{
+        this.source = source;
+    }-*/;
 }

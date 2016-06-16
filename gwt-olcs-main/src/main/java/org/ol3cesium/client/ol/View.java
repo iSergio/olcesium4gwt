@@ -66,6 +66,14 @@ public class View extends Object {
     
     /**
      * Get the constrained center of this view.
+     * @return Constrained center.
+     */
+    public final native Coordinate constrainCenter() /*-{
+        return this.constrainCenter();
+    }-*/;
+    
+    /**
+     * Get the constrained center of this view.
      * @param center Center.
      * @return Constrained center.
      */

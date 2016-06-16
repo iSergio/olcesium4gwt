@@ -19,6 +19,7 @@ import com.google.gwt.dom.client.Element;
 import org.ol3cesium.client.ol.control.Control;
 import org.ol3cesium.client.ol.event.MapClickEventListener;
 import org.ol3cesium.client.ol.event.MapPointerMoveEventListener;
+import org.ol3cesium.client.ol.event.MapPostRenderEventListener;
 import org.ol3cesium.client.ol.event.MouseMoveEventListener;
 import org.ol3cesium.client.ol.geom.Geometry;
 import org.ol3cesium.client.ol.interaction.Interaction;
@@ -429,5 +430,26 @@ public class Map extends Object {
         if (index > -1) {
             this.__mapPointerMoveEventListeners.splice(mapPointerMoveEventListener, 1);
         }
+    }-*/;
+    
+    public final native void addMapPostRenderEventListener(MapPostRenderEventListener mapPostRenderEventListener) /*-{
+        if (!this.__mapPostRenderEventListenerRegistered) {
+            var that = this;
+            var callback = function(event) {
+                var _event = {};
+                that.__notifyMapPostRenderEventListeners(_event);
+            };
+            this.on('postrender', $entry(callback), this);
+            this.__mapPostRenderEventListenerRegistered = true;
+            this.__mapPostRenderEventListeners = [];
+            this.__notifyMapPostRenderEventListeners = function(event) {
+                var length = this.__mapPostRenderEventListeners.length;
+                for (var i = 0; i < length; i++) {
+                    var listener = this.__mapPostRenderEventListeners[i];
+                    listener.@org.ol3cesium.client.ol.event.MapPostRenderEventListener::onMapPostRender(Lorg/ol3cesium/client/ol/event/MapPostRenderEvent;)(event);
+                }
+            }
+        }
+        this.__mapPostRenderEventListeners.push(mapPostRenderEventListener);
     }-*/;
 }

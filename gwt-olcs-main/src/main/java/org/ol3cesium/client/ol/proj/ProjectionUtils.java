@@ -73,6 +73,26 @@ public class ProjectionUtils {
     }-*/;
     
     /**
+     * Fetches a Projection object for the code specified.
+     * @param projection Either a code string which is a combination of authority 
+     * and identifier such as "EPSG:4326", or an existing projection object, or undefined.
+     * @return Projection object, or null if not in list.
+     */
+    public static final native Projection get(Projection projection) /*-{
+        return ol.proj.get(projection);
+    }-*/;
+    
+    /**
+     * Fetches a Projection object for the code specified.
+     * @param projection Either a code string which is a combination of authority 
+     * and identifier such as "EPSG:4326", or an existing projection object, or undefined.
+     * @return Projection object, or null if not in list.
+     */
+    public static final native Projection get(String projection) /*-{
+        return ol.proj.get(projection);
+    }-*/;
+    
+    /**
      * TTransforms a coordinate to longitude/latitude.
      * The default is Web Mercator, i.e. 'EPSG:3857'.
      * @param coordinate {@link Coordinate} Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.

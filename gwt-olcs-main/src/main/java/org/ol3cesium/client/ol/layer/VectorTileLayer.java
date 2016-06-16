@@ -92,7 +92,7 @@ public class VectorTileLayer extends VectorLayer {
                     that.__notifyVectorTileLayerChangeEventListeners(_event);
                 }
             }
-            var types = ['extent', 'maxResolution', 'minResolution', 'opacity', 'preload', 'source', useInterimTilesOnError', 'visible', 'zIndex'];
+            var types = ['extent', 'maxResolution', 'minResolution', 'opacity', 'preload', 'source', 'useInterimTilesOnError', 'visible', 'zIndex'];
             for (var i = 0; i < types.length; i++) {
                 this.on('change:' + types[i], $entry(createCallback(types[i])), this);
             }

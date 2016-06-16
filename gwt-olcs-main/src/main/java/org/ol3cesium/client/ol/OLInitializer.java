@@ -93,7 +93,7 @@ public class OLInitializer {
             try {
                 callback.onSuccess(null);
             } catch (Throwable t) {
-                _logger.log(Level.SEVERE, "Error initializing OpenLayers3: " + t.getMessage(), t);
+                _logger.log(Level.SEVERE, "Error initializing olcs: " + t.getMessage(), t);
             }
         }
     }

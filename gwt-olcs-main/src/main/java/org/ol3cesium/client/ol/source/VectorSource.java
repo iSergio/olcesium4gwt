@@ -150,4 +150,8 @@ public class VectorSource extends Source {
     public final native void removeFeature(Feature feature) /*-{
         this.removeFeature(feature);
     }-*/;
+    
+//    public final native void addFeatureEventListener(FeatureEventListener featureEventListener) /*-{
+//        //
+//    }-*/;
 }

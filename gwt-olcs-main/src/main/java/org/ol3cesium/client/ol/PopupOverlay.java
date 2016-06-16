@@ -71,6 +71,7 @@ public class PopupOverlay extends Overlay {
     public final native void setContent(String content) /*-{
         var popup = $wnd.document.getElementById('popup_' + this.get('id'));
         var _content = popup.getElementsByClassName('ol-popup-content')[0];
+        if (_content == null) return;
         _content.innerHTML = content;
     }-*/;
     
