@@ -35,8 +35,6 @@ import org.ol3cesium.client.ol.OLInitializer;
 import org.ol3cesium.client.ol.View;
 import org.ol3cesium.client.ol.control.ZoomSliderControl;
 import org.ol3cesium.client.ol.layer.TileLayer;
-import org.ol3cesium.client.ol.proj.Projection;
-import org.ol3cesium.client.ol.proj.ProjectionUtils;
 import org.ol3cesium.client.ol.source.OSMSource;
 import org.ol3cesium.client.olcs.OLCesium;
 import org.ol3cesium.client.olcs.OLCesiumOptions;
@@ -65,10 +63,7 @@ public class Ol3CesiumExample extends AbstractExample {
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
                 olConfiguration.setName("ol3cesium-debug.js");
                 List<String> styles = new ArrayList<String>();
-                styles.add(GWT.getModuleBaseURL() + "JavaScript/OpenLayers3/ol.css");
-                styles.add(GWT.getModuleBaseURL() + "JavaScript/OpenLayers3/geobase.css");
-                styles.add(GWT.getModuleBaseURL() + "JavaScript/OpenLayers3/overviewmap.css");
-                styles.add(GWT.getModuleBaseURL() + "JavaScript/OpenLayers3/tooltip.css");
+                styles.add(GWT.getModuleBaseURL() + "JavaScript/ol.css");
                 olConfiguration.setStyles(styles);
                 
                 /**
