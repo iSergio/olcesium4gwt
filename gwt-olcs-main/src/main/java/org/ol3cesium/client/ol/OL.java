@@ -25,7 +25,7 @@ import java.util.List;
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class OL extends JavaScriptObject{
+public class OL extends JavaScriptObject {
     protected OL() {
         //
     }

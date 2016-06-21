@@ -64,14 +64,12 @@ public class OLInitializer {
                 createSetter(_document);
                 
                 String script;
-                JavaScriptObject scriptElement;
-
                 if (olcsDefined()) {
                     script = "document.setGlobalInGWT(ol, olcs);";
                 } else {
                     script = "document.setGlobalInGWT(ol, undefined);";
                 }
-                scriptElement = ScriptInjector.fromString(script).setWindow(getWindow(_document)).inject();
+                ScriptInjector.fromString(script).setWindow(getWindow(_document)).inject();
             }
         }).inject();
     }

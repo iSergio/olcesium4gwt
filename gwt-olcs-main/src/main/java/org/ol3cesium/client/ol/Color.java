@@ -28,39 +28,39 @@ public class Color extends JavaScriptObject {
         //
     }
     
-    public final static native Color create(Integer r, Integer g, Integer b, Float a) /*-{
+    public final static native Color create(int r, int g, int b, float a) /*-{
         return [r, g, b, a];
     }-*/;
     
-    public final native void setRed(Integer r) /*-{
+    public final native void setRed(int r) /*-{
         this[0] = r;
     }-*/;
     
-    public final native Integer getRed() /*-{
+    public final native int getRed() /*-{
         return this[0];
     }-*/;
     
-    public final native void setGreen(Integer g) /*-{
+    public final native void setGreen(int g) /*-{
         this[1] = g;
     }-*/;
     
-    public final native Integer getGren() /*-{
+    public final native int getGren() /*-{
         return this[1];
     }-*/;
     
-    public final native void setBlue(Integer b) /*-{
+    public final native void setBlue(int b) /*-{
         this[2] = b;
     }-*/;
     
-    public final native Integer getBlue() /*-{
+    public final native int getBlue() /*-{
         return this[2];
     }-*/;
     
-    public final native void setAlpha(Float a) /*-{
+    public final native void setAlpha(float a) /*-{
         this[3] = a;
     }-*/;
     
-    public final native Float getAlpha() /*-{
+    public final native float getAlpha() /*-{
         return this[3];
     }-*/;
     

@@ -156,6 +156,31 @@ public class View extends Object {
     }-*/;
     
     /**
+     * Fit the given geometry or extent based on the given map size and border. 
+     * The size is pixel dimensions of the box to fit the extent into. 
+     * In most cases you will want to use the map size, that is map.getSize(). 
+     * Takes care of the map angle.
+     * @param extent Extent.
+     * @param size Box pixel size.
+     */
+    public final native void fit(Extent extent, Size size) /*-{
+        this.fit(extent, size);
+    }-*/;
+    
+    /**
+     * Fit the given geometry or extent based on the given map size and border. 
+     * The size is pixel dimensions of the box to fit the extent into. 
+     * In most cases you will want to use the map size, that is map.getSize(). 
+     * Takes care of the map angle.
+     * @param extent Extent.
+     * @param size Box pixel size.
+     * @param options
+     */
+    public final native void fit(Extent extent, Size size, FitOptions options) /*-{
+        this.fit(extent, size, options);
+    }-*/;
+    
+    /**
      * Get the view center.
      * @return The center of the view.
      */
@@ -177,6 +202,15 @@ public class View extends Object {
      */
     public final native double getResolution() /*-{
         return this.getResolution();
+    }-*/;
+    
+    /**
+     * Get the resolutions for the view. This returns the array of resolutions 
+     * passed to the constructor of the {ol.View}, or undefined if none were given.
+     * @return resolutions for the view
+     */
+    public final native JsArrayNumber getResolutions() /*-{
+        return this.getResolutions();
     }-*/;
     
     /**

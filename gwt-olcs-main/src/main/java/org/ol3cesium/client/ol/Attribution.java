@@ -22,7 +22,7 @@ import org.ol3cesium.client.olx.AttributionOptions;
  * An attribution for a layer source.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class Attribution extends JavaScriptObject{
+public class Attribution extends JavaScriptObject {
     protected Attribution() {
         //
     }
