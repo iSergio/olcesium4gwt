@@ -26,6 +26,7 @@ import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.gwt.user.client.ui.Image;
 import java.util.List;
 import org.ol3cesium.demo.client.config.provider.ShowcaseBrandsProvider;
+import org.ol3cesium.demo.client.examples.ol3cesium.ImageArcGISMapServer;
 import org.ol3cesium.demo.client.examples.ol3cesium.Ol3CesiumExample;
 import org.ol3cesium.demo.client.examples.ol3cesium.VectorWfsGetfeature;
 
@@ -45,6 +46,7 @@ public class GwtOpenlayersInjectorModule extends AbstractGinModule {
         
         bind(Ol3CesiumExample.class).asEagerSingleton();
         bind(VectorWfsGetfeature.class).asEagerSingleton();
+        bind(ImageArcGISMapServer.class).asEagerSingleton();
     }
 
 }
