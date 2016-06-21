@@ -31,6 +31,15 @@ public class TileUTFGridSourceOptions extends JavaScriptObject {
     }-*/;
     
     /**
+     * Use JSONP with callback to load the TileJSON. Useful 
+     * when the server does not support CORS. Default is false.
+     * @param jsonp JSONP with callback to load the TileJSON
+     */
+    public final native void setJSonP(boolean jsonp) /*-{
+        this.jsonp = jsonp;
+    }-*/;
+    
+    /**
      * If true the TileUTFGrid source loads the tiles based on their "visibility". 
      * This improves the speed of response, but increases traffic. 
      * Note that if set to false, you need to pass true as opt_request to 
@@ -41,9 +50,18 @@ public class TileUTFGridSourceOptions extends JavaScriptObject {
     public final native void setPreemptive(boolean preemptive) /*-{
         this.preemptive = preemptive;
     }-*/;
+    
+    /**
+     * TileJSON configuration for this source. If not provided, url must be configured.
+     * @param tileJSON configuration for this source
+     */
+    public final native void setTileJSON(JavaScriptObject tileJSON) /*-{
+        this.tileJSON = tileJSON;
+    }-*/;
 
     /**
-     * 
+     * TileJSON endpoint that provides the configuration for this source. 
+     * Request will be made through JSONP. If not provided, tileJSON must be configured.
      * @param url Required.
      */
     public final native void setUrl(String url) /*-{
