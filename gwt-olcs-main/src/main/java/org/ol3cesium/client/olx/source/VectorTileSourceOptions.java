@@ -62,6 +62,7 @@ public class VectorTileSourceOptions extends JavaScriptObject {
     /**
      * Whether the layer is opaque.
      * @param opaque Opaque.
+     * @Deprecated This option is no longer needed, so it was removed from the API.
      */
     public final native void setOpaque(boolean opaque) /*-{
         this.opaque = opaque;
