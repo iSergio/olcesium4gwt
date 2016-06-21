@@ -18,6 +18,7 @@ package org.ol3cesium.client.olx.format;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
 import org.ol3cesium.client.ol.Extent;
+import org.ol3cesium.client.ol.format.filter.OGCFilter;
 
 /**
  *
@@ -127,5 +128,9 @@ public class WFSWriteGetFeatureFormatOptions extends JavaScriptObject {
      */
     public final native void setBbox(Extent bbox) /*-{
         this.bbox = bbox;
+    }-*/;
+    
+    public final native void setFilter(OGCFilter filter) /*-{
+        this.filter = filter;
     }-*/;
 }
