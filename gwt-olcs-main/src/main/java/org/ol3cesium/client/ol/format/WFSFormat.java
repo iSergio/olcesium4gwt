@@ -101,8 +101,8 @@ public class WFSFormat extends XMLFeatureFormat {
      * @param options
      * @return Result.
      */
-    public final native JavaScriptObject writeGetFeature(WFSWriteGetFeatureFormatOptions options) /*-{
-        return this.writeGetFeature(options);
+    public final native String writeGetFeature(WFSWriteGetFeatureFormatOptions options) /*-{
+        return new XMLSerializer().serializeToString(this.writeGetFeature(options));
     }-*/;
     
     /**
