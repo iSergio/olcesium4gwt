@@ -15,34 +15,31 @@
  */
 package org.ol3cesium.demo.client.examples.ol3cesium;
 
-import com.google.gwt.cell.client.TextButtonCell;
 import com.google.gwt.core.client.Callback;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayNumber;
-import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.core.client.JsArrayUtils;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.logical.shared.ValueChangeEvent;
-import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.typedarrays.client.JsUtils;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.ToggleButton;
 import com.google.gwt.user.client.ui.Widget;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import javax.inject.Inject;
+import org.cesiumjs.cesium.Cartesian3;
 import org.cesiumjs.cesium.Cesium;
 import org.cesiumjs.cesium.Color;
 import org.cesiumjs.cesium.Ellipsoid;
+import org.cesiumjs.cesium.Label;
+import org.cesiumjs.cesium.LabelCollection;
 import org.cesiumjs.cesium.SkyBox;
 import org.cesiumjs.cesium.Sun;
 import org.cesiumjs.cesium.TerrainProvider;
@@ -84,7 +81,6 @@ import org.ol3cesium.client.olx.layer.VectorLayerOptions;
 import org.ol3cesium.client.olx.source.ImageVectorSourceOptions;
 import org.ol3cesium.client.olx.source.VectorSourceOptions;
 import org.ol3cesium.client.olx.style.CircleStyleOptions;
-import org.ol3cesium.client.olx.style.FillStyleOptions;
 import org.ol3cesium.client.olx.style.IconStyleOptions;
 import org.ol3cesium.client.olx.style.StrokeStyleOptions;
 import org.ol3cesium.client.olx.style.StyleOptions;
@@ -503,6 +499,13 @@ public class Ol3CesiumVectorExample extends AbstractExample {
 
                             _olCesium.setEnabled(enable);
                             _olCesium.enableAutoRenderLoop();
+                            
+                            LabelCollection csLabels = LabelCollection.create();
+                            Label csLabel = Label.create();
+                            csLabel.setPosition(Cartesian3.fromRadians(20, 20, 0));
+                            csLabel.setText("Pre-existing primitive");
+                            csLabels.add(csLabel);
+                            _olCesium.getCesiumScene().getPrimitives().add(csLabels);
                         }
                     });
                 } else {
@@ -619,7 +622,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
             }
         });
         
-        contentPanel.add(new HTML("<p>This example shows how integrate cesium-gwt and gwt-olcs</p>"));
+        contentPanel.add(new HTML("<p>This example shows how work synchronization vectro layers between ol and Cesium</p>"));
         contentPanel.add(mapWidget);
         
         HorizontalPanel horizontalPanel1 = new HorizontalPanel();
