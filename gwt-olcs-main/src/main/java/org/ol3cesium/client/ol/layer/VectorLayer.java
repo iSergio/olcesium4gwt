@@ -15,6 +15,7 @@
  */
 package org.ol3cesium.client.ol.layer;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.ol3cesium.client.olx.layer.VectorLayerOptions;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.style.Style;
@@ -61,6 +62,24 @@ public class VectorLayer extends Layer {
     }-*/;
     
     /**
+     * Get the style for features. This returns whatever was passed to the 
+     * style option at construction or to the setStyle method.
+     * @return Layer styles.
+     */
+    public final native JsArray<Style> getStyles() /*-{
+        return this.getStyle();
+    }-*/;
+    
+    /**
+     * Get the style for features. This returns whatever was passed to the 
+     * style option at construction or to the setStyle method.
+     * @return Layer style function.
+     */
+    public final native JavaScriptObject getStyleFunction() /*-{
+        return this.getStyle();
+    }-*/;
+    
+    /**
      * Set the style for features. This can be a single style object, an array of 
      * styles, or a function that takes a feature and resolution and returns an 
      * array of styles. If it is undefined the default style is used. 
@@ -83,6 +102,19 @@ public class VectorLayer extends Layer {
      * @param style Layer style.
      */
     public final native void setStyle(JsArray<Style> style) /*-{
+        this.setStyle(style);
+    }-*/;
+    
+    /**
+     * Set the style for features. This can be a single style object, an array of 
+     * styles, or a function that takes a feature and resolution and returns an 
+     * array of styles. If it is undefined the default style is used. 
+     * If it is null the layer has no style (a null style), so only features that 
+     * have their own styles will be rendered in the layer. See ol.style for 
+     * information on the default style.
+     * @param style Layer style.
+     */
+    public final native void setStyle(JavaScriptObject style) /*-{
         this.setStyle(style);
     }-*/;
 }
