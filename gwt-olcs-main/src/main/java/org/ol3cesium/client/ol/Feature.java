@@ -15,6 +15,7 @@
  */
 package org.ol3cesium.client.ol;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.event.FeatureChangeEventListener;
 import org.ol3cesium.client.ol.geom.Geometry;
@@ -91,7 +92,25 @@ public class Feature extends Object {
      * was provided to the ol.Feature#setStyle method.
      * @return The feature styles.
      */
-    public final native JsArray<Style> getStyle() /*-{
+    public final native JsArray<Style> getStyles() /*-{
+        return this.getStyle();
+    }-*/;
+    
+    /**
+     * Get the feature's style. This return for this method depends on what 
+     * was provided to the ol.Feature#setStyle method.
+     * @return The feature styles.
+     */
+    public final native Style getStyle() /*-{
+        return this.getStyle();
+    }-*/;
+    
+    /**
+     * Get the feature's style. This return for this method depends on what 
+     * was provided to the ol.Feature#setStyle method.
+     * @return Style function
+     */
+    public final native JavaScriptObject getStyleFunction() /*-{
         return this.getStyle();
     }-*/;
     
@@ -141,6 +160,16 @@ public class Feature extends Object {
      */
     public final native void setStyle(JsArray<Style> style) /*-{
         this.setStyle(style);
+    }-*/;
+    
+    /**
+     * Set the style for the feature. This can be a single style object, an array 
+     * of styles, or a function that takes a resolution and returns an array of styles. 
+     * If it is null the feature has no style (a null style).
+     * @param styleFunction Style function.
+     */
+    public final native void setStyle(JavaScriptObject styleFunction) /*-{
+        this.setStyle(styleFunction);
     }-*/;
     
     public final native void addFeatureChangeEventListener(FeatureChangeEventListener featureChangeEventListener) /*-{
