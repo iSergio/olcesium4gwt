@@ -46,6 +46,14 @@ public class OLCesium extends JavaScriptObject {
     }-*/;
     
     /**
+     * Get the autorender loop.
+     * @return autorender loop.
+     */
+    public final native AutoRenderLoop getAutoRenderLoop() /*-{
+        return this.getAutoRenderLoop();
+    }-*/;
+    
+    /**
      * 
      * @return 
      */
