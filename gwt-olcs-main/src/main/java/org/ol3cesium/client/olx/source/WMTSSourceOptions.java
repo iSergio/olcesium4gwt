@@ -177,14 +177,6 @@ public class WMTSSourceOptions extends JavaScriptObject {
         this.url = url;
     }-*/;
 
-    /**
-     * 
-     * @param maxZoom Maximum zoom.
-     */
-    public final native void setMaxZoom(int maxZoom) /*-{
-        this.maxZoom = maxZoom;
-    }-*/;
-
 //tileLoadFunction	ol.TileLoadFunctionType | undefined	experimental
 //Optional function to load a tile given a URL.
     
