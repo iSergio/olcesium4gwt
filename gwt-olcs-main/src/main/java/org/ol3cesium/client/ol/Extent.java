@@ -48,6 +48,16 @@ public class Extent extends JavaScriptObject {
     }-*/;
     
     /**
+     * Apply a transform function to the extent.
+     * @param extent Extent.
+     * @param transformFn Transform function. Called with [minX, minY, maxX, maxY] extent coordinates.
+     * @return Extent.
+     */
+    public static final native Extent applyTransform(Extent extent, JavaScriptObject transformFn) /*-{
+        return ol.extent.applyTransform(extent, transformFn);
+    }-*/;
+    
+    /**
      * Build an extent that includes all given coordinates.
      * @param coordinates Coordinates.
      * @return Bounding extent.
