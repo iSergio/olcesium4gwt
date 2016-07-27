@@ -17,7 +17,6 @@ package org.ol3cesium.client.olx.layer;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import org.ol3cesium.client.ol.Feature;
 import org.ol3cesium.client.ol.Map;
 import org.ol3cesium.client.ol.source.VectorSource;
 import org.ol3cesium.client.ol.style.Style;

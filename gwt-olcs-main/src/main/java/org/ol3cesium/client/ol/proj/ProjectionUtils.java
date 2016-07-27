@@ -15,6 +15,7 @@
  */
 package org.ol3cesium.client.ol.proj;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import org.ol3cesium.client.ol.Coordinate;
 import org.ol3cesium.client.ol.Extent;
@@ -166,5 +167,16 @@ public class ProjectionUtils {
      */
     public static final native Extent transformExtent(Extent extent, String source, String destination) /*-{
         return ol.proj.transformExtent(extent, source, destination);
+    }-*/;
+    
+    /**
+     * Given the projection-like objects, searches for a transformation function 
+     * to convert a coordinates array from the source projection to the destination projection.
+     * @param source Source.
+     * @param destination Destination.
+     * @return Transform function.
+     */
+    public static final native JavaScriptObject getTransform(String source, String destination) /*-{
+        return ol.proj.getTransform(source, destination);
     }-*/;
 }
