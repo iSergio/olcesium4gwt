@@ -320,22 +320,25 @@ public class Map extends Object {
     public final native void flyTo(Geometry geometry, int zoom) /*-{
         var duration = 1000;
         var start = +new Date();
-        var pan = $wnd.ol.animation.pan({
+        var pan = ol.animation.pan({
             duration: duration,
             source: (this.getView().getCenter()),
             start: start
         });
-        var bounce = $wnd.ol.animation.bounce({
+        var bounce = ol.animation.bounce({
             duration: duration,
             resolution: this.getView().getZoom() * this.getView().getResolution(),
             start: start
         });
         this.beforeRender(pan, bounce);
-        var opts = {};
-        if (geometry.getType() != 'MultiPolygon' || geometry.getType() != 'Polygon') {
+        console.log(geometry.getType());
+        if (geometry.getType() == 'MultiPolygon' || geometry.getType() == 'Polygon') {
+            var opts = {};
             opts = {maxZoom: zoom};
+            this.getView().fit(geometry, this.getSize(), opts);
+        } else {
+            this.getView().setCenter(ol.extent.getCenter(geometry.getExtent()));
         }
-        this.getView().fit(geometry, this.getSize(), opts);
     }-*/;
     
     public final native void addMouseMoveEventListener(MouseMoveEventListener mouseMoveEventListener) /*-{
