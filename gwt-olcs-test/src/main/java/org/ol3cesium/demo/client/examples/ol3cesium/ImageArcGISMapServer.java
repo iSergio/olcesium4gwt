@@ -35,12 +35,13 @@ import org.ol3cesium.client.ol.layer.BaseLayer;
 import org.ol3cesium.client.ol.layer.ImageLayer;
 import org.ol3cesium.client.ol.layer.TileLayer;
 import org.ol3cesium.client.ol.source.ImageArcGISRestSource;
-import org.ol3cesium.client.ol.source.MapQuestSource;
+import org.ol3cesium.client.ol.source.OSMSource;
+//import org.ol3cesium.client.ol.source.MapQuestSource;
 import org.ol3cesium.client.olx.MapOptions;
 import org.ol3cesium.client.olx.ViewOptions;
 import org.ol3cesium.client.olx.layer.TileLayerOptions;
 import org.ol3cesium.client.olx.source.ImageArcGISRestSourceOptions;
-import org.ol3cesium.client.olx.source.MapQuestSourceOptions;
+//import org.ol3cesium.client.olx.source.MapQuestSourceOptions;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 
@@ -73,13 +74,10 @@ public class ImageArcGISMapServer extends AbstractExample {
                 _mapPanel = new MapPanel(olConfiguration) {
                     @Override
                     public Map createMap(Element element) {
-                        MapQuestSourceOptions mapQuestSourceOptions = MapQuestSourceOptions.create();
-                        mapQuestSourceOptions.setLayer("sat");
-                        MapQuestSource mapQuestSource = MapQuestSource.create(mapQuestSourceOptions);
                         TileLayerOptions tileLayerOptions = TileLayerOptions.create();
-                        tileLayerOptions.setSource(mapQuestSource);
+                        tileLayerOptions.setSource(OSMSource.create());
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);
-                        
+          
                         String url = "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/" +
                                      "Specialty/ESRI_StateCityHighway_USA/MapServer";
                         ImageArcGISRestSourceOptions imageArcGISRestSourceOptions = ImageArcGISRestSourceOptions.create();
