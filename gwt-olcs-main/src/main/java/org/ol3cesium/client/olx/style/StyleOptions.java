@@ -16,6 +16,7 @@
 package org.ol3cesium.client.olx.style;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import org.ol3cesium.client.ol.geom.Geometry;
 import org.ol3cesium.client.ol.style.FillStyle;
 import org.ol3cesium.client.ol.style.ImageStyle;
 import org.ol3cesium.client.ol.style.StrokeStyle;
@@ -32,6 +33,30 @@ public class StyleOptions extends JavaScriptObject {
     
     public static final native StyleOptions create() /*-{
         return new ol.style.Style();
+    }-*/;
+    
+    /**
+     * Feature property or geometry or function returning a geometry to render for this style.
+     * @param geometry 
+     */
+    public final native void setGeometry(String geometry) /*-{
+        this.geometry = geometry;
+    }-*/;
+    
+    /**
+     * Feature property or geometry or function returning a geometry to render for this style.
+     * @param geometry 
+     */
+    public final native void setGeometry(Geometry geometry) /*-{
+        this.geometry = geometry;
+    }-*/;
+    
+    /**
+     * Feature property or geometry or function returning a geometry to render for this style.
+     * @param geometry 
+     */
+    public final native void setGeometry(JavaScriptObject geometry) /*-{
+        this.geometry = geometry;
     }-*/;
     
     /**
