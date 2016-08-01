@@ -70,6 +70,10 @@ public class BaseLayer extends Object {
         return this.get('className');
     }-*/;
     
+    public final LayerType getType() {
+        return LayerType.fromString(this.getClassName());
+    }
+    
     /**
      * Return the extent of the layer or null if it will be visible regardless of extent
      * @return The layer extent
