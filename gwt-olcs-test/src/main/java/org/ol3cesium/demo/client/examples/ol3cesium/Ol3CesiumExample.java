@@ -60,10 +60,10 @@ public class Ol3CesiumExample extends AbstractExample {
         public final Widget asWidget() {
             if (_mapPanel == null) {
                 OLConfiguration olConfiguration = new OLConfiguration();
-                olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
+                olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/ol3/");
                 olConfiguration.setName("ol-debug.js");
                 List<String> styles = new ArrayList<String>();
-                styles.add(GWT.getModuleBaseURL() + "JavaScript/ol.css");
+                styles.add(GWT.getModuleBaseURL() + "JavaScript/ol3/ol.css");
                 olConfiguration.setStyles(styles);
                 
                 /**
