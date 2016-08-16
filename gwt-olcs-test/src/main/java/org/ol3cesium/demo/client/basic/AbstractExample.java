@@ -19,7 +19,10 @@ package org.ol3cesium.demo.client.basic;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import java.util.ArrayList;
+import java.util.List;
 import org.ol3cesium.demo.client.ExampleBean;
 import org.ol3cesium.demo.client.components.store.ExampleStore;
 
@@ -32,13 +35,13 @@ import org.ol3cesium.demo.client.components.store.ExampleStore;
 public abstract class AbstractExample extends Composite {
 
     protected VerticalPanel contentPanel = new VerticalPanel();
-    private final ShowSourceButton butShowSource = new ShowSourceButton("");
+    protected HorizontalPanel horizontalPanel = new HorizontalPanel();
+    private final List<ShowSourceButton> showSourceButtons = new ArrayList<ShowSourceButton>();
     protected ExampleBean example;
 
-    public AbstractExample(String name, String description, String[] tags,
-            ExampleStore store) {
-       this(name, description, tags);
-       store.addExample(example);
+    public AbstractExample(String name, String description, String[] tags, ExampleStore store) {
+        this(name, description, tags);
+        store.addExample(example);
     }
 
     /**
@@ -46,26 +49,32 @@ public abstract class AbstractExample extends Composite {
      *
      */
     public AbstractExample(String name, String description, String[] tags) {
+        for (String sourceCodeUrl : getSourceCodeURLs()) {
+            ShowSourceButton butShowSource = new ShowSourceButton("");
+            butShowSource.setSourceCodeURL(sourceCodeUrl);
+            showSourceButtons.add(butShowSource);
+        }
         setTitle(name);
-        butShowSource.setSourceCodeURL(getSourceCodeURL());
-
         this.example = new ExampleBean(name, description, tags, this);
     }
 
     public abstract void buildPanel();
-
-    public abstract String getSourceCodeURL();
+    
+    public abstract String[] getSourceCodeURLs();
 
     /**
      * @param title the title to set
      */
     @Override
     public void setTitle(String title) {
+        for (ShowSourceButton butShowSource : showSourceButtons) {
+            horizontalPanel.add(butShowSource);
+        }
         contentPanel.setSpacing(5);
         contentPanel.getElement().getStyle().setPadding(10, Unit.PX);
         contentPanel.setWidth("100%");
         contentPanel.add(new HTML("<H1>" + title + "</H1>"));
-        contentPanel.add(butShowSource);
+        contentPanel.add(horizontalPanel);
     }
 
     /**

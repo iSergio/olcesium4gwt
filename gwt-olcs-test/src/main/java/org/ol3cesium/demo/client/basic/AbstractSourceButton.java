@@ -41,8 +41,7 @@ public abstract class AbstractSourceButton extends Composite implements
     private String sourceCodeURL;
 
     public AbstractSourceButton(String source) {
-        this.button = new Button(ShowcaseSearchPanel.I18N.viewSource(source),
-                this);
+        this.button = new Button(ShowcaseSearchPanel.I18N.viewSource(source), this);
 
         super.initWidget(button);
     }
@@ -51,6 +50,8 @@ public abstract class AbstractSourceButton extends Composite implements
      * @param sourceCodeURL the sourceCodeURL to set
      */
     public void setSourceCodeURL(String sourceCodeURL) {
+        String[] sourceCodeURLParts = sourceCodeURL.split("/");
+        button.setText(button.getText() + " - " + sourceCodeURLParts[sourceCodeURLParts.length - 1].replace(".txt", ""));
         this.sourceCodeURL = sourceCodeURL;
     }
 
