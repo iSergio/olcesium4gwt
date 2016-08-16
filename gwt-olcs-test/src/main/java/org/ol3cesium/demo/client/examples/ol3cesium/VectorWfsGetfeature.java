@@ -210,9 +210,11 @@ public class VectorWfsGetfeature extends AbstractExample {
 
         initWidget(contentPanel);
     }
-
+    
     @Override
-    public String getSourceCodeURL() {
-        return GWT.getModuleBaseURL() + "examples/ol3cesium/" + "VectorWfsGetfeature.txt";
+    public String[] getSourceCodeURLs() {
+        String[] sourceCodeURLs = new String[1];
+        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/ol3cesium/" + "VectorWfsGetfeature.txt";
+        return sourceCodeURLs;
     }
 }

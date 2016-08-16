@@ -36,12 +36,10 @@ import org.ol3cesium.client.ol.layer.ImageLayer;
 import org.ol3cesium.client.ol.layer.TileLayer;
 import org.ol3cesium.client.ol.source.ImageArcGISRestSource;
 import org.ol3cesium.client.ol.source.OSMSource;
-//import org.ol3cesium.client.ol.source.MapQuestSource;
 import org.ol3cesium.client.olx.MapOptions;
 import org.ol3cesium.client.olx.ViewOptions;
 import org.ol3cesium.client.olx.layer.TileLayerOptions;
 import org.ol3cesium.client.olx.source.ImageArcGISRestSourceOptions;
-//import org.ol3cesium.client.olx.source.MapQuestSourceOptions;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 
@@ -118,7 +116,7 @@ public class ImageArcGISMapServer extends AbstractExample {
     
     @Inject
     public ImageArcGISMapServer(ShowcaseExampleStore store) {
-        super("Image ArcGIS MapServer", "Example of an image ArcGIS layer.", new String[]{"Map", "View", "Tile", "Image", "MapQuest", "ImageArcGISRest"}, store);
+        super("Image ArcGIS MapServer", "Example of an image ArcGIS layer.", new String[]{"Map", "View", "Tile", "Image", "ImageArcGISRest"}, store);
     }
 
     @Override
@@ -131,9 +129,11 @@ public class ImageArcGISMapServer extends AbstractExample {
 
         initWidget(contentPanel);
     }
-
+    
     @Override
-    public String getSourceCodeURL() {
-        return GWT.getModuleBaseURL() + "examples/ol3cesium/" + "ImageArcGISMapServer.txt";
+    public String[] getSourceCodeURLs() {
+        String[] sourceCodeURLs = new String[1];
+        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/ol3cesium/" + "ImageArcGISMapServer.txt";
+        return sourceCodeURLs;
     }
 }

@@ -61,7 +61,7 @@ public class Ol3CesiumExample extends AbstractExample {
             if (_mapPanel == null) {
                 OLConfiguration olConfiguration = new OLConfiguration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
-                olConfiguration.setName("ol3cesium-debug.js");
+                olConfiguration.setName("ol-debug.js");
                 List<String> styles = new ArrayList<String>();
                 styles.add(GWT.getModuleBaseURL() + "JavaScript/ol.css");
                 olConfiguration.setStyles(styles);
@@ -186,9 +186,11 @@ public class Ol3CesiumExample extends AbstractExample {
 
         initWidget(contentPanel);
     }
-
+    
     @Override
-    public String getSourceCodeURL() {
-        return GWT.getModuleBaseURL() + "examples/ol3cesium/" + "Ol3CesiumExample.txt";
+    public String[] getSourceCodeURLs() {
+        String[] sourceCodeURLs = new String[1];
+        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/ol3cesium/" + "Ol3CesiumExample.txt";
+        return sourceCodeURLs;
     }
 }
