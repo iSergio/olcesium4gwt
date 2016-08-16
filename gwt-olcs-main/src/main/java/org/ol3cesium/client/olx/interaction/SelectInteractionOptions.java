@@ -36,6 +36,20 @@ public class SelectInteractionOptions extends JavaScriptObject {
     }-*/;
     
     /**
+     * A function that takes an ol.MapBrowserEvent and returns a boolean to 
+     * indicate whether that event should be handled. 
+     * This is the event for the selected features as a whole. 
+     * By default, this is ol.events.condition.singleClick. Clicking on a 
+     * feature selects that feature and removes any that were in the selection. 
+     * Clicking outside any feature removes all from the selection. See toggle, 
+     * add, remove options for adding/removing extra features to/ from the selection.
+     * @param condition Condition function
+     */
+    public final native void setCondition(JavaScriptObject condition) /*-{
+        this.condition = condition;
+    }-*/;
+    
+    /**
      * A list of layers from which features should be selected. 
      * Alternatively, a filter function can be provided. The function will be 
      * called for each layer in the map and should return true for layers that 
