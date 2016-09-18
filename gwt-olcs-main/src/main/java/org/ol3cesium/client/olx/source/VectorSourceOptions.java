@@ -94,6 +94,17 @@ public class VectorSourceOptions extends JavaScriptObject {
     }-*/;
     
     /**
+     * This source may have overlapping geometries. Default is true. 
+     * Setting this to false (e.g. for sources with polygons that represent 
+     * administrative boundaries or TopoJSON sources) allows the renderer to 
+     * optimise fill and stroke operations.
+     * @param overlaps 
+     */
+    public final native void setOverlaps(boolean overlaps) /*-{
+        this.overlaps = overlaps;
+    }-*/;
+    
+    /**
      * By default, an RTree is used as spatial index. When features are removed 
      * and added frequently, and the total number of features is low, setting 
      * this to false may improve performance

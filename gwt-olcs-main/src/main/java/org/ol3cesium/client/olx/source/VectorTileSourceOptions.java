@@ -58,6 +58,17 @@ public class VectorTileSourceOptions extends JavaScriptObject {
     public final native void setLogo(String logo) /*-{
         this.logo = logo;
     }*/;
+    
+    /**
+     * This source may have overlapping geometries. Default is true. 
+     * Setting this to false (e.g. for sources with polygons that represent 
+     * administrative boundaries or TopoJSON sources) allows the renderer to 
+     * optimise fill and stroke operations.
+     * @param overlaps 
+     */
+    public final native void setOverlaps(boolean overlaps) /*-{
+        this.overlaps = overlaps;
+    }-*/;
 
     /**
      * Whether the layer is opaque.
