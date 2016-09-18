@@ -75,6 +75,33 @@ public class Geometry extends Object {
     }-*/;
     
     /**
+     * Rotate the geometry around a given coordinate. This modifies the geometry coordinates in place.
+     * @param angle Rotation angle in radians.
+     * @param anchor The rotation center.
+     */
+    public final native void rotate(double angle, Coordinate anchor) /*-{
+        this.rotate(angle, anchor);
+    }-*/;
+    
+    /**
+     * Scale the geometry (with an optional origin). This modifies the geometry coordinates in place.
+     * @param sx The scaling factor in the x-direction.
+     */
+    public final native void scale(double sx) /*-{
+        this.scale(sx);
+    }-*/;
+
+    /**
+     * Scale the geometry (with an optional origin). This modifies the geometry coordinates in place.
+     * @param sx The scaling factor in the x-direction.
+     * @param sy The scaling factor in the y-direction (defaults to sx).
+     * @param anchor The scale origin (defaults to the center of the geometry extent).
+     */
+    public final native void scale(double sx, double sy, Coordinate anchor) /*-{
+        this.scale(sx, sy, anchor);
+    }-*/;
+    
+    /**
      * Create a simplified version of this geometry. For linestrings, this uses 
      * the the Douglas Peucker algorithm. For polygons, 
      * a quantization-based simplification is used to preserve topology.
