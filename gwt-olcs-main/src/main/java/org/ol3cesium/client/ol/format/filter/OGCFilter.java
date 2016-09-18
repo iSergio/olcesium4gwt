@@ -17,6 +17,7 @@ package org.ol3cesium.client.ol.format.filter;
 
 import org.ol3cesium.client.ol.Object;
 import org.ol3cesium.client.ol.Extent;
+import org.ol3cesium.client.ol.geom.Geometry;
 
 /**
  * This namespace contains convenience functions to create filters for ol.format.WFS#writeGetFeature.
@@ -204,5 +205,37 @@ public class OGCFilter extends Object {
      */
     public static final native OGCOrFilter or(OGCFilter conditionA, OGCFilter conditionB) /*-{
         return new ol.format.ogc.filter.or(conditionA, conditionB);
+    }-*/;
+    
+    /**
+     * Create a <Intersects> operator to test whether a geometry-valued property intersects a given geometry.
+     * @param geometryName Geometry name to use.
+     * @param geometry Geometry.
+     * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
+     * @return <Intersects> operator.
+     */
+    public static final native OGCIntersectsFilter intersects(String geometryName, Geometry geometry, String srsName) /*-{
+        return ol.format.ogc.filter.intersects(geometryName, geometry, srsName);
+    }-*/;
+    
+    /**
+     * Create a <Within> operator to test whether a geometry-valued property is within a given geometry.
+     * @param geometryName Geometry name to use.
+     * @param geometry Geometry.
+     * @return <Within> operator.
+     */
+    public static final native OGCWithinFilter within(String geometryName, Geometry geometry) /*-{
+        return new ol.format.ogc.filter.within(geometryName, geometry);
+    }-*/;
+    
+    /**
+     * Create a <Within> operator to test whether a geometry-valued property is within a given geometry.
+     * @param geometryName Geometry name to use.
+     * @param geometry Geometry.
+     * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
+     * @return <Within> operator.
+     */
+    public static final native OGCWithinFilter within(String geometryName, Geometry geometry, String srsName) /*-{
+        return new ol.format.ogc.filter.within(geometryName, geometry, srsName);
     }-*/;
 }
