@@ -68,7 +68,15 @@ public class TextStyle extends JavaScriptObject {
     public final native int getOffsetY() /*-{
         return this.getOffsetY();
     }-*/;
-
+    
+    /**
+     * Determine whether the text rotates with the map.
+     * @return Rotate with map.
+     */
+    public final native boolean getRotateWithView() /*-{
+        return this.getRotateWithView();
+    }-*/;
+    
     /**
      * Get the text rotation.
      * @return Rotation.

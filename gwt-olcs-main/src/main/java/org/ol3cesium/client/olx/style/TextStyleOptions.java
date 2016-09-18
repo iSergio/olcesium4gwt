@@ -140,6 +140,14 @@ public class TextStyleOptions extends JavaScriptObject {
     public final native void setScale(double scale) /*-{
         this.scale = scale;
     }-*/;
+    
+    /**
+     * Whether to rotate the text with the view. Default is `false`.
+     * @param rotateWithView Set rotate with view.
+     */
+    public final native void setRotateWithView(boolean rotateWithView) /*-{
+        this.rotateWithView = rotateWithView;
+    }-*/;
 
     /**
      * Rotation in radians (positive rotation clockwise). Default is 0.
