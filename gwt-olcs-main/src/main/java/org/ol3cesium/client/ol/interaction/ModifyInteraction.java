@@ -27,7 +27,7 @@ public class ModifyInteraction extends PointerInteraction {
         //
     }
     
-    public static final native ModifyInteraction create(ModifyInteractionOptions options) /*-{
+    public static native ModifyInteraction create(ModifyInteractionOptions options) /*-{
         return new ol.interaction.Modify(options);
     }-*/;
     

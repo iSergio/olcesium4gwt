@@ -26,7 +26,7 @@ public class WMSCapabilitiesFormat extends XMLFormat {
         //
     }
     
-    public static final native WMSCapabilitiesFormat create() /*-{
+    public static native WMSCapabilitiesFormat create() /*-{
         return new ol.format.WMSCapabilities();
     }-*/;
     

@@ -28,7 +28,7 @@ public class TranslateInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TranslateInteractionOptions create() /*-{
+    public static native TranslateInteractionOptions create() /*-{
         return {};
     }-*/;
     

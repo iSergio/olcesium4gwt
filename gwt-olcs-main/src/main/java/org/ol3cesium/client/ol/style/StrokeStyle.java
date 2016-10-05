@@ -34,19 +34,19 @@ public class StrokeStyle extends JavaScriptObject {
         //
     }
     
-    public static final native StrokeStyle create() /*-{
+    public static native StrokeStyle create() /*-{
         return new ol.style.Stroke();
     }-*/;
     
-    public static final native StrokeStyle create(Color color) /*-{
+    public static native StrokeStyle create(Color color) /*-{
         return new ol.style.Stroke({color: color});
     }-*/;
     
-    public static final native StrokeStyle create(String color) /*-{
+    public static native StrokeStyle create(String color) /*-{
         return new ol.style.Stroke({color: color});
     }-*/;
     
-    public static final native StrokeStyle create(StrokeStyleOptions options) /*-{
+    public static native StrokeStyle create(StrokeStyleOptions options) /*-{
         return new ol.style.Stroke(options);
     }-*/;
     

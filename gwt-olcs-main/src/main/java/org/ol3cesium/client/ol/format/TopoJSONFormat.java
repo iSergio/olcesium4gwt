@@ -29,11 +29,11 @@ public class TopoJSONFormat extends JSONFeatureFormat {
         //
     }
     
-    public static final native TopoJSONFormat create() /*-{
+    public static native TopoJSONFormat create() /*-{
         return new ol.format.TopoJSON();
     }-*/;
     
-    public static final native TopoJSONFormat create(TopoJSONFormatOptions options) /*-{
+    public static native TopoJSONFormat create(TopoJSONFormatOptions options) /*-{
         return new ol.format.TopoJSON(options);
     }-*/;
     

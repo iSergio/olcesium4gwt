@@ -29,11 +29,11 @@ public class TileGridUtils {
      * Creates a tile grid with a standard XYZ tiling scheme.
      * @return 
      */
-    public static final native TileGrid createXYZ() /*-{
+    public static native TileGrid createXYZ() /*-{
         return ol.tilegrid.createXYZ();
     }-*/;
     
-    public static final native TileGrid createXYZ(CreateXYZOptions options) /*-{
+    public static native TileGrid createXYZ(CreateXYZOptions options) /*-{
         return ol.tilegrid.createXYZ(options);
     }-*/;
     
@@ -42,7 +42,7 @@ public class TileGridUtils {
             //
         }
         
-        public static final native CreateXYZOptions create() /*-{
+        public static native CreateXYZOptions create() /*-{
             return {};
         }-*/;
         

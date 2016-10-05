@@ -38,7 +38,7 @@ public class VectorLayer extends Layer {
         return vector;
     }-*/;
     
-    public static final native VectorLayer create(VectorLayerOptions options) /*-{
+    public static native VectorLayer create(VectorLayerOptions options) /*-{
         var vector = new ol.layer.Vector(options);
         vector.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::VECTOR_LAYER_CLASS_NAME);
         return vector;

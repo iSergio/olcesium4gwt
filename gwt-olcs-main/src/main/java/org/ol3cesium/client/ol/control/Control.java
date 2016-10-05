@@ -29,7 +29,7 @@ public class Control extends Object {
         //
     }
     
-    public static final native Control create(ControlOptions options) /*-{
+    public static native Control create(ControlOptions options) /*-{
         return new ol.control.Control(options);
     }-*/;
     

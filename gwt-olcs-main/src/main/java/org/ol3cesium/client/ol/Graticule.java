@@ -29,11 +29,11 @@ public class Graticule extends JavaScriptObject {
         //
     }
     
-    public static final native Graticule create() /*-{
+    public static native Graticule create() /*-{
         return new ol.Graticule();
     }-*/;
     
-    public static final native Graticule create(GraticuleOptions options) /*-{
+    public static native Graticule create(GraticuleOptions options) /*-{
         return new ol.Graticule(options);
     }-*/;
     

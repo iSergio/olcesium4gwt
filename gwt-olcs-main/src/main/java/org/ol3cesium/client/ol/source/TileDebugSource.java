@@ -30,7 +30,7 @@ public class TileDebugSource extends TileSource {
         //
     }
     
-    public static final native TileDebugSource create(TileDebugSourceOptions options) /*-{
+    public static native TileDebugSource create(TileDebugSourceOptions options) /*-{
         return new ol.source.TileDebug(options);
     }-*/;
 }

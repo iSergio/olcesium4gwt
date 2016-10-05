@@ -26,7 +26,7 @@ public class KeyboardPanInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native KeyboardPanInteractionOptions create() /*-{
+    public static native KeyboardPanInteractionOptions create() /*-{
         return {};
     }-*/;
     

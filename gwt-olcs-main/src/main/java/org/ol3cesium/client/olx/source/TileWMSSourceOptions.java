@@ -28,7 +28,7 @@ public class TileWMSSourceOptions extends TileImageSourceOptions {
         //
     }
     
-    public static final native TileWMSSourceOptions create() /*-{
+    public static native TileWMSSourceOptions create() /*-{
         return {};
     }-*/;
     
@@ -89,7 +89,7 @@ public class TileWMSSourceOptions extends TileImageSourceOptions {
     
     /**
      * The type of the remote WMS server. Currently only used when hidpi is true. Default is undefined.
-     * @param serverType {@link ServerTypeWMSSource}
+     * @param serverType {@link WMSServerType}
      */
     public final native void setServerType(WMSServerType serverType) /*-{
         this.serverType = serverType.toString();

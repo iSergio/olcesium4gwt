@@ -29,11 +29,11 @@ public class Projection extends JavaScriptObject {
         //
     }
     
-    public static final native Projection create(String code) /*-{
+    public static native Projection create(String code) /*-{
         return new ol.proj.Projection({code: code});
     }-*/;
     
-    public static final native Projection create(ProjectionOptions options) /*-{
+    public static native Projection create(ProjectionOptions options) /*-{
         return new ol.proj.Projection(options);
     }-*/;
     
@@ -153,7 +153,7 @@ public class Projection extends JavaScriptObject {
      * @param projection coordinate projection
      * @return normalized coordinate
      */
-    public static final native Coordinate normalizeCoordinate(Coordinate coordinate, Projection projection) /*-{
+    public static native Coordinate normalizeCoordinate(Coordinate coordinate, Projection projection) /*-{
         var normalizedCoordinate = coordinate;
         var extent = projection.getExtent();
         var worldWidth = ol.extent.getWidth(extent);

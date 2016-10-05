@@ -27,7 +27,7 @@ public class WFSWriteTransactionFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WFSWriteTransactionFormatOptions create() /*-{
+    public static native WFSWriteTransactionFormatOptions create() /*-{
         return {};
     }-*/;
     

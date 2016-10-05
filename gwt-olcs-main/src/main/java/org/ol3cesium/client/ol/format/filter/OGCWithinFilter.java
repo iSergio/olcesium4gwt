@@ -39,7 +39,7 @@ public class OGCWithinFilter extends OGCSpatialFilter {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return Within filter.
      */
-    public static final native OGCWithinFilter create(String geometryName, Geometry geometry, String srsName) /*-{
+    public static native OGCWithinFilter create(String geometryName, Geometry geometry, String srsName) /*-{
         return new ol.format.ogc.filter.Within(geometryName, geometry, opt_srsName);
     }-*/;
 }

@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface MapPointerMoveEventListener {
-    public void onMapPointerMove(MapBrowserEvent event);
+    void onMapPointerMove(MapBrowserEvent event);
 }

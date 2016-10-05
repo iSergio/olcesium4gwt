@@ -26,11 +26,11 @@ public class AttributionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native AttributionOptions create() /*-{
+    public static native AttributionOptions create() /*-{
         return {};
     }-*/;
     
-    public static final native AttributionOptions create(String html) /*-{
+    public static native AttributionOptions create(String html) /*-{
         return {html: html};
     }-*/;
     

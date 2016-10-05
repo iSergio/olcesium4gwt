@@ -30,7 +30,7 @@ public class ImageCanvasSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageCanvasSourceOptions create() /*-{
+    public static native ImageCanvasSourceOptions create() /*-{
         return {};
     }-*/;
     

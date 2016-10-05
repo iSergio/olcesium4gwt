@@ -35,7 +35,7 @@ public class IconStyleOptions extends JavaScriptObject {
         
         private final String _value;
         
-        private IconAnchorUnits(String value) {
+        IconAnchorUnits(String value) {
             _value = value;
         }
         
@@ -65,7 +65,7 @@ public class IconStyleOptions extends JavaScriptObject {
         
         private final String _value;
         
-        private IconOrigin(String value) {
+        IconOrigin(String value) {
             _value = value;
         }
         
@@ -97,7 +97,7 @@ public class IconStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native IconStyleOptions create() /*-{
+    public static native IconStyleOptions create() /*-{
         return {};
     }-*/;
 

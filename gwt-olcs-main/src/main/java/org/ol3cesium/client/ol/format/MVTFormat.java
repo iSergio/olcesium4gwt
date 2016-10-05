@@ -27,11 +27,11 @@ public class MVTFormat extends FeatureFormat {
         //
     }
     
-    public static final native MVTFormat create() /*-{
+    public static native MVTFormat create() /*-{
         return new ol.format.MVT();
     }-*/;
     
-    public static final native MVTFormat create(MVTFormatOptions options) /*-{
+    public static native MVTFormat create(MVTFormatOptions options) /*-{
         return new ol.format.MVT(options);
     }-*/;
     

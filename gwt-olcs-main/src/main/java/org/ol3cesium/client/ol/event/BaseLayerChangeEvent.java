@@ -22,7 +22,8 @@ import org.ol3cesium.client.ol.layer.BaseLayer;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class BaseLayerChangeEvent extends Event {
-    public static enum Type {EXTENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, VISIBLE, ZINDEX, UNKNOWN};
+    public enum Type {EXTENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, VISIBLE, ZINDEX, UNKNOWN}
+
     protected BaseLayerChangeEvent() {
         //
     }

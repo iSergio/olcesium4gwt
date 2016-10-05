@@ -32,13 +32,13 @@ public class TileLayer extends Layer {
         //
     }
     
-    public static final native TileLayer create() /*-{
+    public static native TileLayer create() /*-{
         var tile = new ol.layer.Tile();
         tile.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::TILE_LAYER_CLASS_NAME);
         return tile;
     }-*/;
     
-    public static final native TileLayer create(TileLayerOptions options) /*-{
+    public static native TileLayer create(TileLayerOptions options) /*-{
         var tile = new ol.layer.Tile(options);
         tile.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::TILE_LAYER_CLASS_NAME);
         return tile;

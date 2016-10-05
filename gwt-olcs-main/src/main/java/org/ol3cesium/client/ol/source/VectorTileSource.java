@@ -31,7 +31,7 @@ public class VectorTileSource extends UrlTileSource {
         //
     }
     
-    public static final native VectorTileSource create(VectorTileSourceOptions options) /*-{
+    public static native VectorTileSource create(VectorTileSourceOptions options) /*-{
         return new ol.source.VectorTile(options);
     }-*/;
 }

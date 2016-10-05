@@ -27,11 +27,11 @@ public class TileArcGISRestSource extends TileImageSource {
         //
     }
     
-    public static final native TileArcGISRestSource create() /*-{
+    public static native TileArcGISRestSource create() /*-{
         return new ol.source.TileArcGISRest();
     }-*/;
     
-    public static final native TileArcGISRestSource create(TileArcGISRestSourceOptions options) /*-{
+    public static native TileArcGISRestSource create(TileArcGISRestSourceOptions options) /*-{
         return new ol.source.TileArcGISRest(options);
     }-*/;
     

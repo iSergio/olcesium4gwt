@@ -32,7 +32,7 @@ public enum LayerType {
     
     private final String _value;
     
-    private LayerType(String value) {
+    LayerType(String value) {
         _value = value;
     }
     

@@ -30,11 +30,11 @@ public class MousePositionControl extends Control {
         //
     }
     
-    public static final native MousePositionControl create() /*-{
+    public static native MousePositionControl create() /*-{
         return new ol.control.MousePosition();
     }-*/;
     
-    public static final native MousePositionControl create(MousePositionControlOptions options) /*-{
+    public static native MousePositionControl create(MousePositionControlOptions options) /*-{
         return new ol.control.MousePosition(options);
     }-*/;
     

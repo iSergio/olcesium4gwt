@@ -28,7 +28,7 @@ public class KMLFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native KMLFormatOptions create() /*-{
+    public static native KMLFormatOptions create() /*-{
         return {};
     }-*/;
     

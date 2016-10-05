@@ -29,7 +29,7 @@ public class ImageWMSSource extends ImageSource {
         //
     }
     
-    public static final native ImageWMSSource create(ImageWMSSourceOptions options) /*-{
+    public static native ImageWMSSource create(ImageWMSSourceOptions options) /*-{
         return new ol.source.ImageWMS(options);
     }-*/;
     

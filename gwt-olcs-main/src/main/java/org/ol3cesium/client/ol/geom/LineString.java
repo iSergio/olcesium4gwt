@@ -28,11 +28,11 @@ public class LineString extends SimpleGeometry {
         //
     }
     
-    public static final native LineString create(JsArray<Coordinate> coordinates) /*-{
+    public static native LineString create(JsArray<Coordinate> coordinates) /*-{
         return new ol.geom.LineString(coordinates);
     }-*/;
     
-    public static final native LineString create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
+    public static native LineString create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.LineString(coordinates, layout);
     }-*/;
     

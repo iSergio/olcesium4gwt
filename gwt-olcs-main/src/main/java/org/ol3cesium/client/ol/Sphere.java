@@ -27,7 +27,7 @@ public class Sphere extends JavaScriptObject {
         //
     }
     
-    public static final native Sphere create(double radius) /*-{
+    public static native Sphere create(double radius) /*-{
         return new ol.Sphere(radius);
     }-*/;
     

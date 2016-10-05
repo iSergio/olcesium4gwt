@@ -35,7 +35,7 @@ public class OGCNotFilter extends OGCLogicalFilter {
      * @param condition Filter condition.
      * @return logical <Not> operator for a filter condition.
      */
-    public static final native OGCNotFilter create(OGCFilter condition) /*-{
+    public static native OGCNotFilter create(OGCFilter condition) /*-{
         return new ol.format.ogc.filter.Not(condition);
     }-*/;
 }

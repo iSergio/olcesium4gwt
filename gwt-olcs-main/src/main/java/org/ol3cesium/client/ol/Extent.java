@@ -27,7 +27,7 @@ public class Extent extends JavaScriptObject {
         //
     }
     
-    public static final native Extent create(double minX, double minY, double maxX, double maxY) /*-{
+    public static native Extent create(double minX, double minY, double maxX, double maxY) /*-{
         return [minX, minY, maxX, maxY];
     }-*/;
     
@@ -53,7 +53,7 @@ public class Extent extends JavaScriptObject {
      * @param transformFn Transform function. Called with [minX, minY, maxX, maxY] extent coordinates.
      * @return Extent.
      */
-    public static final native Extent applyTransform(Extent extent, JavaScriptObject transformFn) /*-{
+    public static native Extent applyTransform(Extent extent, JavaScriptObject transformFn) /*-{
         return ol.extent.applyTransform(extent, transformFn);
     }-*/;
     
@@ -62,7 +62,7 @@ public class Extent extends JavaScriptObject {
      * @param coordinates Coordinates.
      * @return Bounding extent.
      */
-    public static final native Extent boundingExtent(JsArray<Coordinate> coordinates) /*-{
+    public static native Extent boundingExtent(JsArray<Coordinate> coordinates) /*-{
         return ol.extent.boundingExtent(coordinates);
     }-*/;
     
@@ -72,7 +72,7 @@ public class Extent extends JavaScriptObject {
      * @param value The amount by which the extent should be buffered.
      * @return Extent.
      */
-    public static final native Extent buffer(Extent extent, double value) /*-{
+    public static native Extent buffer(Extent extent, double value) /*-{
         return ol.extent.buffer(extent, value);
     }-*/;
     
@@ -83,7 +83,7 @@ public class Extent extends JavaScriptObject {
      * @param opt_extent Extent.
      * @return Extent.
      */
-    public static final native Extent buffer(Extent extent, double value, Extent opt_extent) /*-{
+    public static native Extent buffer(Extent extent, double value, Extent opt_extent) /*-{
         return ol.extent.buffer(extent, value, opt_extent);
     }-*/;
     
@@ -102,7 +102,7 @@ public class Extent extends JavaScriptObject {
      * @param coordinate Coordinate.
      * @return The coordinate is contained in the extent.
      */
-    public static final native boolean containsCoordinate(Extent extent, Coordinate coordinate) /*-{
+    public static native boolean containsCoordinate(Extent extent, Coordinate coordinate) /*-{
         return ol.extent.containsCoordinate(extent, coordinate);
     }-*/;
     
@@ -125,7 +125,7 @@ public class Extent extends JavaScriptObject {
      * @param extent2 Extent2.
      * @return The second extent is contained by or on the edge of the first.
      */
-    public static final native boolean containsExtent(Extent extent1, Extent extent2) /*-{
+    public static native boolean containsExtent(Extent extent1, Extent extent2) /*-{
         return ol.extent.containsExtent(extent1, extent2);
     }-*/;
     
@@ -146,7 +146,7 @@ public class Extent extends JavaScriptObject {
      * @param y Y coordinate.
      * @return The x, y values are contained in the extent.
      */
-    public static final native boolean containsXY(Extent extent, double x, double y) /*-{
+    public static native boolean containsXY(Extent extent, double x, double y) /*-{
         return ol.extent.containsXY(extent, x, y);
     }-*/;
     
@@ -165,7 +165,7 @@ public class Extent extends JavaScriptObject {
      * @param extent2 Extent 2.
      * @return The two extents are equivalent.
      */
-    public static final native boolean equals(Extent extent1, Extent extent2) /*-{
+    public static native boolean equals(Extent extent1, Extent extent2) /*-{
         return ol.extent.equals(extent1, extent2);
     }-*/;
     
@@ -184,7 +184,7 @@ public class Extent extends JavaScriptObject {
      * @param extent2 The extent that will be included in the first.
      * @return A reference to the first (extended) extent.
      */
-    public static final native Extent extend(Extent extent1, Extent extent2) /*-{
+    public static native Extent extend(Extent extent1, Extent extent2) /*-{
         return ol.extent.extend(this, extent);
     }-*/;
     
@@ -201,7 +201,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return Bottom left coordinate.
      */
-    public static final native Coordinate getBottomLeft(Extent extent) /*-{
+    public static native Coordinate getBottomLeft(Extent extent) /*-{
         return ol.extent.getBottomLeft(extent);
     }-*/;
     
@@ -218,7 +218,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return Bottom right coordinate.
      */
-    public static final native Coordinate getBottomRight(Extent extent) /*-{
+    public static native Coordinate getBottomRight(Extent extent) /*-{
         return ol.extent.getBottomRight(extent);
     }-*/;
 
@@ -235,7 +235,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return Center.
      */
-    public static final native Coordinate getCenter(Extent extent) /*-{
+    public static native Coordinate getCenter(Extent extent) /*-{
         return ol.extent.getCenter(extent);
     }-*/;
     
@@ -252,7 +252,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return Height.
      */
-    public static final native double getHeight(Extent extent) /*-{
+    public static native double getHeight(Extent extent) /*-{
         return ol.extent.getHeight(extent);
     }-*/;
     
@@ -281,7 +281,7 @@ public class Extent extends JavaScriptObject {
      * @param extent2 Extent.
      * @return Intersecting extent.
      */
-    public static final native Extent getIntersection(Extent extent1, Extent extent2) /*-{
+    public static native Extent getIntersection(Extent extent1, Extent extent2) /*-{
         return ol.extent.getIntersection(extent1, extent2);
     }-*/;
     
@@ -292,7 +292,7 @@ public class Extent extends JavaScriptObject {
      * @param opt_extent Optional extent to populate with intersection.
      * @return Intersecting extent.
      */
-    public static final native Extent getIntersection(Extent extent1, Extent extent2, Extent opt_extent) /*-{
+    public static native Extent getIntersection(Extent extent1, Extent extent2, Extent opt_extent) /*-{
         return ol.extent.getIntersection(extent1, extent2, opt_extent);
     }-*/;
     
@@ -309,7 +309,7 @@ public class Extent extends JavaScriptObject {
      * @param extent The extent.
      * @return The extent size.
      */
-    public static final native Size getSize(Extent extent) /*-{
+    public static native Size getSize(Extent extent) /*-{
         return ol.extent.getSize(extent);
     }-*/;
     
@@ -360,7 +360,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return Width.
      */
-    public static final native double getWidth(Extent extent) /*-{
+    public static native double getWidth(Extent extent) /*-{
         return ol.extent.getWidth(extent);
     }-*/;
     
@@ -379,7 +379,7 @@ public class Extent extends JavaScriptObject {
      * @param extent2 Extent.
      * @return The two extents intersect.
      */
-    public static final native boolean intersects(Extent extent1, Extent extent2) /*-{
+    public static native boolean intersects(Extent extent1, Extent extent2) /*-{
         return ol.extent.intersects(extent1, extent2);
     }-*/;
     
@@ -396,7 +396,7 @@ public class Extent extends JavaScriptObject {
      * @param extent Extent.
      * @return is empty.
      */
-    public static final native boolean isEmpty(Extent extent) /*-{
+    public static native boolean isEmpty(Extent extent) /*-{
         return ol.extent.isEmpty(extent);
     }-*/;
 }

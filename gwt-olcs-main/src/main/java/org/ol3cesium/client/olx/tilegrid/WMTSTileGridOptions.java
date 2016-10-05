@@ -32,7 +32,7 @@ public class WMTSTileGridOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WMTSTileGridOptions create() /*-{
+    public static native WMTSTileGridOptions create() /*-{
         return {};
     }-*/;
     

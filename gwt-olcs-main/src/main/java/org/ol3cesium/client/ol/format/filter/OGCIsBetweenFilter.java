@@ -37,7 +37,7 @@ public class OGCIsBetweenFilter extends OGCComparisonFilter {
      * @param upperBoundary The upper bound of the range.
      * @return Represents a <PropertyIsBetween> comparison operator.
      */
-    public static final native OGCIsBetweenFilter create(String propertyName, double lowerBoundary, double upperBoundary) /*-{
+    public static native OGCIsBetweenFilter create(String propertyName, double lowerBoundary, double upperBoundary) /*-{
         return new ol.format.ogc.filter.IsBetween(propertyName, lowerBoundary, upperBoundary);
     }-*/;
 }

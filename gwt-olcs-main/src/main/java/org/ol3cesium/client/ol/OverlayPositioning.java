@@ -27,7 +27,7 @@ public enum OverlayPositioning {
 
     private final String _value;
 
-    private OverlayPositioning(String value) {
+    OverlayPositioning(String value) {
         _value = value;
     }
 

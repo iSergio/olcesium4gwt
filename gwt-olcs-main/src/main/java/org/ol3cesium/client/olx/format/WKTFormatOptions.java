@@ -26,7 +26,7 @@ public class WKTFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WKTFormatOptions create() /*-{
+    public static native WKTFormatOptions create() /*-{
         return {};
     }-*/;
     

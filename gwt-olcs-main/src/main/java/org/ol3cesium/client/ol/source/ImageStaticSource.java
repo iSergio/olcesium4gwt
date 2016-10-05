@@ -26,7 +26,7 @@ public class ImageStaticSource extends ImageSource {
         //
     }
     
-    public static final native ImageStaticSource create(ImageStaticSourceOptions options) /*-{
+    public static native ImageStaticSource create(ImageStaticSourceOptions options) /*-{
         return new ol.source.ImageStatic(options);
     }-*/;
 }

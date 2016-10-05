@@ -37,7 +37,7 @@ public class OGCEqualToFilter extends OGCComparisonBinaryFilter {
      * @param matchCase Case-sensitive?
      * @return comparison operator
      */
-    public static final native OGCEqualToFilter create(String propertyName, String expression, boolean matchCase) /*-{
+    public static native OGCEqualToFilter create(String propertyName, String expression, boolean matchCase) /*-{
         return new ol.format.ogc.filter.EqualTo(propertyName, expression, matchCase);
     }-*/;
 }

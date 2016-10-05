@@ -40,7 +40,7 @@ public class OGCIsLikeFilter extends OGCComparisonFilter {
      * @param matchCase Case-sensitive?
      * @return Represents a <PropertyIsLike> comparison operator.
      */
-    public static final native OGCIsLikeFilter create(String propertyName, String pattern, String wildCard, String singleChar, String escapeChar, boolean matchCase) /*-{
+    public static native OGCIsLikeFilter create(String propertyName, String pattern, String wildCard, String singleChar, String escapeChar, boolean matchCase) /*-{
         return new ol.format.ogc.filter.IsLike(propertyName, pattern, wildCard, singleChar, escapeChar, matchCase);
     }-*/;
     
@@ -50,7 +50,7 @@ public class OGCIsLikeFilter extends OGCComparisonFilter {
      * @param pattern Text pattern.
      * @return Represents a <PropertyIsLike> comparison operator.
      */
-    public static final native OGCIsLikeFilter create(String propertyName, String pattern) /*-{
+    public static native OGCIsLikeFilter create(String propertyName, String pattern) /*-{
         return new ol.format.ogc.filter.IsLike(propertyName, pattern, wildCard, singleChar, escapeChar, matchCase);
     }-*/;
 }

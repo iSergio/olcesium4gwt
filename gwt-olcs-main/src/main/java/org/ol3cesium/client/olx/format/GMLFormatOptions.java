@@ -27,7 +27,7 @@ public class GMLFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native GMLFormatOptions create() /*-{
+    public static native GMLFormatOptions create() /*-{
         return {};
     }-*/;
     

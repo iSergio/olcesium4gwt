@@ -26,7 +26,7 @@ public class ZoomSliderControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ZoomSliderControlOptions create() /*-{
+    public static native ZoomSliderControlOptions create() /*-{
         return {};
     }-*/;
     

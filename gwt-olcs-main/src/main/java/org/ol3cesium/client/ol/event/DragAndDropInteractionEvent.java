@@ -24,8 +24,8 @@ import org.ol3cesium.client.ol.proj.Projection;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class DragAndDropInteractionEvent extends Event {
-    public static enum Type {ADD_FEATURES, UNKNOWN};
-    
+    public enum Type {ADD_FEATURES, UNKNOWN}
+
     protected DragAndDropInteractionEvent() {
         //
     }

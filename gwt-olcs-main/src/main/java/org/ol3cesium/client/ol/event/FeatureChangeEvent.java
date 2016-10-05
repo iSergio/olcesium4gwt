@@ -22,8 +22,8 @@ import org.ol3cesium.client.ol.Feature;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class FeatureChangeEvent extends Event {
-    public static enum Type {GEOMETRY, ID, STYLE, UNKNOWN};
-    
+    public enum Type {GEOMETRY, ID, STYLE, UNKNOWN}
+
     protected FeatureChangeEvent() {
         //
     }

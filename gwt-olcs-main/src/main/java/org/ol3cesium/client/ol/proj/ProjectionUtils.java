@@ -29,7 +29,7 @@ public class ProjectionUtils {
      * Registers transformation functions that don't alter coordinates. Those allow to transform between projections with equal meaning.
      * @param projections {@link Projection} Projections.
      */
-    public static final native void addEquivalentProjections(JsArray<Projection> projections) /*-{
+    public static native void addEquivalentProjections(JsArray<Projection> projections) /*-{
         ol.proj.addEquivalentProjections(projections);
     }-*/;
     
@@ -37,7 +37,7 @@ public class ProjectionUtils {
      * Add a Projection object to the list of supported projections that can be looked up by their code.
      * @param projection {@link Projection} Projection instance.
      */
-    public static final native void addProjection(Projection projection) /*-{
+    public static native void addProjection(Projection projection) /*-{
         ol.proj.addProjection(projection);
     }-*/;
     
@@ -47,7 +47,7 @@ public class ProjectionUtils {
      * @param coordinate {@link Coordinate} Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.
      * @return Coordinate projected to the target projection.
      */
-    public static final native Coordinate fromLonLat(Coordinate coordinate) /*-{
+    public static native Coordinate fromLonLat(Coordinate coordinate) /*-{
         return ol.proj.fromLonLat(coordinate);
     }-*/;
     
@@ -58,7 +58,7 @@ public class ProjectionUtils {
      * @param projection {@link Projection} Target projection. The default is Web Mercator, i.e. 'EPSG:3857'.
      * @return Coordinate projected to the target projection.
      */
-    public static final native Coordinate fromLonLat(Coordinate coordinate, Projection projection) /*-{
+    public static native Coordinate fromLonLat(Coordinate coordinate, Projection projection) /*-{
         return ol.proj.fromLonLat(coordinate, projection);
     }-*/;
     
@@ -69,7 +69,7 @@ public class ProjectionUtils {
      * @param projection {@link Projection} Target projection. The default is Web Mercator, i.e. 'EPSG:3857'.
      * @return Coordinate projected to the target projection.
      */
-    public static final native Coordinate fromLonLat(Coordinate coordinate, String projection) /*-{
+    public static native Coordinate fromLonLat(Coordinate coordinate, String projection) /*-{
         return ol.proj.fromLonLat(coordinate, projection);
     }-*/;
     
@@ -79,7 +79,7 @@ public class ProjectionUtils {
      * and identifier such as "EPSG:4326", or an existing projection object, or undefined.
      * @return Projection object, or null if not in list.
      */
-    public static final native Projection get(Projection projection) /*-{
+    public static native Projection get(Projection projection) /*-{
         return ol.proj.get(projection);
     }-*/;
     
@@ -89,7 +89,7 @@ public class ProjectionUtils {
      * and identifier such as "EPSG:4326", or an existing projection object, or undefined.
      * @return Projection object, or null if not in list.
      */
-    public static final native Projection get(String projection) /*-{
+    public static native Projection get(String projection) /*-{
         return ol.proj.get(projection);
     }-*/;
     
@@ -99,7 +99,7 @@ public class ProjectionUtils {
      * @param coordinate {@link Coordinate} Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.
      * @return Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.
      */
-    public static final native Coordinate toLonLat(Coordinate coordinate) /*-{
+    public static native Coordinate toLonLat(Coordinate coordinate) /*-{
         return ol.proj.toLonLat(coordinate);
     }-*/;
     
@@ -110,7 +110,7 @@ public class ProjectionUtils {
      * @param projection {@link Projection} Target projection. The default is Web Mercator, i.e. 'EPSG:3857'.
      * @return Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.
      */
-    public static final native Coordinate toLonLat(Coordinate coordinate, Projection projection) /*-{
+    public static native Coordinate toLonLat(Coordinate coordinate, Projection projection) /*-{
         return ol.proj.toLonLat(coordinate, projection);
     }-*/;
     
@@ -121,7 +121,7 @@ public class ProjectionUtils {
      * @param projection {@link Projection} Target projection. The default is Web Mercator, i.e. 'EPSG:3857'.
      * @return Coordinate as longitude and latitude, i.e. an array with longitude as 1st and latitude as 2nd element.
      */
-    public static final native Coordinate toLonLat(Coordinate coordinate, String projection) /*-{
+    public static native Coordinate toLonLat(Coordinate coordinate, String projection) /*-{
         return ol.proj.toLonLat(coordinate, projection);
     }-*/;
     
@@ -132,7 +132,7 @@ public class ProjectionUtils {
      * @param destination {@link Projection} Destination projection
      * @return Coordinate.
      */
-    public static final native Coordinate transform(Coordinate coordinate, Projection source, Projection destination) /*-{
+    public static native Coordinate transform(Coordinate coordinate, Projection source, Projection destination) /*-{
         return ol.proj.transform(coordinate, source, destination);
     }-*/;
     
@@ -143,7 +143,7 @@ public class ProjectionUtils {
      * @param destination {@link String} Destination projection
      * @return Coordinate.
      */
-    public static final native Coordinate transform(Coordinate coordinate, String source, String destination) /*-{
+    public static native Coordinate transform(Coordinate coordinate, String source, String destination) /*-{
         return ol.proj.transform(coordinate, source, destination);
     }-*/;
     
@@ -154,7 +154,7 @@ public class ProjectionUtils {
      * @param destination {@link Projection} Destination projection
      * @return The transformed extent.
      */
-    public static final native Extent transformExtent(Extent extent, Projection source, Projection destination) /*-{
+    public static native Extent transformExtent(Extent extent, Projection source, Projection destination) /*-{
         return ol.proj.transformExtent(extent, source, destination);
     }-*/;
     
@@ -165,7 +165,7 @@ public class ProjectionUtils {
      * @param destination {@link String} Destination projection
      * @return The transformed extent.
      */
-    public static final native Extent transformExtent(Extent extent, String source, String destination) /*-{
+    public static native Extent transformExtent(Extent extent, String source, String destination) /*-{
         return ol.proj.transformExtent(extent, source, destination);
     }-*/;
     
@@ -176,7 +176,7 @@ public class ProjectionUtils {
      * @param destination Destination.
      * @return Transform function.
      */
-    public static final native JavaScriptObject getTransform(String source, String destination) /*-{
+    public static native JavaScriptObject getTransform(String source, String destination) /*-{
         return ol.proj.getTransform(source, destination);
     }-*/;
 }

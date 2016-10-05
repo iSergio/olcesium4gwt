@@ -22,14 +22,14 @@ import org.ol3cesium.client.ol.layer.BaseLayer;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class HeatmapLayerChangeEvent extends Event {
-    public static enum Type {BLUR, EXTENT, GRADIENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, RADIUS, SOURCE, VISIBLE, ZINDEX, UNKNOWN};
-    
+    public enum Type {BLUR, EXTENT, GRADIENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, RADIUS, SOURCE, VISIBLE, ZINDEX, UNKNOWN}
+
     protected HeatmapLayerChangeEvent() {
         //
     }
     
     public final native BaseLayer getLayer() /*-{
-        retrun this.layer;
+        return this.layer;
     }-*/;
     
     public final Type getType() {

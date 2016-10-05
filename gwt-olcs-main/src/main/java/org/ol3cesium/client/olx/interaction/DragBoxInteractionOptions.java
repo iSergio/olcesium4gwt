@@ -31,7 +31,7 @@ public class DragBoxInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DragBoxInteractionOptions create() /*-{
+    public static native DragBoxInteractionOptions create() /*-{
         return {};
     }-*/;
     

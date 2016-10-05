@@ -26,11 +26,11 @@ public class DragPanInteraction extends PointerInteraction {
         //
     }
     
-    public static final native DragPanInteraction create() /*-{
+    public static native DragPanInteraction create() /*-{
         return new ol.interaction.DragPan();
     }-*/;
     
-    public static final native DragPanInteraction create(Kinetic kinetic) /*-{
+    public static native DragPanInteraction create(Kinetic kinetic) /*-{
         return new ol.interaction.DragPan(kinetic);
     }-*/;
 }

@@ -26,7 +26,7 @@ public class HeatmapLayerOptions extends LayerOptions {
         //
     }
     
-    public static final native HeatmapLayerOptions create() /*-{
+    public static native HeatmapLayerOptions create() /*-{
         return {};
     }-*/;
     

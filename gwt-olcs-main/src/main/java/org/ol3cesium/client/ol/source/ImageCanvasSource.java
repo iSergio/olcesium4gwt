@@ -26,7 +26,7 @@ public class ImageCanvasSource extends ImageSource {
         //
     }
     
-    public static final native ImageCanvasSource create(ImageCanvasSourceOptions options) /*-{
+    public static native ImageCanvasSource create(ImageCanvasSourceOptions options) /*-{
         return new ol.source.ImageCanvas(options);
     }-*/;
 }

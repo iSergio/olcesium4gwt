@@ -26,8 +26,8 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class TileLoadEvent extends Event {
-    public static enum Type {TILELOADSTART, TILELOADEND, TILELOADERROR, UNKNOWN};
-    
+    public enum Type {TILELOADSTART, TILELOADEND, TILELOADERROR, UNKNOWN}
+
     protected TileLoadEvent() {
         //
     }

@@ -29,7 +29,7 @@ public class OLCesium extends JavaScriptObject {
         //
     }
     
-    public static final native OLCesium create(OLCesiumOptions options) /*-{
+    public static native OLCesium create(OLCesiumOptions options) /*-{
         var olCesium = new olcs.OLCesium(options);
         return olCesium;
     }-*/;

@@ -26,11 +26,11 @@ public class DoubleClickZoomInteraction extends Interaction {
         //
     }
     
-    public static final native DoubleClickZoomInteraction create() /*-{
+    public static native DoubleClickZoomInteraction create() /*-{
         return new ol.interaction.DoubleClickZoom();
     }-*/;
     
-    public static final native DoubleClickZoomInteraction create(DoubleClickZoomInteractionOptions options) /*-{
+    public static native DoubleClickZoomInteraction create(DoubleClickZoomInteractionOptions options) /*-{
         return new ol.interaction.DoubleClickZoom(options);
     }-*/;
 }

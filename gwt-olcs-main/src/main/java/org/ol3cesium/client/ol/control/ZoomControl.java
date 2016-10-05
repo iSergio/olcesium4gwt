@@ -28,11 +28,11 @@ public class ZoomControl extends Control {
         //
     }
     
-    public static final native ZoomControl create() /*-{
+    public static native ZoomControl create() /*-{
         return new ol.control.Zoom();
     }-*/;
     
-    public static final native ZoomControl create(ZoomControlOptions options) /*-{
+    public static native ZoomControl create(ZoomControlOptions options) /*-{
         return new ol.control.Zoom(options);
     }-*/;
 }

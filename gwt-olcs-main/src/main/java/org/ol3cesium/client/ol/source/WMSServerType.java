@@ -25,7 +25,7 @@ public enum WMSServerType {
     
     private final String _value;
     
-    private WMSServerType(String value) {
+    WMSServerType(String value) {
         _value = value;
     }
     

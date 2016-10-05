@@ -24,7 +24,7 @@ public enum SourceState {
     
     private final String _value;
     
-    private SourceState(String value) {
+    SourceState(String value) {
         _value = value;
     }
     

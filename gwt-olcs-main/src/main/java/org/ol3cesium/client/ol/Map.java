@@ -37,11 +37,11 @@ public class Map extends Object {
         //
     }
     
-    public static final native Map create(Element element) /*-{
+    public static native Map create(Element element) /*-{
         return new ol.Map({target: element});
     }-*/;
     
-    public static final native Map create(MapOptions options) /*-{
+    public static native Map create(MapOptions options) /*-{
         var map = new ol.Map(options);
         return map;
     }-*/;

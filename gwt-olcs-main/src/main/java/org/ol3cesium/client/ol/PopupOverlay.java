@@ -37,7 +37,7 @@ public class PopupOverlay extends Overlay {
         //
     }
     
-    public static final native PopupOverlay create(OverlayOptions options) /*-{
+    public static native PopupOverlay create(OverlayOptions options) /*-{
         var d = new Date().getTime();
         var id = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             var r = (d + Math.random()*16)%16 | 0;

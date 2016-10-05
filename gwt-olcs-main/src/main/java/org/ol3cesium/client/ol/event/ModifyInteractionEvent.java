@@ -23,8 +23,8 @@ import org.ol3cesium.client.ol.Feature;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class ModifyInteractionEvent extends Event {
-    public static enum Type{MODIFY_END, MODIFY_START, UNKNOWN};
-    
+    public enum Type{MODIFY_END, MODIFY_START, UNKNOWN}
+
     protected ModifyInteractionEvent() {
         //
     }

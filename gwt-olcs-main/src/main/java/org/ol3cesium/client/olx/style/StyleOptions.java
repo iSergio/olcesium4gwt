@@ -31,7 +31,7 @@ public class StyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native StyleOptions create() /*-{
+    public static native StyleOptions create() /*-{
         return new ol.style.Style();
     }-*/;
     

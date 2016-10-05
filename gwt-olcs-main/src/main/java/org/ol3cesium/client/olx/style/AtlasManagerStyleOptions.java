@@ -26,7 +26,7 @@ public class AtlasManagerStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native AtlasManagerStyleOptions create() /*-{
+    public static native AtlasManagerStyleOptions create() /*-{
         return {};
     }-*/;
     

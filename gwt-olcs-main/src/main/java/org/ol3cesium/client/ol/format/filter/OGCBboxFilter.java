@@ -39,7 +39,7 @@ public class OGCBboxFilter extends OGCFilter {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return Represents a <BBOX> operator to test whether a geometry-valued property intersects a fixed bounding box
      */
-    public static final native OGCBboxFilter create(String geometryName, Extent extent, String srsName) /*-{
+    public static native OGCBboxFilter create(String geometryName, Extent extent, String srsName) /*-{
         return new ol.format.ogc.filter.Bbox(geometryName, extent, srsName);
     }-*/;
     
@@ -49,7 +49,7 @@ public class OGCBboxFilter extends OGCFilter {
      * @param extent Extent.
      * @return Represents a <BBOX> operator to test whether a geometry-valued property intersects a fixed bounding box
      */
-    public static final native OGCBboxFilter create(String geometryName, Extent extent) /*-{
+    public static native OGCBboxFilter create(String geometryName, Extent extent) /*-{
         return new ol.format.ogc.filter.Bbox(geometryName, extent, srsName);
     }-*/;
 }

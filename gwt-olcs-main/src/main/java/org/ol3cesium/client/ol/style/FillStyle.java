@@ -28,19 +28,19 @@ public class FillStyle extends JavaScriptObject {
         //
     }
     
-    public static final native FillStyle create() /*-{
+    public static native FillStyle create() /*-{
         return new ol.style.Fill();
     }-*/;
     
-    public static final native FillStyle create(Color color) /*-{
+    public static native FillStyle create(Color color) /*-{
         return new ol.style.Fill({color: color});
     }-*/;
     
-    public static final native FillStyle create(String color) /*-{
+    public static native FillStyle create(String color) /*-{
         return new ol.style.Fill({color: color});
     }-*/;
     
-    public static final native FillStyle create(FillStyleOptions options) /*-{
+    public static native FillStyle create(FillStyleOptions options) /*-{
         return new ol.style.Fill(options);
     }-*/;
     

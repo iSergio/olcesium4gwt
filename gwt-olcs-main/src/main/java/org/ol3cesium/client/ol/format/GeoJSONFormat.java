@@ -33,11 +33,11 @@ public class GeoJSONFormat extends JSONFeatureFormat {
         //
     }
     
-    public static final native GeoJSONFormat create() /*-{
+    public static native GeoJSONFormat create() /*-{
         return new ol.format.GeoJSON();
     }-*/;
     
-    public static final native GeoJSONFormat create(GeoJSONFormatOptions options) /*-{
+    public static native GeoJSONFormat create(GeoJSONFormatOptions options) /*-{
         return new ol.format.GeoJSON(options);
     }-*/;
     

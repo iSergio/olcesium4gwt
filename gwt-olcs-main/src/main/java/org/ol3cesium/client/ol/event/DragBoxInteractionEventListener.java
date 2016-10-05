@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface DragBoxInteractionEventListener {
-    public void onDragBoxInteraction(DragBoxInteractionEvent event);
+    void onDragBoxInteraction(DragBoxInteractionEvent event);
 }

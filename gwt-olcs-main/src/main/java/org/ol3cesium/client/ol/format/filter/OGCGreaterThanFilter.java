@@ -36,7 +36,7 @@ public class OGCGreaterThanFilter extends OGCComparisonBinaryFilter {
      * @param expression The value to compare.
      * @return Represents a <PropertyIsGreaterThan> comparison operator.
      */
-    public static final native OGCGreaterThanFilter create(String propertyName, double expression) /*-{
+    public static native OGCGreaterThanFilter create(String propertyName, double expression) /*-{
         return new new ol.format.ogc.filter.GreaterThan(propertyName, expression);
     }-*/;
 }

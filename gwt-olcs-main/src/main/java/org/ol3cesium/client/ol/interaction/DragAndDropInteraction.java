@@ -26,7 +26,7 @@ public class DragAndDropInteraction extends Interaction {
         //
     }
     
-    public static final native DragAndDropInteraction create() /*-{
+    public static native DragAndDropInteraction create() /*-{
         return new ol.interaction.DragAndDrop();
     }-*/;
     

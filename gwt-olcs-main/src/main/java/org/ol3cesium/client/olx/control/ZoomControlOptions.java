@@ -27,7 +27,7 @@ public class ZoomControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ZoomControlOptions create() /*-{
+    public static native ZoomControlOptions create() /*-{
         return {};
     }-*/;
     

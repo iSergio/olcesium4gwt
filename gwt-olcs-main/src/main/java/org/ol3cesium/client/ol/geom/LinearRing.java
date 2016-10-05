@@ -27,11 +27,11 @@ public class LinearRing extends SimpleGeometry {
         //
     }
     
-    public static final native LinearRing create(JsArray<Coordinate> coordinates) /*-{
+    public static native LinearRing create(JsArray<Coordinate> coordinates) /*-{
         return new ol.geom.LinearRing(coordinates);
     }-*/;
     
-    public static final native LinearRing create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
+    public static native LinearRing create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.LinearRing(coordinates, layout);
     }-*/;
     

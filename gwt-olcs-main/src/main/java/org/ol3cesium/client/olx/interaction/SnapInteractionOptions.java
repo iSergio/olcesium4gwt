@@ -29,7 +29,7 @@ public class SnapInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native SnapInteractionOptions create() /*-{
+    public static native SnapInteractionOptions create() /*-{
         return {};
     }-*/;
     

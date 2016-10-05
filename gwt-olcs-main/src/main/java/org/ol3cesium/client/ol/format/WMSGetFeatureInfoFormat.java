@@ -28,7 +28,7 @@ public class WMSGetFeatureInfoFormat extends XMLFeatureFormat {
         //
     }
     
-    public static final native WMSGetFeatureInfoFormat create() /*-{
+    public static native WMSGetFeatureInfoFormat create() /*-{
         return new ol.format.WMSGetFeatureInfo();
     }-*/;
     

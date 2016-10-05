@@ -31,7 +31,7 @@ public class TileArcGISRestSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TileArcGISRestSourceOptions create() /*-{
+    public static native TileArcGISRestSourceOptions create() /*-{
         return {};
     }-*/;
     

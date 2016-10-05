@@ -26,7 +26,7 @@ public class TileJSONSource extends TileImageSource {
         //
     }
     
-    public static final native TileJSONSource create(TileJSONSourceOptions options) /*-{
+    public static native TileJSONSource create(TileJSONSourceOptions options) /*-{
         return new ol.source.TileJSON(options);
     }-*/;
 }

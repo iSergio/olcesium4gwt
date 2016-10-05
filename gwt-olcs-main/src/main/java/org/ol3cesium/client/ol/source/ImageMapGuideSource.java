@@ -27,7 +27,7 @@ public class ImageMapGuideSource extends ImageSource {
         //
     }
     
-    public static final native ImageMapGuideSource create(ImageMapGuideSourceOptions options) /*-{
+    public static native ImageMapGuideSource create(ImageMapGuideSourceOptions options) /*-{
         return new ol.source.ImageMapGuide(options);
     }-*/;
     

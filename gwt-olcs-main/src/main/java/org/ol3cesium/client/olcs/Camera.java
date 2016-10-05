@@ -36,7 +36,7 @@ public class Camera extends JavaScriptObject {
      * @param map OpenLayers 3 map (ol.Map).
      * @return Camera object.
      */
-    public static final native Camera create(Scene scene, Map map) /*-{
+    public static native Camera create(Scene scene, Map map) /*-{
         return new olcs.Camera(scene, map);
     }-*/;
     

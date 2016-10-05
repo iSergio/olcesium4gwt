@@ -26,7 +26,7 @@ public class TileUTFGridSource extends TileSource {
         //
     }
     
-    public static final native TileUTFGridSource create(TileUTFGridSourceOptions options) /*-{
+    public static native TileUTFGridSource create(TileUTFGridSourceOptions options) /*-{
         return new ol.source.TileUTFGrid(options);
     }-*/;
 

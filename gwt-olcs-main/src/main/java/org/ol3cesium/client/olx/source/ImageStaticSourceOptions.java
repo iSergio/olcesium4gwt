@@ -31,7 +31,7 @@ public class ImageStaticSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageStaticSourceOptions create() /*-{
+    public static native ImageStaticSourceOptions create() /*-{
         return {};
     }-*/;
     

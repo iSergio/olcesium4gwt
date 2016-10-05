@@ -33,7 +33,7 @@ public class DragBoxInteraction extends PointerInteraction {
         return new ol.interaction.DragBox();
     }-*/;
     
-    public static final native DragBoxInteraction create(DragBoxInteractionOptions options) /*-{
+    public static native DragBoxInteraction create(DragBoxInteractionOptions options) /*-{
         return new ol.interaction.DragBox(options);
     }-*/;
 

@@ -29,7 +29,7 @@ public class OSMXMLFormat extends XMLFeatureFormat {
         //
     }
     
-    public static final native OSMXMLFormat create() /*-{
+    public static native OSMXMLFormat create() /*-{
         return new ol.format.OSMXML();
     }-*/;
     

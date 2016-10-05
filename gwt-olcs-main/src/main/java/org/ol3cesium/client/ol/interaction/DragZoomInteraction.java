@@ -31,11 +31,11 @@ public class DragZoomInteraction extends DragBoxInteraction {
         //
     }
     
-    public static final native DragZoomInteraction create() /*-{
+    public static native DragZoomInteraction create() /*-{
         return new ol.interaction.DragZoom();
     }-*/;
     
-    public static final native DragZoomInteraction create(DragZoomInteractionOptions options) /*-{
+    public static native DragZoomInteraction create(DragZoomInteractionOptions options) /*-{
         return new ol.interaction.DragZoom(options);
     }-*/;
 }

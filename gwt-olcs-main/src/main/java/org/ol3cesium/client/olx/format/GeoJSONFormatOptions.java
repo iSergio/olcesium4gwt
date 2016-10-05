@@ -27,7 +27,7 @@ public class GeoJSONFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native GeoJSONFormatOptions create() /*-{
+    public static native GeoJSONFormatOptions create() /*-{
         return {};
     }-*/;
     

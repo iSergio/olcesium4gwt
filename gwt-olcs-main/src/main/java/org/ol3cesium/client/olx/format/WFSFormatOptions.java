@@ -28,7 +28,7 @@ public class WFSFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WFSFormatOptions create() /*-{
+    public static native WFSFormatOptions create() /*-{
         return {};
     }-*/;
     

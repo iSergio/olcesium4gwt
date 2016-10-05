@@ -28,11 +28,11 @@ public class MultiPoint extends SimpleGeometry {
         //
     }
     
-    public static final native MultiPoint create(JsArray<Coordinate> coordinates) /*-{
+    public static native MultiPoint create(JsArray<Coordinate> coordinates) /*-{
         return new ol.geom.MultiPoint(coordinates);
     }-*/;
     
-    public static final native MultiPoint create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
+    public static native MultiPoint create(JsArray<Coordinate> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.MultiPoint(coordinates, layout);
     }-*/;
     

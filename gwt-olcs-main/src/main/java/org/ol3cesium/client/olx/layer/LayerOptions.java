@@ -26,7 +26,7 @@ public abstract class LayerOptions extends BaseLayerOptions {
         //
     }
     
-    public static final native LayerOptions create(LayerOptions options) /*-{
+    public static native LayerOptions create(LayerOptions options) /*-{
         return new ol.layer.Layer(options);
     }-*/;
     

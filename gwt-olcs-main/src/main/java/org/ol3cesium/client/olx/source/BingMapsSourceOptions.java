@@ -26,7 +26,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native BingMapsSourceOptions create() /*-{
+    public static native BingMapsSourceOptions create() /*-{
         return {};
     }-*/;
     

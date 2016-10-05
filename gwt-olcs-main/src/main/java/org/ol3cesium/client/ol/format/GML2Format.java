@@ -26,11 +26,11 @@ public class GML2Format extends GMLBaseFormat {
         //
     }
     
-    public static final native GML2Format create() /*-{
+    public static native GML2Format create() /*-{
         return new ol.format.GML2();
     }-*/;
     
-    public static final native GML2Format create(GMLFormatOptions options) /*-{
+    public static native GML2Format create(GMLFormatOptions options) /*-{
         return new ol.format.GML2(options);
     }-*/;
 }

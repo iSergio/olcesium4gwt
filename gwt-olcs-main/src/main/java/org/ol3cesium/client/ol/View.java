@@ -33,11 +33,11 @@ public class View extends Object {
         //
     }
     
-    public static final native View create() /*-{
+    public static native View create() /*-{
         return new ol.View({});
     }-*/;
     
-    public static final native View create(ViewOptions options) /*-{
+    public static native View create(ViewOptions options) /*-{
         var view = new ol.View(options);
         return view;
     }-*/;
@@ -322,7 +322,7 @@ public class View extends Object {
             //
         }
         
-        public static final native FitOptions create() /*-{
+        public static native FitOptions create() /*-{
             return {};
         }-*/;
         

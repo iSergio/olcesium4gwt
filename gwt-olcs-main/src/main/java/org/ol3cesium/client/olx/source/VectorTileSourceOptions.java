@@ -31,7 +31,7 @@ public class VectorTileSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native VectorTileSourceOptions create() /*-{
+    public static native VectorTileSourceOptions create() /*-{
         return {};
     }-*/;
 

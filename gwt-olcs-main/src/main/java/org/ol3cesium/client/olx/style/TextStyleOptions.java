@@ -29,7 +29,7 @@ public class TextStyleOptions extends JavaScriptObject {
         
         private final String _value;
         
-        private TextAlign(String value) {
+        TextAlign(String value) {
             _value = value;
         }
         
@@ -64,7 +64,7 @@ public class TextStyleOptions extends JavaScriptObject {
         
         private final String _value;
         
-        private TextBaseline(String value) {
+        TextBaseline(String value) {
             _value = value;
         }
         
@@ -101,7 +101,7 @@ public class TextStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TextStyleOptions create() /*-{
+    public static native TextStyleOptions create() /*-{
         return {};
     }-*/;
     

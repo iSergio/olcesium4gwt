@@ -39,7 +39,7 @@ public enum Units {
     
     private final String _value;
     
-    private Units(String value) {
+    Units(String value) {
         _value = value;
     }
     

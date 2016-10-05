@@ -45,7 +45,7 @@ public class Feature extends Object {
         //
     }
     
-    public static final native Feature create() /*-{
+    public static native Feature create() /*-{
         return new ol.Feature();
     }-*/;
     

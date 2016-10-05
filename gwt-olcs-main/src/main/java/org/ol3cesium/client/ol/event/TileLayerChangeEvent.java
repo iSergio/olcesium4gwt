@@ -22,8 +22,8 @@ import org.ol3cesium.client.ol.layer.BaseLayer;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class TileLayerChangeEvent extends Event {
-    public static enum Type {EXTENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, PRELOAD, SOURCE, USE_INTERIM_TILES_ON_ERROR, VISIBLE, ZINDEX, UNKNOWN};
-    
+    public enum Type {EXTENT, MAX_RESOLUTION, MIN_RESOLUTION, OPACITY, PRELOAD, SOURCE, USE_INTERIM_TILES_ON_ERROR, VISIBLE, ZINDEX, UNKNOWN}
+
     protected TileLayerChangeEvent() {
         //
     }

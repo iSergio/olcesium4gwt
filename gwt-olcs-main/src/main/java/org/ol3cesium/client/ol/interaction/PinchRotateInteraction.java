@@ -26,11 +26,11 @@ public class PinchRotateInteraction extends PointerInteraction {
         //
     }
     
-    public static final native PinchRotateInteraction create() /*-{
+    public static native PinchRotateInteraction create() /*-{
         return new ol.interaction.PinchRotate();
     }-*/;
     
-    public static final native PinchRotateInteraction create(PinchRotateInteractionOptions options) /*-{
+    public static native PinchRotateInteraction create(PinchRotateInteractionOptions options) /*-{
         return new ol.interaction.PinchRotate(options);
     }-*/;
 }

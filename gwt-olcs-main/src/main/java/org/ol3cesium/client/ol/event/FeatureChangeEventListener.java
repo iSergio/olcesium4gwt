@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface FeatureChangeEventListener {
-    public void onFeatureChange(FeatureChangeEvent event);
+    void onFeatureChange(FeatureChangeEvent event);
 }

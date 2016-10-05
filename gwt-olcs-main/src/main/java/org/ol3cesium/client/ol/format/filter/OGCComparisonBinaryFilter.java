@@ -39,7 +39,7 @@ public class OGCComparisonBinaryFilter extends OGCComparisonFilter {
      * @param matchCase Case-sensitive?
      * @return 
      */
-    public static final native OGCComparisonBinaryFilter create(String tagName, String propertyName, String expression, boolean matchCase) /*-{
+    public static native OGCComparisonBinaryFilter create(String tagName, String propertyName, String expression, boolean matchCase) /*-{
         return new ol.format.ogc.filter.ComparisonBinary(tagName, propertyName, expression, matchCase);
     }-*/;
     
@@ -51,7 +51,7 @@ public class OGCComparisonBinaryFilter extends OGCComparisonFilter {
      * @param expression The value to compare.
      * @return 
      */
-    public static final native OGCComparisonBinaryFilter create(String tagName, String propertyName, String expression) /*-{
+    public static native OGCComparisonBinaryFilter create(String tagName, String propertyName, String expression) /*-{
         return new ol.format.ogc.filter.ComparisonBinary(tagName, propertyName, expression);
     }-*/;
 }

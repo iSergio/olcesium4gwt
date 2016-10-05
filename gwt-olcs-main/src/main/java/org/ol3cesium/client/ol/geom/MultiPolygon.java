@@ -28,11 +28,11 @@ public class MultiPolygon extends SimpleGeometry {
         //
     }
     
-    public static final native MultiPolygon create(JsArray<JsArray<JsArray<Coordinate>>> coordinates) /*-{
+    public static native MultiPolygon create(JsArray<JsArray<JsArray<Coordinate>>> coordinates) /*-{
         return new ol.geom.MultiPolygon(coordinates);
     }-*/;
     
-    public static final native MultiPolygon create(JsArray<JsArray<JsArray<Coordinate>>> coordinates, GeometryLayout layout) /*-{
+    public static native MultiPolygon create(JsArray<JsArray<JsArray<Coordinate>>> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.MultiPolygon(coordinates, layout);
     }-*/;
     

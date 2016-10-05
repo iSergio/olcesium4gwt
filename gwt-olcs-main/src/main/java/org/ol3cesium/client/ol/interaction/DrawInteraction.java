@@ -29,7 +29,7 @@ public class DrawInteraction extends PointerInteraction {
         //
     }
     
-    public static final native DrawInteraction create(DrawInteractionOptions options) /*-{
+    public static native DrawInteraction create(DrawInteractionOptions options) /*-{
         return new ol.interaction.Draw(options);
     }-*/;
     
@@ -48,7 +48,7 @@ public class DrawInteraction extends PointerInteraction {
      * @param sides Number of sides of the regular polygon. Default is 32.
      * @return Function that draws a polygon.
      */
-    public static final native JavaScriptObject createRegularPolygon(int sides) /*-{
+    public static native JavaScriptObject createRegularPolygon(int sides) /*-{
         return ol.interaction.Draw.createRegularPolygon(sides);
     }-*/;
     

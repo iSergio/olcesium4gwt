@@ -28,7 +28,7 @@ public class OLCesiumOptions extends JavaScriptObject {
         //
     }
     
-    public static final native OLCesiumOptions create() /*-{
+    public static native OLCesiumOptions create() /*-{
         return {};
     }-*/;
     

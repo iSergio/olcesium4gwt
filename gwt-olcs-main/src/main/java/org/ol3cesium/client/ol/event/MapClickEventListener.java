@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface MapClickEventListener {
-    public void onMapClick(MapBrowserEvent event);
+    void onMapClick(MapBrowserEvent event);
 }

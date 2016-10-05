@@ -44,7 +44,7 @@ public class OGCFilter extends Object {
      * @param conditionB Second filter condition.
      * @return <And> operator.
      */
-    public static final native OGCAndFilter and(OGCFilter conditionA, OGCFilter conditionB) /*-{
+    public static native OGCAndFilter and(OGCFilter conditionA, OGCFilter conditionB) /*-{
         return new ol.format.ogc.filter.and(conditionA, conditionB);
     }-*/;
     
@@ -54,7 +54,7 @@ public class OGCFilter extends Object {
      * @param extent Extent.
      * @return <BBOX> operator.
      */
-    public static final native OGCBboxFilter bbox(String geometryName, Extent extent) /*-{
+    public static native OGCBboxFilter bbox(String geometryName, Extent extent) /*-{
         return new ol.format.ogc.filter.bbox(geometryName, extent);
     }-*/;
     
@@ -65,7 +65,7 @@ public class OGCFilter extends Object {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return <BBOX> operator.
      */
-    public static final native OGCBboxFilter bbox(String geometryName, Extent extent, String srsName) /*-{
+    public static native OGCBboxFilter bbox(String geometryName, Extent extent, String srsName) /*-{
         return new ol.format.ogc.filter.bbox(geometryName, extent, srsName);
     }-*/;
 
@@ -77,7 +77,7 @@ public class OGCFilter extends Object {
      * @param upperBoundary The upper bound of the range.
      * @return <PropertyIsBetween> operator.
      */
-    public static final native OGCBboxFilter between(String propertyName, double lowerBoundary, double upperBoundary) /*-{
+    public static native OGCBboxFilter between(String propertyName, double lowerBoundary, double upperBoundary) /*-{
         return new ol.format.ogc.filter.between(propertyName, lowerBoundary, upperBoundary);
     }-*/;
 
@@ -87,7 +87,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsEqualTo> operator.
      */
-    public static final native OGCEqualToFilter equalTo(String propertyName, String expression) /*-{
+    public static native OGCEqualToFilter equalTo(String propertyName, String expression) /*-{
         return new ol.format.ogc.filter.equalTo(propertyName, expression);
     }-*/;
 
@@ -99,7 +99,7 @@ public class OGCFilter extends Object {
      * @param matchCase Case-sensitive?
      * @return <PropertyIsEqualTo> operator.
      */
-    public static final native OGCEqualToFilter equalTo(String propertyName, String expression, boolean matchCase) /*-{
+    public static native OGCEqualToFilter equalTo(String propertyName, String expression, boolean matchCase) /*-{
         return new ol.format.ogc.filter.equalTo(propertyName, expression, matchCase);
     }-*/;
     
@@ -109,7 +109,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsGreaterThan> operator.
      */
-    public static final native OGCGreaterThanFilter greaterThan(String propertyName, double expression) /*-{
+    public static native OGCGreaterThanFilter greaterThan(String propertyName, double expression) /*-{
         return new ol.format.ogc.filter.greaterThan(propertyName, expression);
     }-*/;
  
@@ -119,7 +119,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsGreaterThanOrEqualTo> operator. 
      */
-    public static final native OGCGreaterThanOrEqualToFilter greaterThanOrEqualTo(String propertyName, double expression) /*-{
+    public static native OGCGreaterThanOrEqualToFilter greaterThanOrEqualTo(String propertyName, double expression) /*-{
         return new ol.format.ogc.filter.greaterThanOrEqualTo(propertyName, expression);
     }-*/;
 
@@ -128,7 +128,7 @@ public class OGCFilter extends Object {
      * @param propertyName Name of the context property to compare.
      * @return <PropertyIsNull> operator.
      */
-    public static final native OGCIsNullFilter isNull(String propertyName) /*-{
+    public static native OGCIsNullFilter isNull(String propertyName) /*-{
         return new ol.format.ogc.filter.isNull(propertyName);
     }-*/;
  
@@ -138,7 +138,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsLessThan> operator.
      */
-    public static final native OGCLessThanFilter lessThan(String propertyName, double expression) /*-{
+    public static native OGCLessThanFilter lessThan(String propertyName, double expression) /*-{
         return new ol.format.ogc.filter.lessThan(propertyName, expression);
     }-*/;
  
@@ -148,7 +148,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsLessThanOrEqualTo> operator.
      */
-    public static final native OGCLessThanOrEqualToFilter lessThanOrEqualTo(String propertyName, double expression) /*-{
+    public static native OGCLessThanOrEqualToFilter lessThanOrEqualTo(String propertyName, double expression) /*-{
         return new ol.format.ogc.filter.lessThanOrEqualTo(propertyName, expression);
     }-*/;
     
@@ -158,7 +158,7 @@ public class OGCFilter extends Object {
      * @param pattern Text pattern.
      * @return <PropertyIsLike> operator.
      */
-    public static final native OGCIsLikeFilter like(String propertyName, String pattern) /*-{
+    public static native OGCIsLikeFilter like(String propertyName, String pattern) /*-{
         return new ol.format.ogc.filter.like(propertyName, pattern);
     }-*/;
 
@@ -172,7 +172,7 @@ public class OGCFilter extends Object {
      * @param matchCase Case-sensitive?
      * @return <PropertyIsLike> operator.
      */
-    public static final native OGCIsLikeFilter like(String propertyName, String pattern, String wildCard, String singleChar, String escapeChar, boolean matchCase) /*-{
+    public static native OGCIsLikeFilter like(String propertyName, String pattern, String wildCard, String singleChar, String escapeChar, boolean matchCase) /*-{
         return new ol.format.ogc.filter.like(propertyName, pattern, wildCard, singleChar, escapeChar, matchCase);
     }-*/;
     
@@ -182,7 +182,7 @@ public class OGCFilter extends Object {
      * @param expression The value to compare.
      * @return <PropertyIsNotEqualTo> operator.
      */
-    public static final native OGCNotEqualToFilter notEqualTo(String propertyName, String expression) /*-{
+    public static native OGCNotEqualToFilter notEqualTo(String propertyName, String expression) /*-{
         return new ol.format.ogc.filter.notEqualTo(propertyName, expression);
     }-*/;
     
@@ -193,7 +193,7 @@ public class OGCFilter extends Object {
      * @param matchCase Case-sensitive?
      * @return <PropertyIsNotEqualTo> operator.
      */
-    public static final native OGCNotEqualToFilter notEqualTo(String propertyName, String expression, boolean matchCase) /*-{
+    public static native OGCNotEqualToFilter notEqualTo(String propertyName, String expression, boolean matchCase) /*-{
         return new ol.format.ogc.filter.notEqualTo(propertyName, expression, matchCase);
     }-*/;
  
@@ -203,7 +203,7 @@ public class OGCFilter extends Object {
      * @param conditionB Second filter condition.
      * @return <Or> operator.
      */
-    public static final native OGCOrFilter or(OGCFilter conditionA, OGCFilter conditionB) /*-{
+    public static native OGCOrFilter or(OGCFilter conditionA, OGCFilter conditionB) /*-{
         return new ol.format.ogc.filter.or(conditionA, conditionB);
     }-*/;
     
@@ -214,7 +214,7 @@ public class OGCFilter extends Object {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return <Intersects> operator.
      */
-    public static final native OGCIntersectsFilter intersects(String geometryName, Geometry geometry, String srsName) /*-{
+    public static native OGCIntersectsFilter intersects(String geometryName, Geometry geometry, String srsName) /*-{
         return ol.format.ogc.filter.intersects(geometryName, geometry, srsName);
     }-*/;
     
@@ -224,7 +224,7 @@ public class OGCFilter extends Object {
      * @param geometry Geometry.
      * @return <Within> operator.
      */
-    public static final native OGCWithinFilter within(String geometryName, Geometry geometry) /*-{
+    public static native OGCWithinFilter within(String geometryName, Geometry geometry) /*-{
         return new ol.format.ogc.filter.within(geometryName, geometry);
     }-*/;
     
@@ -235,7 +235,7 @@ public class OGCFilter extends Object {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return <Within> operator.
      */
-    public static final native OGCWithinFilter within(String geometryName, Geometry geometry, String srsName) /*-{
+    public static native OGCWithinFilter within(String geometryName, Geometry geometry, String srsName) /*-{
         return new ol.format.ogc.filter.within(geometryName, geometry, srsName);
     }-*/;
 }

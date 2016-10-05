@@ -24,7 +24,7 @@ public enum ZoomifyTiezSizeCalculation {
     
     private final String _value;
     
-    private ZoomifyTiezSizeCalculation(String value) {
+    ZoomifyTiezSizeCalculation(String value) {
         _value = value;
     }
     

@@ -26,7 +26,7 @@ public class StamenSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native StamenSourceOptions create() /*-{
+    public static native StamenSourceOptions create() /*-{
         return {};
     }-*/;
     

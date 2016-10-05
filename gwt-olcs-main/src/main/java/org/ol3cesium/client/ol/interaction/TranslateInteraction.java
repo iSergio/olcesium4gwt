@@ -27,7 +27,7 @@ public class TranslateInteraction extends PointerInteraction {
         //
     }
     
-    public static final native TranslateInteraction create(TranslateInteractionOptions options) /*-{
+    public static native TranslateInteraction create(TranslateInteractionOptions options) /*-{
         return new ol.interaction.Translate(options);
     }-*/;
     

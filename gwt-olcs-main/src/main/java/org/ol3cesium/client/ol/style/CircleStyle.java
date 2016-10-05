@@ -26,11 +26,11 @@ public class CircleStyle extends ImageStyle {
         //
     }
     
-    public static final native CircleStyle create() /*-{
+    public static native CircleStyle create() /*-{
         return new ol.style.Circle();
     }-*/;
     
-    public static final native CircleStyle create(CircleStyleOptions options) /*-{
+    public static native CircleStyle create(CircleStyleOptions options) /*-{
         return new ol.style.Circle(options);
     }-*/;
     

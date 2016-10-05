@@ -32,11 +32,11 @@ public class GPXFormat extends XMLFeatureFormat {
         //
     }
     
-    public static final native GPXFormat create() /*-{
+    public static native GPXFormat create() /*-{
         return new ol.format.GPX();
     }-*/;
     
-    public static final native GPXFormat create(GPXFormatOptions options) /*-{
+    public static native GPXFormat create(GPXFormatOptions options) /*-{
         return new ol.format.GPX(options);
     }-*/;
     

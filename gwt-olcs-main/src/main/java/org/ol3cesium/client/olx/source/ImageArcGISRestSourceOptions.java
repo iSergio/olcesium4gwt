@@ -36,7 +36,7 @@ public class ImageArcGISRestSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageArcGISRestSourceOptions create() /*-{
+    public static native ImageArcGISRestSourceOptions create() /*-{
         return {};
     }-*/;
     

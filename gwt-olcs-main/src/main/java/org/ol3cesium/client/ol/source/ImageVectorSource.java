@@ -35,7 +35,7 @@ public class ImageVectorSource extends ImageCanvasSource {
         //
     }
     
-    public static final native ImageVectorSource create(ImageVectorSourceOptions options) /*-{
+    public static native ImageVectorSource create(ImageVectorSourceOptions options) /*-{
         return new ol.source.ImageVector(options);
     }-*/;
     

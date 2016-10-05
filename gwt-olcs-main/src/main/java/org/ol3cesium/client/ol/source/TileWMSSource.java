@@ -29,11 +29,11 @@ public class TileWMSSource extends TileImageSource {
         //
     }
     
-    public static final native TileWMSSource create() /*-{
+    public static native TileWMSSource create() /*-{
         return new ol.source.TileWMS();
     }-*/;
     
-    public static final native TileWMSSource create(TileWMSSourceOptions options) /*-{
+    public static native TileWMSSource create(TileWMSSourceOptions options) /*-{
         return new ol.source.TileWMS(options);
     }-*/;
     

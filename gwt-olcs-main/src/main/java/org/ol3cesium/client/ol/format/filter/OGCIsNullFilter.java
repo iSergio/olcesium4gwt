@@ -35,7 +35,7 @@ public class OGCIsNullFilter extends OGCComparisonFilter {
      * @param propertyName Name of the context property to compare.
      * @return Represents a <PropertyIsNull> comparison operator.
      */
-    public static final native OGCIsNullFilter create(String propertyName) /*-{
+    public static native OGCIsNullFilter create(String propertyName) /*-{
         return new ol.format.ogc.filter.IsNull(propertyName);
     }-*/;
 }

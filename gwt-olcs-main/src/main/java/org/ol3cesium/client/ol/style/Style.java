@@ -28,11 +28,11 @@ public class Style extends JavaScriptObject {
         //
     }
     
-    public static final native Style create() /*-{
+    public static native Style create() /*-{
         return new ol.style.Style();
     }-*/;
     
-    public static final native Style create(StyleOptions options) /*-{
+    public static native Style create(StyleOptions options) /*-{
         return new ol.style.Style(options);
     }-*/;
     

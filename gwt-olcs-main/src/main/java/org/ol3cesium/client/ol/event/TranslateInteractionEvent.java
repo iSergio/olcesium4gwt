@@ -24,8 +24,8 @@ import org.ol3cesium.client.ol.Feature;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class TranslateInteractionEvent extends Event {
-    public static enum Type {TRANSLATION_END, TRANSLATION_START, TRANSLATING, UNKNOWN};
-    
+    public enum Type {TRANSLATION_END, TRANSLATION_START, TRANSLATING, UNKNOWN}
+
     protected TranslateInteractionEvent() {
         //
     }

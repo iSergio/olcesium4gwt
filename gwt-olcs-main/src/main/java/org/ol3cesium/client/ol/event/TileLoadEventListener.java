@@ -26,5 +26,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface TileLoadEventListener {
-    public void onTileLoad(TileLoadEvent event);
+    void onTileLoad(TileLoadEvent event);
 }

@@ -27,7 +27,7 @@ public class TileLayerOptions extends LayerOptions {
         //
     }
     
-    public static final native TileLayerOptions create() /*-{
+    public static native TileLayerOptions create() /*-{
         return {};
     }-*/;
     

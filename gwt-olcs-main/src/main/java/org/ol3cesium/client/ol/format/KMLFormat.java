@@ -31,11 +31,11 @@ public class KMLFormat extends XMLFeatureFormat {
         //
     }
     
-    public static final native KMLFormat create() /*-{
+    public static native KMLFormat create() /*-{
         return new ol.format.KML();
     }-*/;
     
-    public static final native KMLFormat create(KMLFormatOptions options) /*-{
+    public static native KMLFormat create(KMLFormatOptions options) /*-{
         return new ol.format.KML(options);
     }-*/;
     

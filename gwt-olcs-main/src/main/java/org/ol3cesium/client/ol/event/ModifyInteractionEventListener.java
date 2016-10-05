@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface ModifyInteractionEventListener {
-    public void onModifyInteraction(ModifyInteractionEvent event);
+    void onModifyInteraction(ModifyInteractionEvent event);
 }

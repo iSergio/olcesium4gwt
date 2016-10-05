@@ -30,7 +30,7 @@ public class OverlayOptions extends JavaScriptObject {
         //
     }
     
-    public static final native OverlayOptions create() /*-{
+    public static native OverlayOptions create() /*-{
         return {};
     }-*/;
     

@@ -32,7 +32,7 @@ public class XYZSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native XYZSourceOptions create() /*-{
+    public static native XYZSourceOptions create() /*-{
         return {};
     }-*/;
     

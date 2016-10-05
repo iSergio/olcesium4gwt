@@ -41,7 +41,7 @@ public class OLCesiumCore {
      * @param geometry
      * @param height 
      */
-    public static final native void applyHeightOffsetToGeometry(Geometry geometry, double height) /*-{
+    public static native void applyHeightOffsetToGeometry(Geometry geometry, double height) /*-{
         olcs.core.applyHeightOffsetToGeometry(geometry, height);
     }-*/;
     
@@ -55,7 +55,7 @@ public class OLCesiumCore {
      * @param pivot Point around which the camera rotates.
      * @return 
      */
-    public static final native double computeAngleToZenith(Scene scene, Cartesian3 pivot) /*-{
+    public static native double computeAngleToZenith(Scene scene, Cartesian3 pivot) /*-{
         olcs.core.computeAngleToZenith(scene, pivot);
     }-*/;
     
@@ -65,7 +65,7 @@ public class OLCesiumCore {
      * @param target
      * @return 
      */
-    public static final native Cartesian2 computePixelSizeAtCoordinate(Scene scene, Cartesian3 target) /*-{
+    public static native Cartesian2 computePixelSizeAtCoordinate(Scene scene, Cartesian3 target) /*-{
         olcs.core.computePixelSizeAtCoordinate(scene, target);
     }-*/;
     
@@ -76,7 +76,7 @@ public class OLCesiumCore {
      * @param scene
      * @return 
      */
-    public static final native double computeSignedTiltAngleOnGlobe(Scene scene) /*-{
+    public static native double computeSignedTiltAngleOnGlobe(Scene scene) /*-{
         olcs.core.computeSignedTiltAngleOnGlobe(scene);
     }-*/;
     
@@ -85,7 +85,7 @@ public class OLCesiumCore {
      * @param olColor
      * @return 
      */
-    public static final native Color convertColorToCesium(String olColor) /*-{
+    public static native Color convertColorToCesium(String olColor) /*-{
         return olcs.core.convertColorToCesium(olColor);
     }-*/;
     
@@ -94,7 +94,7 @@ public class OLCesiumCore {
      * @param olColor
      * @return 
      */
-    public static final native Color convertColorToCesium(org.ol3cesium.client.ol.Color olColor) /*-{
+    public static native Color convertColorToCesium(org.ol3cesium.client.ol.Color olColor) /*-{
         return olcs.core.convertColorToCesium(olColor);
     }-*/;
     
@@ -104,7 +104,7 @@ public class OLCesiumCore {
      * @param projection Extent projection.
      * @return The corresponding Cesium rectangle.
      */
-    public static final native Rectangle extentToRectangle(Extent extent, Projection projection) /*-{
+    public static native Rectangle extentToRectangle(Extent extent, Projection projection) /*-{
         return olcs.core.extentToRectangle(extent, projection);
     }-*/;
     
@@ -114,7 +114,7 @@ public class OLCesiumCore {
      * @param projection Extent projection.
      * @return The corresponding Cesium rectangle.
      */
-    public static final native Rectangle extentToRectangle(Extent extent, String projection) /*-{
+    public static native Rectangle extentToRectangle(Extent extent, String projection) /*-{
         return olcs.core.extentToRectangle(extent, projection);
     }-*/;
     
@@ -125,7 +125,7 @@ public class OLCesiumCore {
      * @param target
      * @param globe 
      */
-    public static final native void lookAt(Camera camera, Cartographic target, Globe globe) /*-{
+    public static native void lookAt(Camera camera, Cartographic target, Globe globe) /*-{
         olcs.core.lookAt(camera, target, globe);
     }-*/;
     
@@ -135,7 +135,7 @@ public class OLCesiumCore {
      * @param camera
      * @param target
      */
-    public static final native void lookAt(Camera camera, Cartographic target) /*-{
+    public static native void lookAt(Camera camera, Cartographic target) /*-{
         olcs.core.lookAt(camera, target);
     }-*/;
     
@@ -144,7 +144,7 @@ public class OLCesiumCore {
      * @param coordinates Ol3 coordinates.
      * @return 
      */
-    public static final native JsArray<Cartesian3> ol4326CoordinateArrayToCsCartesians(JsArray<Coordinate> coordinates) /*-{
+    public static native JsArray<Cartesian3> ol4326CoordinateArrayToCsCartesians(JsArray<Coordinate> coordinates) /*-{
         return olcs.core.ol4326CoordinateArrayToCsCartesians(coordinates);
     }-*/;
     
@@ -153,7 +153,7 @@ public class OLCesiumCore {
      * @param coordinate Ol3 coordinate.
      * @return 
      */
-    public static final native Cartesian3 ol4326CoordinateToCesiumCartesian(Coordinate coordinate) /*-{
+    public static native Cartesian3 ol4326CoordinateToCesiumCartesian(Coordinate coordinate) /*-{
         return olcs.core.ol4326CoordinateToCesiumCartesian(coordinate);
     }-*/;
     
@@ -165,7 +165,7 @@ public class OLCesiumCore {
      * @param projection
      * @return 
      */
-    public static final native Geometry olGeometryCloneTo4326(Geometry geometry, Projection projection) /*-{
+    public static native Geometry olGeometryCloneTo4326(Geometry geometry, Projection projection) /*-{
         return olcs.core.olGeometryCloneTo4326(geometry, projection);
     }-*/;
     
@@ -174,7 +174,7 @@ public class OLCesiumCore {
      * @param scene
      * @return 
      */
-    public static final native Cartesian3 pickBottomPoint(Scene scene) /*-{
+    public static native Cartesian3 pickBottomPoint(Scene scene) /*-{
         return olcs.core.pickBottomPoint(scene);
     }-*/;
     
@@ -183,7 +183,7 @@ public class OLCesiumCore {
      * @param scene
      * @return 
      */
-    public static final native Cartesian3 pickCenterPoint(Scene scene) /*-{
+    public static native Cartesian3 pickCenterPoint(Scene scene) /*-{
         return olcs.core.pickCenterPoint(scene);
     }-*/;
     
@@ -193,7 +193,7 @@ public class OLCesiumCore {
      * @param pixel
      * @return 
      */
-    public static final native Cartesian3 pickOnTerrainOrEllipsoid(Scene scene, Cartesian2 pixel) /*-{
+    public static native Cartesian3 pickOnTerrainOrEllipsoid(Scene scene, Cartesian2 pixel) /*-{
         return olcs.core.pickOnTerrainOrEllipsoid(scene, pixel);
     }-*/;
     
@@ -204,7 +204,7 @@ public class OLCesiumCore {
      * @param axis
      * @param transform 
      */
-    public static final native void rotateAroundAxis(Camera camera, double angle, Cartesian3 axis, Matrix4 transform) /*-{
+    public static native void rotateAroundAxis(Camera camera, double angle, Cartesian3 axis, Matrix4 transform) /*-{
         olcs.core.rotateAroundAxis(camera, angle, axis, transform);
     }-*/;
     
@@ -214,7 +214,7 @@ public class OLCesiumCore {
      * @param heading
      * @param bottomCenter 
      */
-    public static final native void setHeadingUsingBottomCenter(Scene scene, double heading, Cartesian3 bottomCenter) /*-{
+    public static native void setHeadingUsingBottomCenter(Scene scene, double heading, Cartesian3 bottomCenter) /*-{
         olcs.core.setHeadingUsingBottomCenter(scene, heading, bottomCenter);
     }-*/;
     
@@ -224,7 +224,7 @@ public class OLCesiumCore {
      * @param viewProj Projection of the view.
      * @return 
      */
-    public static final native ImageryLayer tileLayerToImageryLayer(BaseLayer olLayer, Projection viewProj) /*-{
+    public static native ImageryLayer tileLayerToImageryLayer(BaseLayer olLayer, Projection viewProj) /*-{
         return olcs.core.tileLayerToImageryLayer(olLayer, viewProj);
     }-*/;
     
@@ -233,7 +233,7 @@ public class OLCesiumCore {
      * @param olLayer
      * @param csLayer 
      */
-    public static final native void updateCesiumLayerProperties(BaseLayer olLayer, ImageryLayer csLayer) /*-{
+    public static native void updateCesiumLayerProperties(BaseLayer olLayer, ImageryLayer csLayer) /*-{
         olcs.core.updateCesiumLayerProperties(olLayer, csLayer);
     }-*/;
 }

@@ -39,7 +39,7 @@ public class OL extends JavaScriptObject {
 //    }-*/;
     
     public static void initialize(String path, String name, List<String> styles, Document document, Callback<Void, Exception> callback) {
-        OLInitializer olInitializer = (OLInitializer)(OLInitializer.get(document));
+        OLInitializer olInitializer = OLInitializer.get(document);
         if (olInitializer != null) {
             olInitializer.addCallback(callback);
             olInitializer.initialize();

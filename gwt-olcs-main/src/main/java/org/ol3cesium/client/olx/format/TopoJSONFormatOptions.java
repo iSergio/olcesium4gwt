@@ -27,7 +27,7 @@ public class TopoJSONFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TopoJSONFormatOptions create() /*-{
+    public static native TopoJSONFormatOptions create() /*-{
         return {};
     }-*/;
     

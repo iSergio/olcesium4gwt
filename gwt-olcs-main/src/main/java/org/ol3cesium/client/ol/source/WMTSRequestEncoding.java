@@ -24,7 +24,7 @@ public enum WMTSRequestEncoding {
     
     private final String _value;
     
-    private WMTSRequestEncoding(String value) {
+    WMTSRequestEncoding(String value) {
         _value = value;
     }
     

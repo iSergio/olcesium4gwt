@@ -22,7 +22,8 @@ import org.ol3cesium.client.ol.Coordinate;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class ViewChangeEvent extends Event {
-    public static enum Type {CENTER, RESOLUTION, ROTATION, UNKNOWN};
+    public enum Type {CENTER, RESOLUTION, ROTATION, UNKNOWN}
+
     protected ViewChangeEvent() {
         //
     }
@@ -40,8 +41,8 @@ public class ViewChangeEvent extends Event {
         } else {
             return Type.UNKNOWN;
         }
-    };
-    
+    }
+
     public final native Coordinate getCenter() /*-{
         return this.center;
     }-*/;

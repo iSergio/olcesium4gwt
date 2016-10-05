@@ -31,11 +31,11 @@ public class VectorSource extends Source {
         //
     }
     
-    public static final native VectorSource create() /*-{
+    public static native VectorSource create() /*-{
         return new ol.source.Vector();
     }-*/;
     
-    public static final native VectorSource create(VectorSourceOptions options) /*-{
+    public static native VectorSource create(VectorSourceOptions options) /*-{
         return new ol.source.Vector(options);
     }-*/;
     

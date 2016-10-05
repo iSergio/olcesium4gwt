@@ -26,7 +26,7 @@ public class GetFeatureInfoParams extends JavaScriptObject {
         //
     }
     
-    public static final native GetFeatureInfoParams create() /*-{
+    public static native GetFeatureInfoParams create() /*-{
         return {};
     }-*/;
     

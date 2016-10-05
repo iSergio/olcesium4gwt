@@ -36,7 +36,7 @@ public class ImageArcGISRestSource extends ImageSource {
         //
     }
     
-    public static final native ImageArcGISRestSource create() /*-{
+    public static native ImageArcGISRestSource create() /*-{
         return new ol.source.ImageArcGISRest();
     }-*/;
     
@@ -45,7 +45,7 @@ public class ImageArcGISRestSource extends ImageSource {
      * @param options Image ArcGIS Rest Options.
      * @return 
      */
-    public static final native ImageArcGISRestSource create(ImageArcGISRestSourceOptions options) /*-{
+    public static native ImageArcGISRestSource create(ImageArcGISRestSourceOptions options) /*-{
         return new ol.source.ImageArcGISRest(options);
     }-*/;
     

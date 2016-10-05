@@ -33,12 +33,12 @@ public class PolylineFormat extends TextFeatureFormat {
         //
     }
     
-    public static final native PolylineFormat create() /*-{
-        retrun new ol.format.Polyline();
+    public static native PolylineFormat create() /*-{
+        return new ol.format.Polyline();
     }-*/;
     
-    public static final native PolylineFormat create(PolylineFormatOptions options) /*-{
-        retrun new ol.format.Polyline(options);
+    public static native PolylineFormat create(PolylineFormatOptions options) /*-{
+        return new ol.format.Polyline(options);
     }-*/;
     
     /**
@@ -47,7 +47,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param stride The number of dimension of the points in the encoded string.
      * @return 
      */
-    public static final native JsArrayNumber decodeDeltas(String encoded, int stride) /*-{
+    public static native JsArrayNumber decodeDeltas(String encoded, int stride) /*-{
         return ol.format.Polyline.decodeDeltas(encoded, stride);
     }-*/;
     
@@ -58,7 +58,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param factor The factor by which the resulting numbers will be divided. Default is 1e5.
      * @return A list of n-dimensional points.
      */
-    public static final native JsArrayNumber decodeDeltas(String encoded, int stride, double factor) /*-{
+    public static native JsArrayNumber decodeDeltas(String encoded, int stride, double factor) /*-{
         return ol.format.Polyline.decodeDeltas(encoded, stride, factor);
     }-*/;
     
@@ -67,7 +67,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param encoded An encoded string.
      * @return A list of floating point numbers.
      */
-    public static final native JsArrayNumber decodeFloats(String encoded) /*-{
+    public static native JsArrayNumber decodeFloats(String encoded) /*-{
         return ol.format.Polyline.decodeFloats(encoded);
     }-*/;
     
@@ -77,7 +77,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param factor The factor by which the result will be divided. Default is 1e5.
      * @return A list of floating point numbers.
      */
-    public static final native JsArrayNumber decodeFloats(String encoded, double factor) /*-{
+    public static native JsArrayNumber decodeFloats(String encoded, double factor) /*-{
         return ol.format.Polyline.decodeFloats(encoded, factor);
     }-*/;
     
@@ -88,7 +88,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param stride The number of dimension of the points in the list.
      * @return The encoded string.
      */
-    public static final native String encodeDeltas(JsArrayNumber numbers, int stride) /*-{
+    public static native String encodeDeltas(JsArrayNumber numbers, int stride) /*-{
         return ol.format.Polyline.encodeDeltas(numbers, stride);
     }-*/;
     
@@ -101,7 +101,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * The remaining decimal places will get rounded away. Default is 1e5.
      * @return The encoded string.
      */
-    public static final native String encodeDeltas(JsArrayNumber numbers, int stride, double factor) /*-{
+    public static native String encodeDeltas(JsArrayNumber numbers, int stride, double factor) /*-{
         return ol.format.Polyline.encodeDeltas(numbers, stride, factor);
     }-*/;
     
@@ -111,7 +111,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * @param numbers A list of floating point numbers.
      * @return The encoded string.
      */
-    public static final native String encodeFloats(JsArrayNumber numbers) /*-{
+    public static native String encodeFloats(JsArrayNumber numbers) /*-{
         return ol.format.Polyline.encodeFloats(numbers);
     }-*/;
     
@@ -123,7 +123,7 @@ public class PolylineFormat extends TextFeatureFormat {
      * The remaining decimal places will get rounded away. Default is 1e5.
      * @return The encoded string.
      */
-    public static final native String encodeFloats(JsArrayNumber numbers, double factor) /*-{
+    public static native String encodeFloats(JsArrayNumber numbers, double factor) /*-{
         return ol.format.Polyline.encodeFloats(numbers, factor);
     }-*/;
     

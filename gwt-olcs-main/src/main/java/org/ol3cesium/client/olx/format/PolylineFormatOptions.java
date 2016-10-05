@@ -27,7 +27,7 @@ public class PolylineFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native PolylineFormatOptions create() /*-{
+    public static native PolylineFormatOptions create() /*-{
         return {};
     }-*/;
     

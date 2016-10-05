@@ -27,7 +27,7 @@ public class RasterSource extends ImageSource {
         //
     }
     
-    public static final native RasterSource create(RasterSourceOptions options) /*-{
+    public static native RasterSource create(RasterSourceOptions options) /*-{
         return new ol.source.Raster(options);
     }-*/;
     

@@ -28,7 +28,7 @@ public class OSMSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native OSMSourceOptions create() /*-{
+    public static native OSMSourceOptions create() /*-{
         return {};
     }-*/;
     

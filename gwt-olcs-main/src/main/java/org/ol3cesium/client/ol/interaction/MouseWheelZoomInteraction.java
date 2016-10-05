@@ -26,11 +26,11 @@ public class MouseWheelZoomInteraction extends Interaction {
         //
     }
     
-    public static final native MouseWheelZoomInteraction create() /*-{
+    public static native MouseWheelZoomInteraction create() /*-{
         return new ol.interaction.MouseWheeZoom();
     }-*/;
     
-    public static final native MouseWheelZoomInteraction create(MouseWheelZoomInteractionOptions options) /*-{
+    public static native MouseWheelZoomInteraction create(MouseWheelZoomInteractionOptions options) /*-{
         return new ol.interaction.MouseWheeZoom(options);
     }-*/;
     

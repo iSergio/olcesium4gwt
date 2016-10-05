@@ -37,7 +37,7 @@ public class OGCNotEqualToFilter extends OGCComparisonBinaryFilter {
      * @param matchCase Case-sensitive?
      * @return Represents a <PropertyIsNotEqualTo> comparison operator.
      */
-    public static final native OGCNotEqualToFilter create(String propertyName, String expression, boolean matchCase) /*-{
+    public static native OGCNotEqualToFilter create(String propertyName, String expression, boolean matchCase) /*-{
         return new ol.format.ogc.filter.NotEqualTo(propertyName, expression, matchCase);
     }-*/;
 }

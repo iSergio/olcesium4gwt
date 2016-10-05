@@ -26,7 +26,7 @@ public class PinchRotateInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native PinchRotateInteractionOptions create() /*-{
+    public static native PinchRotateInteractionOptions create() /*-{
         return {};
     }-*/;
     

@@ -26,7 +26,7 @@ public class StamenSource extends XYZSource {
         //
     }
     
-    public static final native StamenSource create(StamenSourceOptions options) /*-{
+    public static native StamenSource create(StamenSourceOptions options) /*-{
         return new ol.source.Stamen(options);
     }-*/;
 }

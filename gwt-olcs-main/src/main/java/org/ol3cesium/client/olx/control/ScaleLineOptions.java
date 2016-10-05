@@ -28,7 +28,7 @@ public class ScaleLineOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ScaleLineOptions create() /*-{
+    public static native ScaleLineOptions create() /*-{
         return {};
     }-*/;
     

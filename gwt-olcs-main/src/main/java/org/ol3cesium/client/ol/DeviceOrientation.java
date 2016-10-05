@@ -28,11 +28,11 @@ public class DeviceOrientation extends Object {
         //
     }
     
-    public static final native DeviceOrientation create() /*-{
+    public static native DeviceOrientation create() /*-{
         return new ol.DeviceOrientation();
     }-*/;
     
-    public static final native DeviceOrientation create(DeviceOrientationOptions options) /*-{
+    public static native DeviceOrientation create(DeviceOrientationOptions options) /*-{
         return new ol.DeviceOrientation(options);
     }-*/;
     

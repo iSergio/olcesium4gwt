@@ -26,7 +26,7 @@ public class DragZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DragZoomInteractionOptions create() /*-{
+    public static native DragZoomInteractionOptions create() /*-{
         return {};
     }-*/;
     

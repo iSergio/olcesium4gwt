@@ -28,7 +28,7 @@ public class AbstractSynchronizer extends JavaScriptObject {
         //
     }
     
-    public static final native AbstractSynchronizer create(Map map, Scene scene) /*-{
+    public static native AbstractSynchronizer create(Map map, Scene scene) /*-{
         return new olcs.AbstractSynchronizer(map, scene);
     }-*/;
     

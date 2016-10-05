@@ -26,7 +26,7 @@ public class DragRotateAndZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DragRotateAndZoomInteractionOptions create() /*-{
+    public static native DragRotateAndZoomInteractionOptions create() /*-{
         return {};
     }-*/;
     

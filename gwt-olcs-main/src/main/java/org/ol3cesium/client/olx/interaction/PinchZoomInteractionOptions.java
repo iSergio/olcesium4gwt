@@ -26,7 +26,7 @@ public class PinchZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native PinchZoomInteractionOptions create() /*-{
+    public static native PinchZoomInteractionOptions create() /*-{
         return {};
     }-*/;
     

@@ -27,7 +27,7 @@ public class FullScreenControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native FullScreenControlOptions create() /*-{
+    public static native FullScreenControlOptions create() /*-{
         return {};
     }-*/;
     

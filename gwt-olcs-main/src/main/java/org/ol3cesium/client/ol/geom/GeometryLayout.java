@@ -25,7 +25,7 @@ public enum GeometryLayout {
     
     private final String _value;
     
-    private GeometryLayout(String value) {
+    GeometryLayout(String value) {
         _value = value;
     }
     

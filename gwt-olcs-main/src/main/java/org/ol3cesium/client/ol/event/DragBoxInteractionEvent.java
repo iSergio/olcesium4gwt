@@ -23,8 +23,8 @@ import org.ol3cesium.client.ol.geom.Polygon;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class DragBoxInteractionEvent extends Event {
-    public static enum Type {BOX_END, BOX_START, UNKNOWN};
-    
+    public enum Type {BOX_END, BOX_START, UNKNOWN}
+
     protected DragBoxInteractionEvent() {
         //
     }

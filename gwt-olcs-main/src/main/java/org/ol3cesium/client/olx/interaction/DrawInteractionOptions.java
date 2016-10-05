@@ -32,7 +32,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DrawInteractionOptions create() /*-{
+    public static native DrawInteractionOptions create() /*-{
         return {};
     }-*/;
     

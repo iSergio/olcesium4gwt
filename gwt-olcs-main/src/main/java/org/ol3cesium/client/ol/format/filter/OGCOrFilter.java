@@ -36,7 +36,7 @@ public class OGCOrFilter extends OGCLogicalBinaryFilter {
      * @param conditionB Second filter condition.
      * @return logical <Or> operator between two filter conditions.
      */
-    public static final native OGCOrFilter create(OGCFilter conditionA, OGCFilter conditionB) /*-{
+    public static native OGCOrFilter create(OGCFilter conditionA, OGCFilter conditionB) /*-{
         return new ol.format.ogc.filter.Or(conditionA, conditionB);
     }-*/;
 }

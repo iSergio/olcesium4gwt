@@ -29,11 +29,11 @@ public class TextStyle extends JavaScriptObject {
         //
     }
     
-    public static final native TextStyle create() /*-{
+    public static native TextStyle create() /*-{
         return new ol.style.Text();
     }-*/;
     
-    public static final native TextStyle create(TextStyleOptions options) /*-{
+    public static native TextStyle create(TextStyleOptions options) /*-{
         return new ol.style.Text(options);
     }-*/;
     

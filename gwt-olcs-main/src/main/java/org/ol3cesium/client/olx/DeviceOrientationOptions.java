@@ -26,11 +26,11 @@ public class DeviceOrientationOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DeviceOrientationOptions create() /*-{
+    public static native DeviceOrientationOptions create() /*-{
         return {};
     }-*/;
     
-    public static final native DeviceOrientationOptions create(boolean tracking) /*-{
+    public static native DeviceOrientationOptions create(boolean tracking) /*-{
         return {tracking: tracking};
     }-*/;
     

@@ -24,7 +24,7 @@ public enum RendererType {
     
     private final String _value;
     
-    private RendererType(String value) {
+    RendererType(String value) {
         _value = value;
     }
     

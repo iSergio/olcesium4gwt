@@ -27,15 +27,15 @@ public class FillStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native FillStyleOptions create() /*-{
+    public static native FillStyleOptions create() /*-{
         return {};
     }-*/;
     
-    public static final native FillStyleOptions create(Color color) /*-{
+    public static native FillStyleOptions create(Color color) /*-{
         return {color: color};
     }-*/;
     
-    public static final native FillStyleOptions create(String color) /*-{
+    public static native FillStyleOptions create(String color) /*-{
         return {color: color};
     }-*/;
     

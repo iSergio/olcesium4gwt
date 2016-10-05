@@ -22,5 +22,5 @@ import com.google.gwt.core.client.JavaScriptObject;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface CollectionRemoveEventListener {
-    public void onCollectionRemove(JavaScriptObject event);
+    void onCollectionRemove(JavaScriptObject event);
 }

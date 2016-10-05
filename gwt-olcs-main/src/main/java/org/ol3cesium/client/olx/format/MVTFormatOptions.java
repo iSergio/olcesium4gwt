@@ -27,7 +27,7 @@ public class MVTFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native MVTFormatOptions create() /*-{
+    public static native MVTFormatOptions create() /*-{
         return {};
     }-*/;
     

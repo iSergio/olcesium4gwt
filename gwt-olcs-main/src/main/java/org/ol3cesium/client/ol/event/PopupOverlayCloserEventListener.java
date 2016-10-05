@@ -22,5 +22,5 @@ import org.ol3cesium.client.ol.PopupOverlay;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface PopupOverlayCloserEventListener {
-    public void onPopupOverlayeCloser(PopupOverlay popupOverlay);
+    void onPopupOverlayeCloser(PopupOverlay popupOverlay);
 }

@@ -26,11 +26,11 @@ public class ZoomifySource extends TileImageSource {
         //
     }
     
-    public static final native ZoomifySource create() /*-{
+    public static native ZoomifySource create() /*-{
         return new ol.source.Zoomify();
     }-*/;
     
-    public static final native ZoomifySource create(ZoomifySourceOptions options) /*-{
+    public static native ZoomifySource create(ZoomifySourceOptions options) /*-{
         return new ol.source.Zoomify(options);
     }-*/;
 }

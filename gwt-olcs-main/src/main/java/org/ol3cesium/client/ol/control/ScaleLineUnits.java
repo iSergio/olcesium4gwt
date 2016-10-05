@@ -25,7 +25,7 @@ public enum ScaleLineUnits {
     
     private final String _value;
     
-    private ScaleLineUnits(String value) {
+    ScaleLineUnits(String value) {
         _value = value;
     }
     

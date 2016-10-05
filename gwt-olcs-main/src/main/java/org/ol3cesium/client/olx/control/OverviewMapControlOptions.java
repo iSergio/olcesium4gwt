@@ -31,7 +31,7 @@ public class OverviewMapControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native OverviewMapControlOptions create() /*-{
+    public static native OverviewMapControlOptions create() /*-{
         return {};
     }-*/;
     

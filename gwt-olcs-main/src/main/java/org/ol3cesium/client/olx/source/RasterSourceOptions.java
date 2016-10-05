@@ -28,7 +28,7 @@ public class RasterSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native RasterSourceOptions create() /*-{
+    public static native RasterSourceOptions create() /*-{
         return {};
     }-*/;
     

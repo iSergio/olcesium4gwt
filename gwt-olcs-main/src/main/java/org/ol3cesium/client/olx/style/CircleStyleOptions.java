@@ -28,7 +28,7 @@ public class CircleStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native CircleStyleOptions create() /*-{
+    public static native CircleStyleOptions create() /*-{
         return {};
     }-*/;
 

@@ -26,11 +26,11 @@ public class OSMSource extends XYZSource {
         //
     }
     
-    public static final native OSMSource create() /*-{
+    public static native OSMSource create() /*-{
         return new ol.source.OSM();
     }-*/;
     
-    public static final native OSMSource create(OSMSourceOptions options) /*-{
+    public static native OSMSource create(OSMSourceOptions options) /*-{
         return new ol.source.OSM(options);
     }-*/;
 }

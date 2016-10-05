@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface HeatmapLayerChangeEventListener {
-    public void onHeatmapLayerChange(HeatmapLayerChangeEvent event);
+    void onHeatmapLayerChange(HeatmapLayerChangeEvent event);
 }

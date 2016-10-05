@@ -28,11 +28,11 @@ public class FullScreenControl extends Control {
         //
     }
     
-    public static final native FullScreenControl create() /*-{
+    public static native FullScreenControl create() /*-{
         return new ol.control.FullScreen();
     }-*/;
     
-    public static final native FullScreenControl create(FullScreenControlOptions options) /*-{
+    public static native FullScreenControl create(FullScreenControlOptions options) /*-{
         return new ol.control.FullScreen(options);
     }-*/;
 }

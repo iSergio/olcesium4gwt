@@ -26,7 +26,7 @@ public class EsriJSONFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native EsriJSONFormatOptions create() /*-{
+    public static native EsriJSONFormatOptions create() /*-{
         return {};
     }-*/;
     

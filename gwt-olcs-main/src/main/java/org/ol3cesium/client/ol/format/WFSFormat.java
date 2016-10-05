@@ -36,11 +36,11 @@ public class WFSFormat extends XMLFeatureFormat {
         //
     }
     
-    public static final native WFSFormat create() /*-{
+    public static native WFSFormat create() /*-{
         return new ol.format.WFS();
     }-*/;
     
-    public static final native WFSFormat create(WFSFormatOptions options) /*-{
+    public static native WFSFormat create(WFSFormatOptions options) /*-{
         return new ol.format.WFS(options);
     }-*/;
     

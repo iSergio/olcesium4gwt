@@ -30,7 +30,7 @@ public class ModifyInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ModifyInteractionOptions create() /*-{
+    public static native ModifyInteractionOptions create() /*-{
         return {};
     }-*/;
     

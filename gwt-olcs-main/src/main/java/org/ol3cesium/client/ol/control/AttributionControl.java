@@ -29,11 +29,11 @@ public class AttributionControl extends Control {
         //
     }
     
-    public static final native AttributionControl create() /*-{
+    public static native AttributionControl create() /*-{
         return new ol.control.Attribution();
     }-*/;
     
-    public static final native AttributionControl create(AttributionControlOptions options) /*-{
+    public static native AttributionControl create(AttributionControlOptions options) /*-{
         return new ol.control.Attribution(options);
     }-*/;
 

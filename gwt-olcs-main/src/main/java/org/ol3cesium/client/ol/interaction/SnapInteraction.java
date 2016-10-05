@@ -33,11 +33,11 @@ public class SnapInteraction extends PointerInteraction {
         //
     }
     
-    public static final native SnapInteraction create() /*-{
+    public static native SnapInteraction create() /*-{
         return new ol.interaction.Snap();
     }-*/;
     
-    public static final native SnapInteraction create(SnapInteractionOptions options) /*-{
+    public static native SnapInteraction create(SnapInteractionOptions options) /*-{
         return new ol.interaction.Snap(options);
     }-*/;
     

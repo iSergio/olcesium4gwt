@@ -22,8 +22,8 @@ import org.ol3cesium.client.ol.Feature;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class DrawInteractionEvent extends Event {
-    public static enum Type{DRAW_END, DRAW_START, UNKNOWN};
-    
+    public enum Type{DRAW_END, DRAW_START, UNKNOWN}
+
     protected DrawInteractionEvent() {
         //
     }

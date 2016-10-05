@@ -22,5 +22,5 @@ import com.google.gwt.core.client.JavaScriptObject;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface CollectionAddEventListener {
-    public void onCollectionAdd(JavaScriptObject event);
+    void onCollectionAdd(JavaScriptObject event);
 }

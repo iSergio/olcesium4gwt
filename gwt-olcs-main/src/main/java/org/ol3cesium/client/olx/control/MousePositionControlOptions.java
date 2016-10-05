@@ -28,7 +28,7 @@ public class MousePositionControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native MousePositionControlOptions create() /*-{
+    public static native MousePositionControlOptions create() /*-{
         return {};
     }-*/;
     

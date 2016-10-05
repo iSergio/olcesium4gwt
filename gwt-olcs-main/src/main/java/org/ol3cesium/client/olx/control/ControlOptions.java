@@ -27,7 +27,7 @@ public class ControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ControlOptions create() /*-{
+    public static native ControlOptions create() /*-{
         return {};
     }-*/;
     

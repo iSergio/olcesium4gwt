@@ -32,7 +32,7 @@ public class GMLBaseFormat extends XMLFeatureFormat {
      * @param source Source.
      * @return Features.
      */
-    public static final native JsArray<Feature> readFeatures(String source) /*-{
+    public static native JsArray<Feature> readFeatures(String source) /*-{
         return this.readFeatures(source);
     }-*/;
 }

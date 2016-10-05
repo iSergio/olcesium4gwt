@@ -27,7 +27,7 @@ public class RotateControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native RotateControlOptions create() /*-{
+    public static native RotateControlOptions create() /*-{
         return {};
     }-*/;
     

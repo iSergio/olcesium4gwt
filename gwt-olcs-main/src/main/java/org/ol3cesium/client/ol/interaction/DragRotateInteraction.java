@@ -27,11 +27,11 @@ public class DragRotateInteraction extends PointerInteraction {
         //
     }
     
-    public static final native DragRotateInteraction create() /*-{
+    public static native DragRotateInteraction create() /*-{
         return new ol.interaction.DragRotate();
     }-*/;
     
-    public static final native DragRotateInteraction create(DragRotateInteractionOptions options) /*-{
+    public static native DragRotateInteraction create(DragRotateInteractionOptions options) /*-{
         return new ol.interaction.DragRotate(options);
     }-*/;
 }

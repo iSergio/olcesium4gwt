@@ -27,7 +27,7 @@ public class GeolocationOptions extends JavaScriptObject {
         //
     }
     
-    public static final native GeolocationOptions create() /*-{
+    public static native GeolocationOptions create() /*-{
         return {};
     }-*/;
     

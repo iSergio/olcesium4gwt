@@ -31,11 +31,11 @@ public class WKTFormat extends TextFeatureFormat {
         //
     }
     
-    public static final native WKTFormat create() /*-{
+    public static native WKTFormat create() /*-{
         return new ol.format.WKT();
     }-*/;
     
-    public static final native WKTFormat create(WKTFormatOptions options) /*-{
+    public static native WKTFormat create(WKTFormatOptions options) /*-{
         return new ol.format.WKT(options);
     }-*/;
     

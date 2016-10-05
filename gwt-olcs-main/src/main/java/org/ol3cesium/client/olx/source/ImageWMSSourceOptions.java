@@ -31,7 +31,7 @@ public class ImageWMSSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageWMSSourceOptions create() /*-{
+    public static native ImageWMSSourceOptions create() /*-{
         return {};
     }-*/;
     
@@ -65,7 +65,7 @@ public class ImageWMSSourceOptions extends JavaScriptObject {
     
     /**
      * The type of the remote WMS server. Currently only used when hidpi is true. Default is undefined.
-     * @param serverType {@link ServerTypeWMSSource}
+     * @param serverType {@link WMSServerType}
      */
     public final native void setServerType(WMSServerType serverType) /*-{
         this.serverType = serverType.toString();

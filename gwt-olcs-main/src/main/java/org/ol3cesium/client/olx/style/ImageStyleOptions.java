@@ -26,7 +26,7 @@ public class ImageStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageStyleOptions create() /*-{
+    public static native ImageStyleOptions create() /*-{
         return {};
     }-*/;
         

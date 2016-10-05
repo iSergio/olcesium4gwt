@@ -28,7 +28,7 @@ public class TileDebugSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TileDebugSourceOptions create() /*-{
+    public static native TileDebugSourceOptions create() /*-{
         return {};
     }-*/;
     

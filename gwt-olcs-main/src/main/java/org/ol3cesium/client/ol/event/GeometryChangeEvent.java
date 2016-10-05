@@ -22,8 +22,8 @@ import org.ol3cesium.client.ol.geom.Geometry;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class GeometryChangeEvent extends Event {
-    public static enum Type {CHANGE, UNKNOWN};
-    
+    public enum Type {CHANGE, UNKNOWN}
+
     protected GeometryChangeEvent() {
         //
     }

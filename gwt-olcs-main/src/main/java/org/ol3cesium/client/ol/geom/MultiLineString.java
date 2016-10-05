@@ -28,11 +28,11 @@ public class MultiLineString extends SimpleGeometry {
         //
     }
     
-    public static final native MultiLineString create(JsArray<JsArray<Coordinate>> coordinates) /*-{
+    public static native MultiLineString create(JsArray<JsArray<Coordinate>> coordinates) /*-{
         return new ol.geom.MultiLineString(coordinates);
     }-*/;
     
-    public static final native MultiLineString create(JsArray<JsArray<Coordinate>> coordinates, GeometryLayout layout) /*-{
+    public static native MultiLineString create(JsArray<JsArray<Coordinate>> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.MultiLineString(coordinates, layout);
     }-*/;
     

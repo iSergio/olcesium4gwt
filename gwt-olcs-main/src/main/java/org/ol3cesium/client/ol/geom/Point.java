@@ -27,11 +27,11 @@ public class Point extends SimpleGeometry {
         //
     }
     
-    public static final native Point create(Coordinate coordinates) /*-{
+    public static native Point create(Coordinate coordinates) /*-{
         return new ol.geom.Point(coordinates);
     }-*/;
     
-    public static final native Point create(Coordinate coordinates, GeometryLayout layout) /*-{
+    public static native Point create(Coordinate coordinates, GeometryLayout layout) /*-{
         return new ol.geom.Point(coordinates, layout);
     }-*/;
     

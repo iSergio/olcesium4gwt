@@ -32,11 +32,11 @@ public class KeyboardZoomInteraction extends Interaction {
         //
     }
     
-    public static final native KeyboardZoomInteraction create() /*-{
+    public static native KeyboardZoomInteraction create() /*-{
         return new ol.interaction.KeyboardZoom();
     }-*/;
     
-    public static final native KeyboardZoomInteraction create(KeyboardZoomInteractionOptions options) /*-{
+    public static native KeyboardZoomInteraction create(KeyboardZoomInteractionOptions options) /*-{
         return new ol.interaction.KeyboardZoom(options);
     }-*/;
 }

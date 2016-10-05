@@ -35,7 +35,7 @@ public enum VectorTileLayerRenderType {
     IMAGE("image"), HYBRID("hybrid"), VECTOR("vector"), UNKNOWN("unknown");
     public final String _value;
     
-    private VectorTileLayerRenderType(String value) {
+    VectorTileLayerRenderType(String value) {
         _value = value;
     }
     

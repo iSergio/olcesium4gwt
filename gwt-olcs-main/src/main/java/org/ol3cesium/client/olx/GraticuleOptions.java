@@ -28,7 +28,7 @@ public class GraticuleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native GraticuleOptions create() /*-{
+    public static native GraticuleOptions create() /*-{
         return {};
     }-*/;
     

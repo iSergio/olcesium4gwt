@@ -26,7 +26,7 @@ public class ClusterSource extends VectorSource {
         //
     }
     
-    public static final native ClusterSource create(ClusterSourceOptions options) /*-{
+    public static native ClusterSource create(ClusterSourceOptions options) /*-{
         return new ol.source.Cluster(options);
     }-*/;
     

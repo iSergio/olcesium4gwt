@@ -33,11 +33,11 @@ public class Collection<T extends JavaScriptObject> extends Object {
         //
     }
     
-    public static final native Collection create() /*-{
+    public static native Collection create() /*-{
         return new ol.Collection();
     }-*/;
     
-    public static final native Collection create(JsArray array) /*-{
+    public static native Collection create(JsArray array) /*-{
         var collection = new ol.Collection();
         return collection.extend(array);
     }-*/;

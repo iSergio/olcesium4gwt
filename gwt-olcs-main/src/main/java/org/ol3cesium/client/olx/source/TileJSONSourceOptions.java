@@ -28,7 +28,7 @@ public class TileJSONSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TileJSONSourceOptions create() /*-{
+    public static native TileJSONSourceOptions create() /*-{
         return {};
     }-*/;
     

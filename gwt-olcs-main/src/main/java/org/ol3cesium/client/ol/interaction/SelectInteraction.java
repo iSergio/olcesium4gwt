@@ -39,11 +39,11 @@ public class SelectInteraction extends Interaction {
         //
     }
     
-    public static final native SelectInteraction create() /*-{
+    public static native SelectInteraction create() /*-{
         return new ol.interaction.Select();
     }-*/;
     
-    public static final native SelectInteraction create(SelectInteractionOptions options) /*-{
+    public static native SelectInteraction create(SelectInteractionOptions options) /*-{
         return new ol.interaction.Select(options);
     }-*/;
 

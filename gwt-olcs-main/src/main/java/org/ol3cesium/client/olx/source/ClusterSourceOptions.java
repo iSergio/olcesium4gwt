@@ -32,7 +32,7 @@ public class ClusterSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ClusterSourceOptions create() /*-{
+    public static native ClusterSourceOptions create() /*-{
         return {};
     }-*/;
     

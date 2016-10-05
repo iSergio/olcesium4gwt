@@ -29,11 +29,11 @@ public class Polygon extends SimpleGeometry {
         //
     }
     
-    public static final native Polygon create(JsArray<JsArray<Coordinate>> coordinates) /*-{
+    public static native Polygon create(JsArray<JsArray<Coordinate>> coordinates) /*-{
         return new ol.geom.Polygon(coordinates);
     }-*/;
     
-    public static final native Polygon create(JsArray<JsArray<Coordinate>> coordinates, GeometryLayout layout) /*-{
+    public static native Polygon create(JsArray<JsArray<Coordinate>> coordinates, GeometryLayout layout) /*-{
         return new ol.geom.Polygon(coordinates, layout);
     }-*/;
 
@@ -44,7 +44,7 @@ public class Polygon extends SimpleGeometry {
      * @param radius The great-circle distance from the center to the polygon vertices.
      * @return The "circular" polygon.
      */
-    public static final native Polygon circular(Sphere sphere, Coordinate center, double radius) /*-{
+    public static native Polygon circular(Sphere sphere, Coordinate center, double radius) /*-{
         return new ol.geom.Polygon.circular(sphere, center, radius);
     }-*/;
     
@@ -56,7 +56,7 @@ public class Polygon extends SimpleGeometry {
      * @param n Optional number of vertices for the resulting polygon. Default is 32.
      * @return The "circular" polygon.
      */
-    public static final native Polygon circular(Sphere sphere, Coordinate center, double radius, int n) /*-{
+    public static native Polygon circular(Sphere sphere, Coordinate center, double radius, int n) /*-{
         return new ol.geom.Polygon.circular(sphere, center, radius, n);
     }-*/;
 
@@ -67,7 +67,7 @@ public class Polygon extends SimpleGeometry {
      * @param angle Start angle for the first vertex of the polygon in radians. Default is 0.
      * @return 
      */
-    public static final native Polygon fromCircle(Circle circle, int sides, double angle) /*-{
+    public static native Polygon fromCircle(Circle circle, int sides, double angle) /*-{
         return new ol.geom.Polygon.fromCircle(circle, sides, angle);
     }-*/;
     
@@ -76,7 +76,7 @@ public class Polygon extends SimpleGeometry {
      * @param extent The extent
      * @return The polygon.
      */
-    public static final native Polygon fromExtent(Extent extent) /*-{
+    public static native Polygon fromExtent(Extent extent) /*-{
         return new ol.geom.Polygon.fromExtent(extent);
     }-*/;
 

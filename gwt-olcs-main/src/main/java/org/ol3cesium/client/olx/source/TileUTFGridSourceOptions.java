@@ -26,7 +26,7 @@ public class TileUTFGridSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TileUTFGridSourceOptions create() /*-{
+    public static native TileUTFGridSourceOptions create() /*-{
         return {};
     }-*/;
     

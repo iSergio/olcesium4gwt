@@ -29,7 +29,7 @@ public class WFSWriteGetFeatureFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WFSWriteGetFeatureFormatOptions create() /*-{
+    public static native WFSWriteGetFeatureFormatOptions create() /*-{
         return {};
     }-*/;
     

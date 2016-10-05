@@ -27,11 +27,11 @@ public class OverviewMapControl extends Control {
         //
     }
     
-    public static final native OverviewMapControl create() /*-{
+    public static native OverviewMapControl create() /*-{
         return new ol.control.OverviewMap();
     }-*/;
     
-    public static final native OverviewMapControl create(OverviewMapControlOptions options) /*-{
+    public static native OverviewMapControl create(OverviewMapControlOptions options) /*-{
         return new ol.control.OverviewMap(options);
     }-*/;
     

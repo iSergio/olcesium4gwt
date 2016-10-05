@@ -26,7 +26,7 @@ public class DoubleClickZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DoubleClickZoomInteractionOptions create() /*-{
+    public static native DoubleClickZoomInteractionOptions create() /*-{
         return {};
     }-*/;
     

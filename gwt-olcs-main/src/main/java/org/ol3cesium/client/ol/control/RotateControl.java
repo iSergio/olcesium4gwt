@@ -28,11 +28,11 @@ public class RotateControl extends Control {
         //
     }
     
-    public static final native RotateControl create() /*-{
+    public static native RotateControl create() /*-{
         return new ol.control.Rotate();
     }-*/;
     
-    public static final native RotateControl create(RotateControlOptions options) /*-{
+    public static native RotateControl create(RotateControlOptions options) /*-{
         return new ol.control.Rotate(options);
     }-*/;
 }

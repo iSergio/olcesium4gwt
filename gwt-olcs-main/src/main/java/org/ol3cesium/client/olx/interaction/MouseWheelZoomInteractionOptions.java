@@ -26,7 +26,7 @@ public class MouseWheelZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native MouseWheelZoomInteractionOptions create() /*-{
+    public static native MouseWheelZoomInteractionOptions create() /*-{
         return {};
     }-*/;
 

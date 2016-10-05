@@ -26,7 +26,7 @@ public class KeyboardZoomInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native KeyboardZoomInteractionOptions create() /*-{
+    public static native KeyboardZoomInteractionOptions create() /*-{
         return {};
     }-*/;
     

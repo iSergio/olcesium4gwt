@@ -27,19 +27,19 @@ public class ImageLayer extends Layer {
         //
     }
     
-    public static final native ImageLayer create() /*-{
+    public static native ImageLayer create() /*-{
         var image = new ol.layer.Image();
         image.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::IMAGE_LAYER_CLASS_NAME);
         return image;
     }-*/;
     
-    public static final native ImageLayer create(ImageLayerOptions options) /*-{
+    public static native ImageLayer create(ImageLayerOptions options) /*-{
         var image = new ol.layer.Image(options);
         image.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::IMAGE_LAYER_CLASS_NAME);
         return image;
     }-*/;
     
-    public static final native ImageLayer create(ImageSource source) /*-{
+    public static native ImageLayer create(ImageSource source) /*-{
         var image = new ol.layer.Image({source: source});
         image.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::IMAGE_LAYER_CLASS_NAME);
         return image;

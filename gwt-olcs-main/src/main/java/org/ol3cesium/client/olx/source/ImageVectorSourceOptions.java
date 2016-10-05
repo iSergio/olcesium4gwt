@@ -32,7 +32,7 @@ public class ImageVectorSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageVectorSourceOptions create() /*-{
+    public static native ImageVectorSourceOptions create() /*-{
         return {};
     }-*/;
     

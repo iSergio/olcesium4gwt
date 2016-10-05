@@ -26,7 +26,7 @@ public class XYZSource extends TileImageSource {
         //
     }
     
-    public static final native XYZSource create(XYZSourceOptions options) /*-{
+    public static native XYZSource create(XYZSourceOptions options) /*-{
         return new ol.source.XYZ(options);
     }-*/;
 }

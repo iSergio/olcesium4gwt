@@ -30,11 +30,11 @@ public class IGCFormat extends TextFeatureFormat {
         //
     }
     
-    public static final native IGCFormat create() /*-{
+    public static native IGCFormat create() /*-{
         return new ol.format.IGC();
     }-*/;
     
-    public static final native IGCFormat create(IGCFormatOptions options) /*-{
+    public static native IGCFormat create(IGCFormatOptions options) /*-{
         return new ol.format.IGC(options);
     }-*/;
     

@@ -30,7 +30,7 @@ public class ZoomToExtentControlOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ZoomToExtentControlOptions create() /*-{
+    public static native ZoomToExtentControlOptions create() /*-{
         return {};
     }-*/;
     

@@ -24,7 +24,7 @@ public class WriteFormatOptions extends ReadFormatOptions {
         //
     }
 
-    public static final native WriteFormatOptions create() /*-{
+    public static native WriteFormatOptions create() /*-{
         return {};
     }-*/;
 

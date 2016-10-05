@@ -26,7 +26,7 @@ public class DragRotateInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native DragRotateInteractionOptions create() /*-{
+    public static native DragRotateInteractionOptions create() /*-{
         return {};
     }-*/;
     

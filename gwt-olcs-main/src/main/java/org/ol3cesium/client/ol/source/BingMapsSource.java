@@ -26,7 +26,7 @@ public class BingMapsSource extends TileImageSource {
         //
     }
     
-    public static final native BingMapsSource create(BingMapsSourceOptions options) /*-{
+    public static native BingMapsSource create(BingMapsSourceOptions options) /*-{
         return new ol.source.BingMaps(options);
     }-*/;
 }

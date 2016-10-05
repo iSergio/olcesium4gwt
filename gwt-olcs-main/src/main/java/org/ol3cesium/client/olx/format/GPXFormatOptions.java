@@ -26,7 +26,7 @@ public class GPXFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native GPXFormatOptions create() /*-{
+    public static native GPXFormatOptions create() /*-{
         return {};
     }-*/;
     

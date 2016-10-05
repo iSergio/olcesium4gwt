@@ -28,7 +28,7 @@ public enum GeometryType {
 
     private final String _value;
 
-    private GeometryType(String value) {
+    GeometryType(String value) {
         _value = value;
     }
 

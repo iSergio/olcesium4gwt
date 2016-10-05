@@ -29,7 +29,7 @@ public class WMTSTileGrid extends TileGrid {
         //
     }
     
-    public static final native WMTSTileGrid create(WMTSTileGridOptions options) /*-{
+    public static native WMTSTileGrid create(WMTSTileGridOptions options) /*-{
         return new ol.tilegrid.WMTS(options);
     }-*/;
     
@@ -39,7 +39,7 @@ public class WMTSTileGrid extends TileGrid {
      * @param extent An optional extent to restrict the tile ranges the server provides.
      * @return WMTS tileGrid instance.
      */
-    public static final native WMTSTileGrid createFromCapabilitiesMatrixSet(JavaScriptObject matrixSet, Extent extent) /*-{
+    public static native WMTSTileGrid createFromCapabilitiesMatrixSet(JavaScriptObject matrixSet, Extent extent) /*-{
         return ol.tilegrid.WMTS.createFromCapabilitiesMatrixSet(matrixSet, extent);
     }-*/;
 

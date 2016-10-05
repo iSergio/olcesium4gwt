@@ -30,7 +30,7 @@ public class ZoomifySourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ZoomifySourceOptions create() /*-{
+    public static native ZoomifySourceOptions create() /*-{
         return {};
     }-*/;
     

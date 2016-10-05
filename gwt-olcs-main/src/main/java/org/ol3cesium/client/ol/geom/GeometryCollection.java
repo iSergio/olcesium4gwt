@@ -27,11 +27,11 @@ public class GeometryCollection extends Geometry {
         //
     }
     
-    public static final native GeometryCollection create() /*-{
+    public static native GeometryCollection create() /*-{
         return new ol.geom.GeometryCollection();
     }-*/;
     
-    public static final native GeometryCollection create(JsArray<Geometry> geometries) /*-{
+    public static native GeometryCollection create(JsArray<Geometry> geometries) /*-{
         return new ol.geom.GeometryCollection(geometries);
     }-*/;
     

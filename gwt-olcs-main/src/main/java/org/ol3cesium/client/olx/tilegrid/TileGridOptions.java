@@ -32,7 +32,7 @@ public class TileGridOptions extends JavaScriptObject {
         //
     }
     
-    public static final native TileGridOptions create() /*-{
+    public static native TileGridOptions create() /*-{
         return {};
     }-*/;
     

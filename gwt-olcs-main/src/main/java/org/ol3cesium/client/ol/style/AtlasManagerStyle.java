@@ -35,11 +35,11 @@ public class AtlasManagerStyle extends JavaScriptObject {
         //
     }
     
-    public static final native AtlasManagerStyle crate() /*-{
+    public static native AtlasManagerStyle crate() /*-{
         return new ol.style.AtlasManager();
     }-*/;
     
-    public static final native AtlasManagerStyle crate(AtlasManagerStyleOptions options) /*-{
+    public static native AtlasManagerStyle crate(AtlasManagerStyleOptions options) /*-{
         return new ol.style.AtlasManager(options);
     }-*/;
 }

@@ -31,11 +31,11 @@ public class GML3Format extends GMLBaseFormat {
         //
     }
     
-    public static final native GML3Format create() /*-{
+    public static native GML3Format create() /*-{
         return new ol.format.GML3();
     }-*/;
     
-    public static final native GML3Format create(GMLFormatOptions options) /*-{
+    public static native GML3Format create(GMLFormatOptions options) /*-{
         return new ol.format.GML3(options);
     }-*/;
     

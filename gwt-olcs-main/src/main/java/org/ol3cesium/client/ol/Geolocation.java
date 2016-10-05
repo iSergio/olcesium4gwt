@@ -33,11 +33,11 @@ public class Geolocation extends Object {
         //
     }
     
-    public static final native Geolocation create() /*-{
+    public static native Geolocation create() /*-{
         return new ol.Geolocation();
     }-*/;
     
-    public static final native Geolocation create(GeolocationOptions options) /*-{
+    public static native Geolocation create(GeolocationOptions options) /*-{
         return new ol.Geolocation(options);
     }-*/;
     

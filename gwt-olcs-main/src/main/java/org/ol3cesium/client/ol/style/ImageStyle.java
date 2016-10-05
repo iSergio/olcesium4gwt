@@ -28,7 +28,7 @@ public class ImageStyle extends JavaScriptObject {
         //
     }
     
-    public static final native ImageStyle create(ImageStyleOptions options) /*-{
+    public static native ImageStyle create(ImageStyleOptions options) /*-{
         return new ol.style.Image(options);
     }-*/;
     

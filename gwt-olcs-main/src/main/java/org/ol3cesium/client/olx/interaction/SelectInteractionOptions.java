@@ -31,7 +31,7 @@ public class SelectInteractionOptions extends JavaScriptObject {
         //
     }
     
-    public static final native SelectInteractionOptions create() /*-{
+    public static native SelectInteractionOptions create() /*-{
         return {};
     }-*/;
     

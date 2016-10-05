@@ -30,13 +30,13 @@ public class VectorTileLayer extends VectorLayer {
         //
     }
     
-    public static final native VectorTileLayer create() /*-{
+    public static native VectorTileLayer create() /*-{
         var vectorTile = new ol.layer.VectorTile();
         vectorTile.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::VECTOR_TILE_LAYER_CLASS_NAME);
         return vectorTile;
     }-*/;
     
-    public static final native VectorTileLayer create(VectorTileLayerOptions options) /*-{
+    public static native VectorTileLayer create(VectorTileLayerOptions options) /*-{
         var vectorTile = new ol.layer.VectorTile(options);
         vectorTile.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::VECTOR_TILE_LAYER_CLASS_NAME);
         return vectorTile;

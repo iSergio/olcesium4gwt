@@ -26,7 +26,7 @@ public class IGCFormatOptions extends JavaScriptObject {
         //
     }
     
-    public static final native IGCFormatOptions create() /*-{
+    public static native IGCFormatOptions create() /*-{
         return {};
     }-*/;
     

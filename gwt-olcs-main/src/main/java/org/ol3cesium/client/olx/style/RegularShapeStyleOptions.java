@@ -28,7 +28,7 @@ public class RegularShapeStyleOptions extends JavaScriptObject {
         //
     }
     
-    public static final native RegularShapeStyleOptions create() /*-{
+    public static native RegularShapeStyleOptions create() /*-{
         return {};
     }-*/;
     

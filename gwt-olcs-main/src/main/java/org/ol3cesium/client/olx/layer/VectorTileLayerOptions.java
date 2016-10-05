@@ -27,7 +27,7 @@ public class VectorTileLayerOptions extends VectorLayerOptions {
         //
     }
     
-    public static final native VectorTileLayerOptions create() /*-{
+    public static native VectorTileLayerOptions create() /*-{
         return {};
     }-*/;
 

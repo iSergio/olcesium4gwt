@@ -29,11 +29,11 @@ public class IconStyle extends ImageStyle {
         //
     }
     
-    public static final native IconStyle create() /*-{
+    public static native IconStyle create() /*-{
         return new ol.style.Icon();
     }-*/;
     
-    public static final native IconStyle create(IconStyleOptions options) /*-{
+    public static native IconStyle create(IconStyleOptions options) /*-{
         return new ol.style.Icon(options);
     }-*/;
     

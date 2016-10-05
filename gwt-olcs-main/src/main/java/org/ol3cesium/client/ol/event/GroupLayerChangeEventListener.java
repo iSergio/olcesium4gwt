@@ -20,5 +20,5 @@ package org.ol3cesium.client.ol.event;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public interface GroupLayerChangeEventListener {
-    public void onGroupLayerChange(GroupLayerChangeEvent event);
+    void onGroupLayerChange(GroupLayerChangeEvent event);
 }

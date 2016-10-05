@@ -32,11 +32,11 @@ public class KeyboardPanInteraction extends Interaction {
         //
     }
     
-    public static final native KeyboardPanInteraction create() /*-{
+    public static native KeyboardPanInteraction create() /*-{
         return new ol.interaction.KeyboardPan();
     }-*/;
     
-    public static final native KeyboardPanInteraction create(KeyboardPanInteractionOptions options) /*-{
+    public static native KeyboardPanInteraction create(KeyboardPanInteractionOptions options) /*-{
         return new ol.interaction.KeyboardPan(options);
     }-*/;
 }

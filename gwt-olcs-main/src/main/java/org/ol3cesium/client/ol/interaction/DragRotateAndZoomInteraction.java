@@ -31,11 +31,11 @@ public class DragRotateAndZoomInteraction extends PointerInteraction {
         //
     }
     
-    public static final native DragRotateAndZoomInteraction create() /*-{
+    public static native DragRotateAndZoomInteraction create() /*-{
         return new ol.interaction.DragRotateAndZoom();
     }-*/;
     
-    public static final native DragRotateAndZoomInteraction create(DragRotateAndZoomInteractionOptions options) /*-{
+    public static native DragRotateAndZoomInteraction create(DragRotateAndZoomInteractionOptions options) /*-{
         return new ol.interaction.DragRotateAndZoom(options);
     }-*/;
 }

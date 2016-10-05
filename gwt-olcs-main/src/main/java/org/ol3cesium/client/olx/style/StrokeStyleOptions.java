@@ -24,12 +24,12 @@ import org.ol3cesium.client.ol.Color;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class StrokeStyleOptions extends JavaScriptObject {
-    public static enum LineCapStyle {
+    public enum LineCapStyle {
         BUTT("butt"), ROUND("round"), SQUARE("square"), UNKNOWN("unknown");
         
         private final String _value;
         
-        private LineCapStyle(String value) {
+        LineCapStyle(String value) {
             _value = value;
         }
         
@@ -51,13 +51,14 @@ public class StrokeStyleOptions extends JavaScriptObject {
         public String toString() {
             return _value;
         }
-    };
-    public static enum LineJoinStyle {
+    }
+
+    public enum LineJoinStyle {
         BEVEL("bevel"), ROUND("round"), MITER("miter"), UNKNOWN("unknown");
         
         private final String _value;
         
-        private LineJoinStyle(String value) {
+        LineJoinStyle(String value) {
             _value = value;
         }
         
@@ -79,13 +80,13 @@ public class StrokeStyleOptions extends JavaScriptObject {
         public String toString() {
             return _value;
         }
-    };
-    
+    }
+
     protected StrokeStyleOptions() {
         //
     }
     
-    public static final native StrokeStyleOptions create() /*-{
+    public static native StrokeStyleOptions create() /*-{
         return {}
     }-*/;
     

@@ -38,8 +38,8 @@ public class OGCIntersectsFilter extends OGCSpatialFilter {
      * @param geometry Geoemtry.
      * @return Intersects filter.
      */
-    public static final native OGCIntersectsFilter create(String geometryName, Geometry geometry) /*-{
-        retutn new ol.format.ogc.filter.Intersects(geometryName, geometry);
+    public static native OGCIntersectsFilter create(String geometryName, Geometry geometry) /*-{
+        return new ol.format.ogc.filter.Intersects(geometryName, geometry);
     }-*/;
     
     /**
@@ -49,7 +49,7 @@ public class OGCIntersectsFilter extends OGCSpatialFilter {
      * @param srsName SRS name. No srsName attribute will be set on geometries when this is not provided.
      * @return Intersects filter.
      */
-    public static final native OGCIntersectsFilter create(String geometryName, Geometry geometry, String srsName) /*-{
-        retutn new ol.format.ogc.filter.Intersects(geometryName, geometry, srsName);
+    public static native OGCIntersectsFilter create(String geometryName, Geometry geometry, String srsName) /*-{
+        return new ol.format.ogc.filter.Intersects(geometryName, geometry, srsName);
     }-*/;
 }

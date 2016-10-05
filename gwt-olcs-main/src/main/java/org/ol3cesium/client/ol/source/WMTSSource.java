@@ -27,7 +27,7 @@ public class WMTSSource extends TileImageSource {
         //
     }
     
-    public static final native WMTSSource create(WMTSSourceOptions options) /*-{
+    public static native WMTSSource create(WMTSSourceOptions options) /*-{
         return new ol.source.WMTS(options);
     }-*/;
     
@@ -44,7 +44,7 @@ public class WMTSSource extends TileImageSource {
      * format - {string} Image format for the layer. Default is the first format returned in the GetCapabilities response.
      * @return WMTS source options object.
      */
-    public static final native WMTSSourceOptions optionsFromCapabilities(JavaScriptObject wmtsCap, JavaScriptObject config) /*-{
+    public static native WMTSSourceOptions optionsFromCapabilities(JavaScriptObject wmtsCap, JavaScriptObject config) /*-{
         return ol.source.WMTS.optionsFromCapabilities(wmtsCap, config);
     }-*/;
     

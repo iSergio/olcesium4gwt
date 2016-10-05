@@ -28,7 +28,7 @@ public class Color extends JavaScriptObject {
         //
     }
     
-    public final static native Color create(int r, int g, int b, float a) /*-{
+    public static native Color create(int r, int g, int b, float a) /*-{
         return [r, g, b, a];
     }-*/;
     

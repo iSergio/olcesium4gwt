@@ -28,13 +28,13 @@ public class GroupLayer extends BaseLayer {
         //
     }
     
-    public static final native GroupLayer create() /*-{
+    public static native GroupLayer create() /*-{
         var group = new ol.layer.Group();
         group.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::GROUP_LAYER_CLASS_NAME);
         return group;
     }-*/;
     
-    public static final native GroupLayer create(GroupLayerOptions options) /*-{
+    public static native GroupLayer create(GroupLayerOptions options) /*-{
         var group = new ol.layer.Group(options);
         group.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::GROUP_LAYER_CLASS_NAME);
         return group;

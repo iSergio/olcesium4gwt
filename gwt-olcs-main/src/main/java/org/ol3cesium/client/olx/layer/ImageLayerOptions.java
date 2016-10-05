@@ -24,7 +24,7 @@ public class ImageLayerOptions extends LayerOptions {
         //
     }
     
-    public static final native ImageLayerOptions create() /*-{
+    public static native ImageLayerOptions create() /*-{
         return {};
     }-*/;
 }

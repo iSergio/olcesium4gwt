@@ -28,7 +28,7 @@ public class ImageMapGuideSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native ImageMapGuideSourceOptions create() /*-{
+    public static native ImageMapGuideSourceOptions create() /*-{
         return {};
     }-*/;
 

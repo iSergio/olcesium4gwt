@@ -31,13 +31,13 @@ public class HeatmapLayer extends VectorLayer {
         //
     }
     
-    public static final native HeatmapLayer create() /*-{
+    public static native HeatmapLayer create() /*-{
         var heatmap = new ol.layer.Heatmap();
         heatmap.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::HEATMAP_LAYER_CLASS_NAME);
         return heatmap;
     }-*/;
     
-    public static final native HeatmapLayer create(HeatmapLayerOptions options) /*-{
+    public static native HeatmapLayer create(HeatmapLayerOptions options) /*-{
         var heatmap = new ol.layer.Heatmap(options);
         heatmap.set('className', @org.ol3cesium.client.ol.layer.BaseLayer::HEATMAP_LAYER_CLASS_NAME);
         return heatmap;

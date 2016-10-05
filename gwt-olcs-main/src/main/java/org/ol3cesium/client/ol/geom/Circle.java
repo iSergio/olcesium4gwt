@@ -34,7 +34,7 @@ public class Circle extends SimpleGeometry {
      * @param radius Radius.
      * @return 
      */
-    public static final native Circle create(Coordinate center, double radius) /*-{
+    public static native Circle create(Coordinate center, double radius) /*-{
         return new ol.geom.Circle(center, radius);
     }-*/;
     
@@ -45,7 +45,7 @@ public class Circle extends SimpleGeometry {
      * @param layout Layout.
      * @return 
      */
-    public static final native Circle create(Coordinate center, double radius, GeometryLayout layout) /*-{
+    public static native Circle create(Coordinate center, double radius, GeometryLayout layout) /*-{
         return new ol.geom.Circle(center, radius, layout);
     }-*/;
     

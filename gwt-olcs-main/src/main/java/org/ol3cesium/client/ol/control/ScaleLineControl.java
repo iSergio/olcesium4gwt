@@ -30,11 +30,11 @@ public class ScaleLineControl extends Control {
         //
     }
     
-    public static final native ScaleLineControl create() /*-{
+    public static native ScaleLineControl create() /*-{
         return new ol.control.ScaleLine();
     }-*/;
     
-    public static final native ScaleLineControl create(ScaleLineOptions options) /*-{
+    public static native ScaleLineControl create(ScaleLineOptions options) /*-{
         return new ol.control.ScaleLine(options);
     }-*/;
     

@@ -33,7 +33,7 @@ public class Kinetic extends JavaScriptObject {
      * @param delay Delay to consider to calculate the kinetic initial values (milliseconds).
      * @return 
      */
-    public static final native Kinetic create(double decay, double minVelocity, int delay) /*-{
+    public static native Kinetic create(double decay, double minVelocity, int delay) /*-{
         return new ol.Kinetic(decay, minVelocity, delay)
     }-*/;
 }

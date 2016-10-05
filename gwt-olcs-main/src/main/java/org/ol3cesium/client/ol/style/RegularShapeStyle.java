@@ -30,7 +30,7 @@ public class RegularShapeStyle extends ImageStyle {
         //
     }
     
-    public static final native RegularShapeStyle create(RegularShapeStyleOptions options) /*-{
+    public static native RegularShapeStyle create(RegularShapeStyleOptions options) /*-{
         return new ol.style.RegularShape(options);
     }-*/;
     

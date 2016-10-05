@@ -32,7 +32,7 @@ public class WMTSSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native WMTSSourceOptions create() /*-{
+    public static native WMTSSourceOptions create() /*-{
         return {};
     }-*/;
     

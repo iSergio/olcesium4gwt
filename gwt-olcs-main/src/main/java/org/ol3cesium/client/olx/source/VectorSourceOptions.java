@@ -31,7 +31,7 @@ public class VectorSourceOptions extends JavaScriptObject {
         //
     }
     
-    public static final native VectorSourceOptions create() /*-{
+    public static native VectorSourceOptions create() /*-{
         return {};
     }-*/;
     
