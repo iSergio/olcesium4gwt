@@ -32,7 +32,7 @@ public class DragZoomInteractionOptions extends JavaScriptObject {
     
     /**
      * CSS class name for styling the box. The default is ol-dragzoom.
-     * @param className 
+     * @param className CSS class name.
      */
     public final native void setClassName(String className) /*-{
         this.className = className;
@@ -40,7 +40,7 @@ public class DragZoomInteractionOptions extends JavaScriptObject {
 
     /**
      * Animation duration in milliseconds. Default is 200.
-     * @param duration 
+     * @param duration Animation duration.
      */
     public final native void setDuration(int duration) /*-{
         this.duration = duration;

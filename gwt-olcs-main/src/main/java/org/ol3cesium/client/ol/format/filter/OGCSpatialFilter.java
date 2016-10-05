@@ -21,8 +21,6 @@
  */
 package org.ol3cesium.client.ol.format.filter;
 
-import org.ol3cesium.client.ol.geom.Geometry;
-
 /**
  * Represents a spatial operator to test whether a geometry-valued 
  * property relates to a given geometry.

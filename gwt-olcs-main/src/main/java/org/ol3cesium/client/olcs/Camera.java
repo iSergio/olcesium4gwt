@@ -58,7 +58,7 @@ public class Camera extends JavaScriptObject {
     
     /**
      * Distance in meters.
-     * @return 
+     * @return distance in meters.
      */
     public final native double getDistance() /*-{
         return this.getDistance();

@@ -33,12 +33,12 @@ import java.util.logging.Level;
 public class OLInitializer {
     private static final Logger _logger = Logger.getLogger(OLInitializer.class.getName());
   
-    private static final Map<Document, OLInitializer> _ol3InitializerFromDocument = new HashMap<Document, OLInitializer>();
+    private static final Map<Document, OLInitializer> _ol3InitializerFromDocument = new HashMap<>();
 
     private final String       _path;
     private final String       _name;
     private final Document     _document;
-    private final List<Callback<Void, Exception>> _callbacks = new ArrayList<Callback<Void, Exception>>();
+    private final List<Callback<Void, Exception>> _callbacks = new ArrayList<>();
     
     public OLInitializer(String path, String name, Document document, Callback<Void, Exception> callback) {
         _path     = path;

@@ -41,7 +41,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
      * to be considered a "click" event and actually add a point/vertex to the 
      * geometry being drawn. Default is 6 pixels. That value was chosen for the 
      * draw interaction to behave correctly on mouse as well as on touch devices.
-     * @param clickTolerance 
+     * @param clickTolerance maximum distance in pixels.
      */
     public final native void setClickTolerance(int clickTolerance) /*-{
         this.clickTolerance = clickTolerance;
@@ -49,7 +49,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
 
     /**
      * Destination collection for the drawn features.
-     * @param features 
+     * @param features Destination collection.
      */
     public final native void setFeatures(Collection<Feature> features) /*-{
         this.features = features;
@@ -57,7 +57,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
 
     /**
      * Destination source for the drawn features.
-     * @param source 
+     * @param source Destination source.
      */
     public final native void setSource(VectorSource source) /*-{
         this.source = source;
@@ -65,7 +65,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
 
     /**
      * Pixel distance for snapping to the drawing finish. Default is 12.
-     * @param snapTolerance 
+     * @param snapTolerance Pixel distance.
      */
     public final native void setSnapTolerance(int snapTolerance) /*-{
         this.snapTolerance = snapTolerance;
@@ -74,7 +74,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
     /**
      * Drawing type ('Point', 'LineString', 'Polygon', 'MultiPoint', 'MultiLineString', 
      * 'MultiPolygon' or 'Circle'). Required.
-     * @param type 
+     * @param type Drawing type.
      */
     public final native void setType(GeometryType type) /*-{
         this.type = type.toString();
@@ -83,7 +83,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
     /**
      * The number of points that can be drawn before a polygon ring or 
      * line string is finished. The default is no restriction.
-     * @param maxPoints 
+     * @param maxPoints number of points.
      */
     public final native void setMaxPoints(int maxPoints) /*-{
         this.maxPoints = maxPoints;
@@ -92,7 +92,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
     /**
      * The number of points that must be drawn before a polygon ring or line 
      * string can be finished. Default is 3 for polygon rings and 2 for line strings.
-     * @param minPoints 
+     * @param minPoints number of points.
      */
     public final native void setMinPoints(int minPoints) /*-{
         this.minPoints = minPoints;
@@ -100,19 +100,23 @@ public class DrawInteractionOptions extends JavaScriptObject {
 
     /**
      * Style for sketch features.
-     * @param style 
+     * @param style Style.
      */
     public final native void setStyle(Style style) /*-{
         this.style = style;
     }-*/;
-    
+
+    /**
+     * Function that is called when a geometry's coordinates are updated.
+     * @param geometryFunction Function.
+     */
     public final native void setGeometryFunction(JavaScriptObject geometryFunction) /*-{
         this.geometryFunction = geometryFunction;
     }-*/;
     
     /**
      * Style for sketch features.
-     * @param style 
+     * @param style Style.
      */
     public final native void setStyle(JsArray<Style> style) /*-{
         this.style = style;
@@ -120,7 +124,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
     
     /**
      * Geometry name to use for features created by the draw interaction.
-     * @param geometryName 
+     * @param geometryName Geometry name.
      */
     public final native void setGeometryName(String geometryName) /*-{
         this.geometryName = geometryName;
@@ -128,7 +132,7 @@ public class DrawInteractionOptions extends JavaScriptObject {
 
     /**
      * Wrap the world horizontally on the sketch overlay. Default is false.
-     * @param wrapX 
+     * @param wrapX Wrap the world horizontally.
      */
     public final native void setWrapX(boolean wrapX) /*-{
         this.wrapX = wrapX;

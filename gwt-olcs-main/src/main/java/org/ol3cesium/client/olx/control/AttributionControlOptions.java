@@ -75,7 +75,7 @@ public class AttributionControlOptions extends JavaScriptObject {
     /**
      * Text label to use for the collapsed attributions button. Default is i. 
      * Instead of text, also a Node (e.g. a span element) can be used.
-     * @param label 
+     * @param label label to use.
      */
     public final native void setLabel(String label) /*-{
         this.label = label;
@@ -84,7 +84,7 @@ public class AttributionControlOptions extends JavaScriptObject {
     /**
      * Text label to use for the expanded attributions button. Default is ». 
      * Instead of text, also a Node (e.g. a span element) can be used.
-     * @param collapseLabel 
+     * @param collapseLabel Collapse label flag.
      */
     public final native void setCollapseLabel(String collapseLabel) /*-{
         this.collapseLabel = collapseLabel;

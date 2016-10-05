@@ -32,7 +32,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
     
     /**
      * Culture code. Default is en-us.
-     * @param culture 
+     * @param culture Culture code.
      */
     public final native void setCulture(String culture) /*-{
         this.culture = culture;
@@ -40,7 +40,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
 
     /**
      * Bing Maps API key. Get yours at http://bingmapsportal.com/. Required.
-     * @param key 
+     * @param key Bing Maps API key.
      */
     public final native void setKey(String key) /*-{
         this.key = key;
@@ -48,7 +48,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
 
     /**
      * Type of imagery. Required.
-     * @param imagerySet 
+     * @param imagerySet Type of imagery. Required.
      */
     public final native void setImagerySet(String imagerySet) /*-{
         this.imagerySet = imagerySet;
@@ -56,7 +56,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
 
     /**
      * Max zoom. Default is what's advertized by the BingMaps service (21 currently).
-     * @param maxZoom 
+     * @param maxZoom Max zoom.
      */
     public final native void setMaxZoom(int maxZoom) /*-{
         this.maxZoom = maxZoom;
@@ -65,7 +65,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
     /**
      * Maximum allowed reprojection error (in pixels). Default is 0.5. 
      * Higher values can increase reprojection performance, but decrease precision.
-     * @param reprojectionErrorThreshold 
+     * @param reprojectionErrorThreshold Maximum allowed reprojection error (in pixels).
      */
     public final native void setReprojectionErrorThreshold(double reprojectionErrorThreshold) /*-{
         this.reprojectionErrorThreshold = reprojectionErrorThreshold;
@@ -76,7 +76,7 @@ public class BingMapsSourceOptions extends JavaScriptObject {
     
     /**
      * Whether to wrap the world horizontally. Default is true.
-     * @param wrapX 
+     * @param wrapX Whether to wrap the world horizontally.
      */
     public final native void setWrapX(boolean wrapX) /*-{
             this.wrapX = wrapX;

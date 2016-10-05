@@ -48,16 +48,15 @@ public class TranslateInteractionEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("translationend")) {
-            return Type.TRANSLATION_END;
-        }
-        else if (type.equals("translationtart")) {
-            return Type.TRANSLATION_START;
-        }
-        else if (type.equals("translating")) {
-            return Type.TRANSLATING;
-        }else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "translationend":
+                return Type.TRANSLATION_END;
+            case "translationtart":
+                return Type.TRANSLATION_START;
+            case "translating":
+                return Type.TRANSLATING;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

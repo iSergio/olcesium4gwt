@@ -34,34 +34,27 @@ public class TileLayerChangeEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("extent")) {
-            return Type.EXTENT;
-        }
-        else if (type.equals("maxResolution")) {
-            return Type.MAX_RESOLUTION;
-        }
-        else if (type.equals("minResolution")) {
-            return Type.MIN_RESOLUTION;
-        }
-        else if (type.equals("opacity")) {
-            return Type.OPACITY;
-        }
-        else if (type.equals("preload")) {
-            return Type.PRELOAD;
-        }
-        else if (type.equals("source")) {
-            return Type.SOURCE;
-        }
-        else if (type.equals("useInterimTilesOnError")) {
-            return Type.USE_INTERIM_TILES_ON_ERROR;
-        }
-        else if (type.equals("visible")) {
-            return Type.VISIBLE;
-        }
-        else if (type.equals("zIndex")) {
-            return Type.ZINDEX;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "extent":
+                return Type.EXTENT;
+            case "maxResolution":
+                return Type.MAX_RESOLUTION;
+            case "minResolution":
+                return Type.MIN_RESOLUTION;
+            case "opacity":
+                return Type.OPACITY;
+            case "preload":
+                return Type.PRELOAD;
+            case "source":
+                return Type.SOURCE;
+            case "useInterimTilesOnError":
+                return Type.USE_INTERIM_TILES_ON_ERROR;
+            case "visible":
+                return Type.VISIBLE;
+            case "zIndex":
+                return Type.ZINDEX;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

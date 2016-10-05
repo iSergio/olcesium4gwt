@@ -32,7 +32,7 @@ public class Circle extends SimpleGeometry {
      * 
      * @param center Center.
      * @param radius Radius.
-     * @return 
+     * @return Circle geometry.
      */
     public static native Circle create(Coordinate center, double radius) /*-{
         return new ol.geom.Circle(center, radius);
@@ -43,7 +43,7 @@ public class Circle extends SimpleGeometry {
      * @param center Center.
      * @param radius Radius.
      * @param layout Layout.
-     * @return 
+     * @return Circle geometry.
      */
     public static native Circle create(Coordinate center, double radius, GeometryLayout layout) /*-{
         return new ol.geom.Circle(center, radius, layout);

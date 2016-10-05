@@ -39,13 +39,13 @@ public class DragBoxInteractionEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("boxend")) {
-            return Type.BOX_END;
-        }
-        else if (type.equals("boxstart")) {
-            return Type.BOX_START;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "boxend":
+                return Type.BOX_END;
+            case "boxstart":
+                return Type.BOX_START;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

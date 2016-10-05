@@ -34,7 +34,7 @@ public class CircleStyleOptions extends JavaScriptObject {
 
     /**
      * Fill style.
-     * @param fill 
+     * @param fill fill style.
      */
     public final native void setFill(FillStyle fill) /*-{
         this.fill = fill;
@@ -55,7 +55,7 @@ public class CircleStyleOptions extends JavaScriptObject {
      * "sharp" rendering (no blur), while using false allows for "accurate" 
      * rendering. Note that accuracy is important if the circle's position is 
      * animated. Without it, the circle may jitter noticeably. Default value is true.
-     * @param snapToPixel 
+     * @param snapToPixel If true integral numbers of pixels are used as the X and Y pixel coordinate when drawing the circle in the output canvas.
      */
     public final native void setSnapToPixel(boolean snapToPixel) /*-{
         this.snapToPixel = snapToPixel;
@@ -63,7 +63,7 @@ public class CircleStyleOptions extends JavaScriptObject {
     
     /**
      * Stroke style.
-     * @param stroke 
+     * @param stroke Stroke style.
      */
     public final native void setStroke(StrokeStyle stroke) /*-{
         this.stroke = stroke;

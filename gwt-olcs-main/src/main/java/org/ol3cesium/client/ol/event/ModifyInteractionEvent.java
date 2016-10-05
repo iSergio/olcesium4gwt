@@ -35,13 +35,13 @@ public class ModifyInteractionEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("modifyend")) {
-            return Type.MODIFY_END;
-        }
-        else if (type.equals("modifystart")) {
-            return Type.MODIFY_START;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "modifyend":
+                return Type.MODIFY_END;
+            case "modifystart":
+                return Type.MODIFY_START;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

@@ -30,16 +30,15 @@ public class ViewChangeEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("center")) {
-            return Type.CENTER;
-        }
-        else if (type.equals("resolution")) {
-            return Type.RESOLUTION;
-        }
-        else if (type.equals("rotation")) {
-            return Type.ROTATION;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "center":
+                return Type.CENTER;
+            case "resolution":
+                return Type.RESOLUTION;
+            case "rotation":
+                return Type.ROTATION;
+            default:
+                return Type.UNKNOWN;
         }
     }
 

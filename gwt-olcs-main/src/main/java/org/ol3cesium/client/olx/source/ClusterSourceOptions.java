@@ -46,7 +46,7 @@ public class ClusterSourceOptions extends JavaScriptObject {
     
     /**
      * Minimum distance in pixels between clusters. Default is 20.
-     * @param distance 
+     * @param distance minimum distance.
      */
     public final native void setDistance(int distance) /*-{
         this.distance = distance;
@@ -106,7 +106,7 @@ public class ClusterSourceOptions extends JavaScriptObject {
      * For vector editing across the -180° and 180° meridians to work properly, 
      * this should be set to false. The resulting geometry 
      * coordinates will then exceed the world bounds.
-     * @param wrapX 
+     * @param wrapX Wrap the world horizontally.
      */
     public final native void setWrapX(boolean wrapX) /*-{
         this.wrapX = wrapX;

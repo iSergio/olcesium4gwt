@@ -37,7 +37,7 @@ public class DragBoxInteractionOptions extends JavaScriptObject {
     
     /**
      * CSS class name for styling the box. The default is ol-dragbox.
-     * @param className 
+     * @param className CSS class name.
      */
     public final native void setClassName(String className) /*-{
         this.className = className;

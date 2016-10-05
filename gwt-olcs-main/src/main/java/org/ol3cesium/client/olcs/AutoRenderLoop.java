@@ -31,14 +31,17 @@ public class AutoRenderLoop extends JavaScriptObject {
     protected AutoRenderLoop() {
         //
     }
-    
+
+    /**
+     * Restart render loop. Force a restart of the render loop.
+     */
     public final native void restartRenderLoop() /*-{
         this.restartRenderLoop();
     }-*/;
     
     /**
      * 
-     * @param debug 
+     * @param debug Set out put debug information flag.
      */
     public final native void setDebug(boolean debug) /*-{
         this.setDebug(debug);

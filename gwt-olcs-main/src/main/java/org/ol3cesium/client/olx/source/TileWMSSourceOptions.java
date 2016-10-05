@@ -17,7 +17,6 @@ package org.ol3cesium.client.olx.source;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import org.ol3cesium.client.ol.source.WMSServerType;
-import org.ol3cesium.client.ol.tilegrid.TileGrid;
 
 /**
  *

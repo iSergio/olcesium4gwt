@@ -34,16 +34,15 @@ public class FeatureChangeEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("geometry")) {
-            return Type.GEOMETRY;
-        }
-        else if (type.equals("id")) {
-            return Type.ID;
-        }
-        else if (type.equals("style")) {
-            return Type.STYLE;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "geometry":
+                return Type.GEOMETRY;
+            case "id":
+                return Type.ID;
+            case "style":
+                return Type.STYLE;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

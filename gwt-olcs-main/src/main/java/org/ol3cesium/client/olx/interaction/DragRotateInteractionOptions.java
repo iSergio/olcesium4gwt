@@ -32,7 +32,7 @@ public class DragRotateInteractionOptions extends JavaScriptObject {
     
     /**
      * Animation duration in milliseconds. Default is 250.
-     * @param duration 
+     * @param duration Animation duration.
      */
     public final native void setDuration(int duration) /*-{
         this.duration = duration;

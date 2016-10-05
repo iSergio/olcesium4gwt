@@ -32,7 +32,7 @@ public class DoubleClickZoomInteractionOptions extends JavaScriptObject {
     
     /**
      * Animation duration in milliseconds. Default is 250.
-     * @param duration 
+     * @param duration Animation duration.
      */
     public final native void setDuration(int duration) /*-{
         this.duration = duration;
@@ -40,7 +40,7 @@ public class DoubleClickZoomInteractionOptions extends JavaScriptObject {
 
     /**
      * The zoom delta applied on each double click, default is 1.
-     * @param delta 
+     * @param delta zoom delta.
      */
     public final native void setDelta(int delta) /*-{
         this.delta = deta;

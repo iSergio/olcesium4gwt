@@ -34,13 +34,13 @@ public class DrawInteractionEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("drawend")) {
-            return Type.DRAW_END;
-        }
-        else if (type.equals("drawstart")) {
-            return Type.DRAW_START;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "drawend":
+                return Type.DRAW_END;
+            case "drawstart":
+                return Type.DRAW_START;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

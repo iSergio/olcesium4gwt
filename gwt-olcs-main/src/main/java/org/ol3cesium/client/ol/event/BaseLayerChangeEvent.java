@@ -34,25 +34,21 @@ public class BaseLayerChangeEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equals("extent")) {
-            return Type.EXTENT;
-        }
-        else if (type.equals("maxResolution")) {
-            return Type.MAX_RESOLUTION;
-        }
-        else if (type.equals("minResolution")) {
-            return Type.MIN_RESOLUTION;
-        }
-        else if (type.equals("opacity")) {
-            return Type.OPACITY;
-        }
-        else if (type.equals("visible")) {
-            return Type.VISIBLE;
-        }
-        else if (type.equals("zIndex")) {
-            return Type.ZINDEX;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "extent":
+                return Type.EXTENT;
+            case "maxResolution":
+                return Type.MAX_RESOLUTION;
+            case "minResolution":
+                return Type.MIN_RESOLUTION;
+            case "opacity":
+                return Type.OPACITY;
+            case "visible":
+                return Type.VISIBLE;
+            case "zIndex":
+                return Type.ZINDEX;
+            default:
+                return Type.UNKNOWN;
         }
     }
 }

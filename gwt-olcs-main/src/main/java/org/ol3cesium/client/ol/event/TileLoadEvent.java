@@ -34,16 +34,11 @@ public class TileLoadEvent extends Event {
     
     public final Type getType() {
         String type = getNativeType();
-        if (type.equalsIgnoreCase("tileloadstart")) {
-            return Type.TILELOADSTART;
-        }
-        else if (type.equals("tileloadend")) {
-            return Type.TILELOADEND;
-        }
-        else if (type.equals("tileloaderror")) {
-            return Type.TILELOADERROR;
-        } else {
-            return Type.UNKNOWN;
+        switch (type) {
+            case "tileloadstart": return Type.TILELOADSTART;
+            case "tileloadend" : return Type.TILELOADEND;
+            case "tileloaderror": return Type.TILELOADERROR;
+            default: return Type.UNKNOWN;
         }
     }
 }
