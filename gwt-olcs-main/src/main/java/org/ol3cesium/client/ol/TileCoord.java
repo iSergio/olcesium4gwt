@@ -28,5 +28,5 @@ public class TileCoord extends JavaScriptObject {
     
     public final native TileCoord create(int x, int y, int z) /*-{
         return [x, y, z];
-    */;
+    }-*/;
 }

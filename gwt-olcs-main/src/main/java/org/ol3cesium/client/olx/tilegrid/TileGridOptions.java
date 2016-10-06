@@ -92,7 +92,7 @@ public class TileGridOptions extends JavaScriptObject {
      */
     public final native void setTileSize(int tileSize) /*-{
         this.tileSize = tileSize;
-    */;
+    }-*/;
     
     /**
      * Tile size. Default is [256, 256].
