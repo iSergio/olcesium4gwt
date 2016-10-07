@@ -39,5 +39,7 @@ public class PinchZoomInteraction extends PointerInteraction {
      * @param options
      * @return 
      */
-    public static native PinchZoomInteraction create(PinchZoomInteractionOptions options);
+    public static native PinchZoomInteraction create(PinchZoomInteractionOptions options) /*-{
+        return new ol.interaction.PitchZoom(options);
+    }-*/;
 }

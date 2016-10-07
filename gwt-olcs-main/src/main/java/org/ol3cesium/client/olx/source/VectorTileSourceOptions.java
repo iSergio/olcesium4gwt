@@ -57,7 +57,7 @@ public class VectorTileSourceOptions extends JavaScriptObject {
      */
     public final native void setLogo(String logo) /*-{
         this.logo = logo;
-    }*/;
+    }-*/;
     
     /**
      * This source may have overlapping geometries. Default is true. 
