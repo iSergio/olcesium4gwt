@@ -19,7 +19,7 @@
     
     <dependencies>
         <dependency>
-            <groupId>org.cesiumjs</groupId>
+            <groupId>org.ol3cesium</groupId>
             <artifactId>gwt-olcs-main</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
