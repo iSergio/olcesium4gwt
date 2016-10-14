@@ -8,13 +8,16 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gwt-olcs-main</artifactId>
     <description>OpenLayers3 and OL3-Cesium Wrapper fro GWT (Main)</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     
     <dependencies>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <scope>provided</scope>
-            <version>2.7.0</version>
+            <version>${gwt.version}</version>
         </dependency>
         <dependency>
             <groupId>org.cesiumjs</groupId>
@@ -30,7 +33,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>2.7.0</version>
+                <version>${gwt.version}</version>
                 <executions>
                     <execution>
                         <id>prepare-package</id>
@@ -76,7 +79,7 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <!--Need uncomment if you compile Java 8-->
+                            <!-- For Java 1.8 -->
                             <!--<additionalparam>-Xdoclint:none</additionalparam>-->
                         </configuration>
                     </execution>

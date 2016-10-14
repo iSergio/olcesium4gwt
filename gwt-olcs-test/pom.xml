@@ -11,8 +11,7 @@
     
     <properties>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
-        <gwt.version>2.7.0</gwt.version>
-        <slf4j-version>1.7.5</slf4j-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
     <packaging>war</packaging>
@@ -26,15 +25,28 @@
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-            <scope>provided</scope>
-            <version>2.7.0</version>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
         </dependency>
         <dependency>
             <groupId>org.cesiumjs</groupId>
             <artifactId>cesium-gwt-main</artifactId>
             <version>0.2.0</version>
         </dependency>
-        
+        <!--<dependency>-->
+            <!--<groupId>org.cesiumjs</groupId>-->
+            <!--<artifactId>gwt-cs-main</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
@@ -62,7 +74,6 @@
     </dependencies>
     
     <build>
-        <!--<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>-->
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
         
         <plugins>
@@ -78,7 +89,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>3.0.0</version>
                 <configuration>
                     <warSourceExcludes>.gwt-tmp/**</warSourceExcludes>
                     <warSourceDirectory>war</warSourceDirectory>
@@ -88,17 +99,17 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>2.7.0</version>
+                <version>${gwt.version}</version>
                 <configuration>
-                    <inplace>true</inplace>
+                    <!--<inplace>true</inplace>-->
                     <module>org.ol3cesium.demo.GwtOlCsShowcase</module>
                     <runTarget>GwtOlCsShowcase.html</runTarget>
                     <warSourceDirectory>war</warSourceDirectory>
-                    <disableCastChecking>true</disableCastChecking>
-                    <disableClassMetadata>true</disableClassMetadata>
+                    <!--<disableCastChecking>true</disableCastChecking>-->
+                    <!--<disableClassMetadata>true</disableClassMetadata>-->
                     <hostedWebapp>${basedir}/war</hostedWebapp>
-                    <sourceLevel>1.7</sourceLevel>
                     <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
+                    <!--<sourceLevel>1.7</sourceLevel>-->
                 </configuration>
                 <executions>
                     <execution>
@@ -112,30 +123,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
-<!--             GWT Maven Plugin 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>gwt-maven-plugin</artifactId>
-                <version>2.7.0</version>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <extraJvmArgs>-Xms1024M -Xmx2048M -XX:PermSize=256M -XX:MaxPermSize=512M</extraJvmArgs>
-                        </configuration>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                 Plugin configuration. There are many available options, see gwt-maven-plugin documentation at codehaus.org 
-                <configuration>
-                    <runTarget>gwt-olcs.html</runTarget>
-                    <hostedWebapp>${webappDirectory}</hostedWebapp>
-                    <extraJvmArgs>-Xmx2048M -XX:PermSize=256M -XX:MaxPermSize=512M</extraJvmArgs>
-                </configuration>
-            </plugin>-->
         </plugins>
     </build>
 </project>

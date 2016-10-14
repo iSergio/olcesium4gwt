@@ -17,28 +17,29 @@
 
 -->
 <module>
-
+    <inherits name="com.google.gwt.inject.Inject"/>
     <inherits name='com.google.gwt.user.User'/>
     <inherits name="com.google.gwt.xml.XML"/>
     <inherits name="com.google.gwt.logging.Logging"/>
     <inherits name='com.google.gwt.user.theme.clean.Clean'/>
     <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
     <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
-    <inherits name="com.google.gwt.inject.Inject"/>
 
     <!-- Other module inherits                                      -->
-    <inherits name='org.cesiumjs.cesium' />
+    <!--<inherits name='org.cesiumjs.cesium' />-->
     <inherits name='org.ol3cesium.OL3Cesium'/>
+    <!--<inherits name='org.cesiumjs.cesiumjs'/>-->
 
     <!--Logging configuration-->
     <set-property name="gwt.logging.enabled" value="TRUE"/>
     <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
     <set-property name="gwt.logging.logLevel" value="INFO"/>
-
     <!--END Logging configuration-->
 
     <!--Entry point class.                         -->
     <entry-point class='org.ol3cesium.demo.client.GwtOlCsShowcase'/>
-
     <!-- third party scripts are referenced in GwtOpenLayersShowcase.html -->
+    <!-- GWT 2.8.0 & GIN Fix -->
+    <!-- because of this bug with GIN: https://groups.google.com/forum/#!msg/google-web-toolkit/BzjX7dGECbg/4HNbqVXWCgAJ -->
+    <!--<set-configuration-property name="gin.classloading.exceptedPackages" value="com.google.gwt.core.client"/>-->
 </module>
