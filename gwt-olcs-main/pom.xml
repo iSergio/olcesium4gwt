@@ -2,7 +2,7 @@
     <parent>
         <groupId>org.ol3cesium</groupId>
         <artifactId>gwt-olcs</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     
     <modelVersion>4.0.0</modelVersion>
@@ -80,7 +80,7 @@
                         </goals>
                         <configuration>
                             <!-- For Java 1.8 -->
-                            <!--<additionalparam>-Xdoclint:none</additionalparam>-->
+                            <additionalparam>-Xdoclint:none</additionalparam>
                         </configuration>
                     </execution>
                 </executions>
