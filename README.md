@@ -14,18 +14,8 @@ You not need include JavaScript of OpenLayers 3 or Cesium into main html file, i
 
 Building the library
 --------------------
- * Build [JsFunction-GWT](https://github.com/richkadel/jsfunction-gwt):
-
-    $ git clone https://github.com/iSergio/jsfunction-gwt.git && cd jsfunction-gwt && mvn install
-
- * Build [cesium-gwt](https://github.com/iSergio/cesium-gwt). If you not need examples use original repo of [cesium-gwt](https://github.com/richkadel/cesium-gwt.git) (In examples uses some functional, which i added in my fork)
-
-    $ git clone https://github.com/iSergio/cesium-gwt && cd cesium-gwt && mvn install
-
- * Build [gwt-olcs](https://github.com/iSergio/gwt-olcs.git)
-
-    $ git clone https://github.com/iSergio/gwt-olcs.git && cd gwt-olcs && mvn install
-
+ * $ git clone --recursive https://github.com/iSergio/gwt-olcs.git
+ * mvn -U clean install
 
 Examples
 --------

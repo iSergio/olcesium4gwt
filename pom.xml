@@ -11,6 +11,8 @@
     </properties>
 
     <modules>
+        <module>jsfunction-gwt</module>
+        <module>cesium-gwt</module>
         <module>gwt-olcs-main</module>
         <module>gwt-olcs-test</module>
     </modules>
