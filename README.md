@@ -14,11 +14,13 @@ You not need include JavaScript of OpenLayers 3 or Cesium into main html file, i
 
 Building the library
 --------------------
+From master:
  * $ git clone --recursive https://github.com/iSergio/gwt-olcs.git
  * mvn -U clean install
+From release:
+git clone -b [RELEASE](https://github.com/iSergio/gwt-olcs/releases) --recursive https://github.com/iSergio/gwt-olcs.git
 
 Examples
 --------
 Library provided showcase based on [GWT-OpenLayers Showcase](http://www.gwt-openlayers.org).
 [Show online showcase](http://sergeserver.noip.me/gwt-olcs-test/)
-
