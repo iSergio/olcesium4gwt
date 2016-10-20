@@ -1,0 +1,6 @@
+[submodule "jsfunction-gwt"]
+	path = jsfunction-gwt
+	url = https://github.com/iSergio/jsfunction-gwt.git
+[submodule "cesium-gwt"]
+	path = cesium-gwt
+	url = https://github.com/iSergio/cesium-gwt
