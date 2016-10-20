@@ -17,8 +17,9 @@ Building the library
 From master:
  * $ git clone --recursive https://github.com/iSergio/gwt-olcs.git
  * mvn -U clean install
+
 From release:
-git clone -b [RELEASE](https://github.com/iSergio/gwt-olcs/releases) --recursive https://github.com/iSergio/gwt-olcs.git
+ * git clone -b [RELEASE](https://github.com/iSergio/gwt-olcs/releases) --recursive https://github.com/iSergio/gwt-olcs.git
 
 Examples
 --------
