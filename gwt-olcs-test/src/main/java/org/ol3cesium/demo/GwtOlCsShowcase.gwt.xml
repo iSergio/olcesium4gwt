@@ -27,7 +27,7 @@
 
     <!-- Other module inherits                                      -->
     <!--<inherits name='org.cesiumjs.cesium' />-->
-    <inherits name='org.ol3cesium.OL3Cesium'/>
+    <inherits name='org.ol3cesium.ol3cesium'/>
     <!--<inherits name='org.cesiumjs.cesiumjs'/>-->
 
     <!--Logging configuration-->
