@@ -1,7 +1,17 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright 2016 Serge Silaev aka iSergio <s.serge.b@gmail.com>.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package org.ol3cesium.demo.client.examples.ol3cesium;
 
@@ -25,22 +35,22 @@ import org.cesiumjs.cesium.SkyBox;
 import org.cesiumjs.cesium.Sun;
 import org.cesiumjs.cesium.TerrainProvider;
 import org.cesiumjs.cesium.providers.EllipsoidTerrainProvider;
+import org.ol3cesium.Configuration;
+import org.ol3cesium.Initializer;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
-import org.ol3cesium.client.ol.Coordinate;
-import org.ol3cesium.client.ol.Map;
-import org.ol3cesium.client.ol.MapPanel;
-import org.ol3cesium.client.ol.OLConfiguration;
-import org.ol3cesium.client.ol.OLInitializer;
-import org.ol3cesium.client.ol.View;
-import org.ol3cesium.client.ol.control.ZoomSliderControl;
-import org.ol3cesium.client.ol.layer.TileLayer;
-import org.ol3cesium.client.ol.source.OSMSource;
-import org.ol3cesium.client.olcs.OLCesium;
-import org.ol3cesium.client.olcs.OLCesiumOptions;
-import org.ol3cesium.client.olx.MapOptions;
-import org.ol3cesium.client.olx.ViewOptions;
-import org.ol3cesium.client.olx.layer.TileLayerOptions;
+import org.ol3cesium.ol.Coordinate;
+import org.ol3cesium.ol.Map;
+import org.ol3cesium.ol.MapPanelAbstract;
+import org.ol3cesium.ol.View;
+import org.ol3cesium.ol.control.ZoomSliderControl;
+import org.ol3cesium.ol.layer.TileLayer;
+import org.ol3cesium.ol.source.OSMSource;
+import org.ol3cesium.olcs.OLCesium;
+import org.ol3cesium.olcs.OLCesiumOptions;
+import org.ol3cesium.olx.MapOptions;
+import org.ol3cesium.olx.ViewOptions;
+import org.ol3cesium.olx.layer.TileLayerOptions;
 
 /**
  *
@@ -48,7 +58,7 @@ import org.ol3cesium.client.olx.layer.TileLayerOptions;
  */
 public class Ol3CesiumExample extends AbstractExample {
     public class MapWidget implements IsWidget {
-        private MapPanel _mapPanel;
+        private MapPanelAbstract _mapPanel;
         private OLCesium _olCesium;
         
         public MapWidget() {
@@ -59,7 +69,7 @@ public class Ol3CesiumExample extends AbstractExample {
         @Override
         public final Widget asWidget() {
             if (_mapPanel == null) {
-                OLConfiguration olConfiguration = new OLConfiguration();
+                Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
                 olConfiguration.setName("ol3cesium-debug.js");
                 List<String> styles = new ArrayList<String>();
@@ -69,9 +79,9 @@ public class Ol3CesiumExample extends AbstractExample {
                 /**
                  * Construct OpenLayers 3 map
                  */
-                _mapPanel = new MapPanel(olConfiguration) {
+                _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map createMap(Element element) {
+                    public Map create(Element element) {
                         MapOptions mapOptions = MapOptions.create();
                         mapOptions.setLogo(false);
                         mapOptions.setLoadTilesWhileAnimating(true);
@@ -88,18 +98,18 @@ public class Ol3CesiumExample extends AbstractExample {
                         view.setZoom(3);
                         mapOptions.setView(view);
 
-                        _map = Map.create(mapOptions);
+                        Map olMap = Map.create(mapOptions);
 
                         OSMSource osmSource = OSMSource.create();
                         TileLayerOptions tileLayerOptions = TileLayerOptions.create();
                         tileLayerOptions.setSource(osmSource);
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);
                         tileLayer.setVisible(true);
-                        _map.addLayer(tileLayer);
+                        olMap.addLayer(tileLayer);
 
-                        _map.addControl(ZoomSliderControl.create());
+                        olMap.addControl(ZoomSliderControl.create());
 
-                        return _map;
+                        return olMap;
                     }
                 };
             }
@@ -111,7 +121,7 @@ public class Ol3CesiumExample extends AbstractExample {
          * @param enable 
          */
         public void set3D(final boolean enable) {
-            if (!OLInitializer.olcsDefined()) {
+            if (!Initializer.olcsDefined()) {
                 Window.alert("OpenLayers3 Cesium plugin not initialized");
             } else {
                 if (_olCesium == null) {
@@ -124,7 +134,7 @@ public class Ol3CesiumExample extends AbstractExample {
                         @Override
                         public void onSuccess(Void result) {
                             OLCesiumOptions olCesiumOptions = OLCesiumOptions.create();
-                            olCesiumOptions.setMap(_mapPanel.getMap());
+                            olCesiumOptions.setMap(_mapPanel.get());
                             _olCesium = OLCesium.create(olCesiumOptions);
 
                             TerrainProvider ellipsoidTerrainProvider = EllipsoidTerrainProvider.create(Ellipsoid.WGS84).cast();

@@ -44,47 +44,47 @@ import org.cesiumjs.cesium.SkyBox;
 import org.cesiumjs.cesium.Sun;
 import org.cesiumjs.cesium.TerrainProvider;
 import org.cesiumjs.cesium.providers.EllipsoidTerrainProvider;
-import org.ol3cesium.client.ol.Coordinate;
-import org.ol3cesium.client.ol.Feature;
-import org.ol3cesium.client.ol.Map;
-import org.ol3cesium.client.ol.MapPanel;
-import org.ol3cesium.client.ol.OLConfiguration;
-import org.ol3cesium.client.ol.OLInitializer;
-import org.ol3cesium.client.ol.Pixel;
-import org.ol3cesium.client.ol.View;
-import org.ol3cesium.client.ol.control.ZoomSliderControl;
-import org.ol3cesium.client.ol.format.GeoJSONFormat;
-import org.ol3cesium.client.ol.geom.Circle;
-import org.ol3cesium.client.ol.geom.Geometry;
-import org.ol3cesium.client.ol.geom.MultiPolygon;
-import org.ol3cesium.client.ol.geom.Point;
-import org.ol3cesium.client.ol.geom.Polygon;
-import org.ol3cesium.client.ol.layer.ImageLayer;
-import org.ol3cesium.client.ol.layer.TileLayer;
-import org.ol3cesium.client.ol.layer.VectorLayer;
-import org.ol3cesium.client.ol.source.ImageVectorSource;
-import org.ol3cesium.client.ol.source.OSMSource;
-import org.ol3cesium.client.ol.source.VectorSource;
-import org.ol3cesium.client.ol.style.CircleStyle;
-import org.ol3cesium.client.ol.style.FillStyle;
-import org.ol3cesium.client.ol.style.IconStyle;
-import org.ol3cesium.client.ol.style.StrokeStyle;
-import org.ol3cesium.client.ol.style.Style;
-import org.ol3cesium.client.ol.style.TextStyle;
-import org.ol3cesium.client.olcs.OLCesium;
-import org.ol3cesium.client.olcs.OLCesiumOptions;
-import org.ol3cesium.client.olx.MapOptions;
-import org.ol3cesium.client.olx.ViewOptions;
-import org.ol3cesium.client.olx.layer.ImageLayerOptions;
-import org.ol3cesium.client.olx.layer.TileLayerOptions;
-import org.ol3cesium.client.olx.layer.VectorLayerOptions;
-import org.ol3cesium.client.olx.source.ImageVectorSourceOptions;
-import org.ol3cesium.client.olx.source.VectorSourceOptions;
-import org.ol3cesium.client.olx.style.CircleStyleOptions;
-import org.ol3cesium.client.olx.style.IconStyleOptions;
-import org.ol3cesium.client.olx.style.StrokeStyleOptions;
-import org.ol3cesium.client.olx.style.StyleOptions;
-import org.ol3cesium.client.olx.style.TextStyleOptions;
+import org.ol3cesium.ol.Coordinate;
+import org.ol3cesium.ol.Feature;
+import org.ol3cesium.ol.Map;
+import org.ol3cesium.ol.MapPanelAbstract;
+import org.ol3cesium.Configuration;
+import org.ol3cesium.Initializer;
+import org.ol3cesium.ol.Pixel;
+import org.ol3cesium.ol.View;
+import org.ol3cesium.ol.control.ZoomSliderControl;
+import org.ol3cesium.ol.format.GeoJSONFormat;
+import org.ol3cesium.ol.geom.Circle;
+import org.ol3cesium.ol.geom.Geometry;
+import org.ol3cesium.ol.geom.MultiPolygon;
+import org.ol3cesium.ol.geom.Point;
+import org.ol3cesium.ol.geom.Polygon;
+import org.ol3cesium.ol.layer.ImageLayer;
+import org.ol3cesium.ol.layer.TileLayer;
+import org.ol3cesium.ol.layer.VectorLayer;
+import org.ol3cesium.ol.source.ImageVectorSource;
+import org.ol3cesium.ol.source.OSMSource;
+import org.ol3cesium.ol.source.VectorSource;
+import org.ol3cesium.ol.style.CircleStyle;
+import org.ol3cesium.ol.style.FillStyle;
+import org.ol3cesium.ol.style.IconStyle;
+import org.ol3cesium.ol.style.StrokeStyle;
+import org.ol3cesium.ol.style.Style;
+import org.ol3cesium.ol.style.TextStyle;
+import org.ol3cesium.olcs.OLCesium;
+import org.ol3cesium.olcs.OLCesiumOptions;
+import org.ol3cesium.olx.MapOptions;
+import org.ol3cesium.olx.ViewOptions;
+import org.ol3cesium.olx.layer.ImageLayerOptions;
+import org.ol3cesium.olx.layer.TileLayerOptions;
+import org.ol3cesium.olx.layer.VectorLayerOptions;
+import org.ol3cesium.olx.source.ImageVectorSourceOptions;
+import org.ol3cesium.olx.source.VectorSourceOptions;
+import org.ol3cesium.olx.style.CircleStyleOptions;
+import org.ol3cesium.olx.style.IconStyleOptions;
+import org.ol3cesium.olx.style.StrokeStyleOptions;
+import org.ol3cesium.olx.style.StyleOptions;
+import org.ol3cesium.olx.style.TextStyleOptions;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 
@@ -111,7 +111,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
     private Style _oldStyle;
     
     public class MapWidget implements IsWidget {
-        private MapPanel _mapPanel;
+        private MapPanelAbstract _mapPanel;
         private OLCesium _olCesium;
         
         public MapWidget() {
@@ -122,7 +122,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
         @Override
         public final Widget asWidget() {
             if (_mapPanel == null) {
-                OLConfiguration olConfiguration = new OLConfiguration();
+                Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
                 olConfiguration.setName("ol3cesium-debug.js");
                 List<String> styles = new ArrayList<String>();
@@ -132,9 +132,9 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                 /**
                  * Construct OpenLayers 3 map
                  */
-                _mapPanel = new MapPanel(olConfiguration) {
+                _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map createMap(Element element) {
+                    public Map create(Element element) {
                         MapOptions mapOptions = MapOptions.create();
                         mapOptions.setLogo(false);
                         mapOptions.setLoadTilesWhileAnimating(true);
@@ -151,7 +151,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         view.setZoom(2);
                         mapOptions.setView(view);
 
-                        _map = Map.create(mapOptions);
+                        Map olMap = Map.create(mapOptions);
                         
                         _styles = createStyles();
 
@@ -160,7 +160,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         tileLayerOptions.setSource(osmSource);
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);
                         tileLayer.setVisible(true);
-                        _map.addLayer(tileLayer);
+                        olMap.addLayer(tileLayer);
                         
                         VectorSourceOptions vectorSourceOptions = VectorSourceOptions.create();
                         vectorSourceOptions.setFormat(GeoJSONFormat.create());
@@ -170,9 +170,9 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         vectorLayerOptions.setSource(vectorSource);
                         vectorLayerOptions.setStyle(styleFunction());
                         _vectorLayer1 = VectorLayer.create(vectorLayerOptions);
-                        _map.addLayer(_vectorLayer1);
+                        olMap.addLayer(_vectorLayer1);
 
-                        _map.addControl(ZoomSliderControl.create());
+                        olMap.addControl(ZoomSliderControl.create());
                         
                         _iconFeature = Feature.create();
                         Point geometry = Point.create(Coordinate.create(700000, 200000, 100000));
@@ -244,7 +244,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         strokeStyleOptions.setWidth(3);
                         StrokeStyle strokeStyle = StrokeStyle.create(strokeStyleOptions);
                         
-                        FillStyle fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(0, 0, 155, 0.3f));
+                        FillStyle fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(0, 0, 155, 0.3f));
                         
                         TextStyleOptions textStyleOptions = TextStyleOptions.create();
                         textStyleOptions.setText("Some text");
@@ -264,7 +264,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         strokeStyleOptions.setWidth(3);
                         strokeStyle = StrokeStyle.create(strokeStyleOptions);
                         
-                        fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(0, 0, 155, 0.3f));//"rgba(0, 0, 155, 0.3)");
+                        fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(0, 0, 155, 0.3f));//"rgba(0, 0, 155, 0.3)");
                         
                         textStyleOptions = TextStyleOptions.create();
                         textStyleOptions.setText("Only text");
@@ -279,11 +279,11 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         Style textStyleMain = Style.create(styleOptions);
                         
                         strokeStyleOptions = StrokeStyleOptions.create();
-                        strokeStyleOptions.setColor(org.ol3cesium.client.ol.Color.create(255, 69, 0, 0.9f));
+                        strokeStyleOptions.setColor(org.ol3cesium.ol.Color.create(255, 69, 0, 0.9f));
                         strokeStyleOptions.setWidth(1);
                         strokeStyle = StrokeStyle.create(strokeStyleOptions);
                         
-                        fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(255, 69, 0, 0.7f));
+                        fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(255, 69, 0, 0.7f));
                         
                         styleOptions = StyleOptions.create();
                         styleOptions.setFill(fillStyle);
@@ -312,7 +312,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         ImageLayerOptions imageLayerOptions = ImageLayerOptions.create();
                         imageLayerOptions.setSource(imageVectorSource);
                         _vectorLayer2 = ImageLayer.create(imageLayerOptions);
-                        _map.addLayer(_vectorLayer2);
+                        olMap.addLayer(_vectorLayer2);
                         
                         strokeStyleOptions = StrokeStyleOptions.create();
                         strokeStyleOptions.setColor("blue");
@@ -324,7 +324,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         styleOptions.setFill(fillStyle);
                         _oldStyle = Style.create(styleOptions);
                         
-                        return _map;
+                        return olMap;
                     }
                 };
             }
@@ -383,7 +383,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
             strokeStyleOptions.setColor("yellow");
             strokeStyleOptions.setWidth(1);
             strokeStyle = StrokeStyle.create(strokeStyleOptions);
-            FillStyle fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(255, 255, 0, 0.1f));//"rgba(255, 255, 0, 0.1");
+            FillStyle fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(255, 255, 0, 0.1f));//"rgba(255, 255, 0, 0.1");
             styleOptions = StyleOptions.create();
             styleOptions.setFill(fillStyle);
             styleOptions.setStroke(strokeStyle);
@@ -395,7 +395,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
             strokeStyleOptions.setWidth(3);
             strokeStyleOptions.setLineDash((JsArrayNumber)JsArrayUtils.readOnlyJsArray(new int[]{4}).cast());
             strokeStyle = StrokeStyle.create(strokeStyleOptions);
-            fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(0, 0, 255, 0.1f));//"rgba(0, 0, 255, 0.1");
+            fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(0, 0, 255, 0.1f));//"rgba(0, 0, 255, 0.1");
             styleOptions = StyleOptions.create();
             styleOptions.setFill(fillStyle);
             styleOptions.setStroke(strokeStyle);
@@ -422,7 +422,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
             strokeStyleOptions.setColor("red");
             strokeStyleOptions.setWidth(2);
             strokeStyle = StrokeStyle.create(strokeStyleOptions);
-            fillStyle = FillStyle.create(org.ol3cesium.client.ol.Color.create(255, 0, 0, 0.2f));//"rgba(255, 0, 0, 0.2");
+            fillStyle = FillStyle.create(org.ol3cesium.ol.Color.create(255, 0, 0, 0.2f));//"rgba(255, 0, 0, 0.2");
             styleOptions = StyleOptions.create();
             styleOptions.setFill(fillStyle);
             styleOptions.setStroke(strokeStyle);
@@ -447,7 +447,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
         }-*/;
         
         public Map getMap() {
-            return _mapPanel.getMap();
+            return _mapPanel.get();
         }
         
         public OLCesium getOLCesium() {
@@ -459,7 +459,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
          * @param enable 
          */
         public void set3D(final boolean enable) {
-            if (!OLInitializer.olcsDefined()) {
+            if (!Initializer.olcsDefined()) {
                 Window.alert("OpenLayers3 Cesium plugin not initialized");
             } else {
                 if (_olCesium == null) {
@@ -472,7 +472,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                         @Override
                         public void onSuccess(Void result) {
                             OLCesiumOptions olCesiumOptions = OLCesiumOptions.create();
-                            olCesiumOptions.setMap(_mapPanel.getMap());
+                            olCesiumOptions.setMap(_mapPanel.get());
                             _olCesium = OLCesium.create(olCesiumOptions);
 
                             TerrainProvider ellipsoidTerrainProvider = EllipsoidTerrainProvider.create(Ellipsoid.WGS84).cast();

@@ -15,8 +15,8 @@
  */
 package org.ol3cesium.demo.client.examples.ol3cesium.measureex;
 
-import org.ol3cesium.client.ol.Overlay;
-import org.ol3cesium.client.olx.OverlayOptions;
+import org.ol3cesium.ol.Overlay;
+import org.ol3cesium.olx.OverlayOptions;
 
 /**
  *

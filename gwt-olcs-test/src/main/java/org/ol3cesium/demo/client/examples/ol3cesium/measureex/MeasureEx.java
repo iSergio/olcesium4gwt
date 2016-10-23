@@ -31,19 +31,19 @@ import com.google.gwt.user.client.ui.Widget;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
-import org.ol3cesium.client.ol.Coordinate;
-import org.ol3cesium.client.ol.Map;
-import org.ol3cesium.client.ol.MapPanel;
-import org.ol3cesium.client.ol.OLConfiguration;
-import org.ol3cesium.client.ol.View;
-import org.ol3cesium.client.ol.control.ZoomSliderControl;
-import org.ol3cesium.client.ol.geom.GeometryType;
-import org.ol3cesium.client.ol.layer.BaseLayer;
-import org.ol3cesium.client.ol.layer.TileLayer;
-import org.ol3cesium.client.ol.source.OSMSource;
-import org.ol3cesium.client.olx.MapOptions;
-import org.ol3cesium.client.olx.ViewOptions;
-import org.ol3cesium.client.olx.layer.TileLayerOptions;
+import org.ol3cesium.ol.Coordinate;
+import org.ol3cesium.ol.Map;
+import org.ol3cesium.ol.MapPanelAbstract;
+import org.ol3cesium.Configuration;
+import org.ol3cesium.ol.View;
+import org.ol3cesium.ol.control.ZoomSliderControl;
+import org.ol3cesium.ol.geom.GeometryType;
+import org.ol3cesium.ol.layer.BaseLayer;
+import org.ol3cesium.ol.layer.TileLayer;
+import org.ol3cesium.ol.source.OSMSource;
+import org.ol3cesium.olx.MapOptions;
+import org.ol3cesium.olx.ViewOptions;
+import org.ol3cesium.olx.layer.TileLayerOptions;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 
@@ -59,7 +59,7 @@ public class MeasureEx extends AbstractExample {
     private Measure _measure;
     
     public class MapWidget implements IsWidget {
-        private MapPanel _mapPanel;
+        private MapPanelAbstract _mapPanel;
         
         public MapWidget() {
             super();
@@ -69,7 +69,7 @@ public class MeasureEx extends AbstractExample {
         @Override
         public final Widget asWidget() {
             if (_mapPanel == null) {
-                OLConfiguration olConfiguration = new OLConfiguration();
+                Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/ol3/");
                 olConfiguration.setName("ol-debug.js");
                 List<String> styles = new ArrayList<String>();
@@ -80,9 +80,9 @@ public class MeasureEx extends AbstractExample {
                 /**
                  * Construct OpenLayers 3 map
                  */
-                _mapPanel = new MapPanel(olConfiguration) {
+                _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map createMap(Element element) {
+                    public Map create(Element element) {
                         TileLayerOptions tileLayerOptions = TileLayerOptions.create();
                         tileLayerOptions.setSource(OSMSource.create());
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);
@@ -104,11 +104,11 @@ public class MeasureEx extends AbstractExample {
                         View view = View.create(viewOptions);
                         mapOptions.setView(view);
 
-                        _map = Map.create(mapOptions);
+                        Map olMap = Map.create(mapOptions);
 
-                        _map.addControl(ZoomSliderControl.create());
+                        olMap.addControl(ZoomSliderControl.create());
 
-                        return _map;
+                        return olMap;
                     }
                 };
             }
@@ -116,7 +116,7 @@ public class MeasureEx extends AbstractExample {
         }
         
         public Map getMap() {
-            return _mapPanel.getMap();
+            return _mapPanel.get();
         }
     }
     

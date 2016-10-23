@@ -34,35 +34,35 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.inject.Inject;
-import org.ol3cesium.client.ol.Color;
-import org.ol3cesium.client.ol.Feature;
-import org.ol3cesium.client.ol.Map;
-import org.ol3cesium.client.ol.MapPanel;
-import org.ol3cesium.client.ol.OLConfiguration;
-import org.ol3cesium.client.ol.View;
-import org.ol3cesium.client.ol.control.ZoomSliderControl;
-import org.ol3cesium.client.ol.format.GeoJSONFormat;
-import org.ol3cesium.client.ol.format.WFSFormat;
-import org.ol3cesium.client.ol.format.filter.OGCAndFilter;
-import org.ol3cesium.client.ol.format.filter.OGCEqualToFilter;
-import org.ol3cesium.client.ol.format.filter.OGCFilter;
-import org.ol3cesium.client.ol.format.filter.OGCIsLikeFilter;
-import org.ol3cesium.client.ol.layer.BaseLayer;
-import org.ol3cesium.client.ol.layer.TileLayer;
-import org.ol3cesium.client.ol.layer.VectorLayer;
-import org.ol3cesium.client.ol.source.BingMapsSource;
-import org.ol3cesium.client.ol.source.VectorSource;
-import org.ol3cesium.client.ol.style.StrokeStyle;
-import org.ol3cesium.client.ol.style.Style;
-import org.ol3cesium.client.olx.MapOptions;
-import org.ol3cesium.client.olx.ViewOptions;
-import org.ol3cesium.client.olx.format.WFSWriteGetFeatureFormatOptions;
-import org.ol3cesium.client.olx.layer.TileLayerOptions;
-import org.ol3cesium.client.olx.layer.VectorLayerOptions;
-import org.ol3cesium.client.olx.source.BingMapsSourceOptions;
-import org.ol3cesium.client.olx.source.VectorSourceOptions;
-import org.ol3cesium.client.olx.style.StrokeStyleOptions;
-import org.ol3cesium.client.olx.style.StyleOptions;
+import org.ol3cesium.ol.Color;
+import org.ol3cesium.ol.Feature;
+import org.ol3cesium.ol.Map;
+import org.ol3cesium.ol.MapPanelAbstract;
+import org.ol3cesium.Configuration;
+import org.ol3cesium.ol.View;
+import org.ol3cesium.ol.control.ZoomSliderControl;
+import org.ol3cesium.ol.format.GeoJSONFormat;
+import org.ol3cesium.ol.format.WFSFormat;
+import org.ol3cesium.ol.format.filter.OGCAndFilter;
+import org.ol3cesium.ol.format.filter.OGCEqualToFilter;
+import org.ol3cesium.ol.format.filter.OGCFilter;
+import org.ol3cesium.ol.format.filter.OGCIsLikeFilter;
+import org.ol3cesium.ol.layer.BaseLayer;
+import org.ol3cesium.ol.layer.TileLayer;
+import org.ol3cesium.ol.layer.VectorLayer;
+import org.ol3cesium.ol.source.BingMapsSource;
+import org.ol3cesium.ol.source.VectorSource;
+import org.ol3cesium.ol.style.StrokeStyle;
+import org.ol3cesium.ol.style.Style;
+import org.ol3cesium.olx.MapOptions;
+import org.ol3cesium.olx.ViewOptions;
+import org.ol3cesium.olx.format.WFSWriteGetFeatureFormatOptions;
+import org.ol3cesium.olx.layer.TileLayerOptions;
+import org.ol3cesium.olx.layer.VectorLayerOptions;
+import org.ol3cesium.olx.source.BingMapsSourceOptions;
+import org.ol3cesium.olx.source.VectorSourceOptions;
+import org.ol3cesium.olx.style.StrokeStyleOptions;
+import org.ol3cesium.olx.style.StyleOptions;
 import org.ol3cesium.demo.client.basic.AbstractExample;
 import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 
@@ -73,7 +73,7 @@ import org.ol3cesium.demo.client.components.store.ShowcaseExampleStore;
 public class VectorWfsGetfeature extends AbstractExample {
     static final Logger _logger = Logger.getLogger(VectorWfsGetfeature.class.getName());
     public class MapWidget implements IsWidget {
-        private MapPanel _mapPanel;
+        private MapPanelAbstract _mapPanel;
         private VectorLayer _vectorLayer;
         
         public MapWidget() {
@@ -84,7 +84,7 @@ public class VectorWfsGetfeature extends AbstractExample {
         @Override
         public final Widget asWidget() {
             if (_mapPanel == null) {
-                OLConfiguration olConfiguration = new OLConfiguration();
+                Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/ol3/");
                 olConfiguration.setName("ol-debug.js");
                 List<String> styles = new ArrayList<String>();
@@ -94,9 +94,9 @@ public class VectorWfsGetfeature extends AbstractExample {
                 /**
                  * Construct OpenLayers 3 map
                  */
-                _mapPanel = new MapPanel(olConfiguration) {
+                _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map createMap(Element element) {
+                    public Map create(Element element) {
                         BingMapsSourceOptions bingMapsSourceOptions = BingMapsSourceOptions.create();
                         bingMapsSourceOptions.setImagerySet("Aerial");
                         bingMapsSourceOptions.setKey("AkGbxXx6tDWf1swIhPJyoAVp06H0s0gDTYslNWWHZ6RoPqMpB9ld5FY1WutX8UoF");
@@ -143,9 +143,9 @@ public class VectorWfsGetfeature extends AbstractExample {
                         View view = View.create(viewOptions);
                         mapOptions.setView(view);
 
-                        _map = Map.create(mapOptions);
+                        final Map olMap = Map.create(mapOptions);
 
-                        _map.addControl(ZoomSliderControl.create());
+                        olMap.addControl(ZoomSliderControl.create());
                         
                         OGCIsLikeFilter ogcLikeFilter = OGCFilter.like("name", "Mississippi*");
                         OGCEqualToFilter ogcEqualToFilter = OGCFilter.equalTo("waterway", "riverbank");
@@ -173,7 +173,7 @@ public class VectorWfsGetfeature extends AbstractExample {
                                 GeoJSONFormat geoJSONFormat = GeoJSONFormat.create();
                                 JsArray<Feature> features = geoJSONFormat.readFeatures(response.getText());
                                 ((VectorSource)_vectorLayer.getSource()).addFeatures(features);
-                                _map.getView().fit(((VectorSource)_vectorLayer.getSource()).getExtent(), _map.getSize());
+                                olMap.getView().fit(((VectorSource)_vectorLayer.getSource()).getExtent(), olMap.getSize());
                             }
 
                             @Override
@@ -187,7 +187,7 @@ public class VectorWfsGetfeature extends AbstractExample {
                             Logger.getLogger(VectorWfsGetfeature.class.getName()).log(Level.SEVERE, null, ex);
                         }
 
-                        return _map;
+                        return olMap;
                     }
                 };
             }

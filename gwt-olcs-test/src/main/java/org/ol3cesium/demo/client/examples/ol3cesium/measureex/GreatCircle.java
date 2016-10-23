@@ -17,7 +17,7 @@ package org.ol3cesium.demo.client.examples.ol3cesium.measureex;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
-import org.ol3cesium.client.ol.Coordinate;
+import org.ol3cesium.ol.Coordinate;
 
 /**
  *
