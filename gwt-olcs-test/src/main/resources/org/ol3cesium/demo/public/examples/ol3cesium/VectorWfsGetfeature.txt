@@ -81,7 +81,7 @@ public class VectorWfsGetfeature extends AbstractExample {
                  */
                 _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map create(Element element) {
+                    public Map createMap(Element element) {
                         BingMapsSourceOptions bingMapsSourceOptions = BingMapsSourceOptions.create();
                         bingMapsSourceOptions.setImagerySet("Aerial");
                         bingMapsSourceOptions.setKey("AkGbxXx6tDWf1swIhPJyoAVp06H0s0gDTYslNWWHZ6RoPqMpB9ld5FY1WutX8UoF");

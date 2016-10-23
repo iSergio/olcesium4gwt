@@ -70,7 +70,7 @@ public class ImageArcGISMapServer extends AbstractExample {
                  */
                 _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map create(Element element) {
+                    public Map createMap(Element element) {
                         TileLayerOptions tileLayerOptions = TileLayerOptions.create();
                         tileLayerOptions.setSource(OSMSource.create());
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);

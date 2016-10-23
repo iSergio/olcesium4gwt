@@ -55,14 +55,14 @@ public abstract class MapPanelAbstract extends SimplePanel {
 
             @Override
             public void onSuccess(Void result) {
-                _map = create(element);
+                _map = createMap(element);
             }
         });
     }
     
-    public abstract Map create(Element element);
+    public abstract Map createMap(Element element);
     
-    public Map get(){
+    public Map getMap(){
         return _map;
     }
 }

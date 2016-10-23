@@ -81,7 +81,7 @@ public class Ol3CesiumExample extends AbstractExample {
                  */
                 _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map create(Element element) {
+                    public Map createMap(Element element) {
                         MapOptions mapOptions = MapOptions.create();
                         mapOptions.setLogo(false);
                         mapOptions.setLoadTilesWhileAnimating(true);
@@ -134,7 +134,7 @@ public class Ol3CesiumExample extends AbstractExample {
                         @Override
                         public void onSuccess(Void result) {
                             OLCesiumOptions olCesiumOptions = OLCesiumOptions.create();
-                            olCesiumOptions.setMap(_mapPanel.get());
+                            olCesiumOptions.setMap(_mapPanel.getMap());
                             _olCesium = OLCesium.create(olCesiumOptions);
 
                             TerrainProvider ellipsoidTerrainProvider = EllipsoidTerrainProvider.create(Ellipsoid.WGS84).cast();

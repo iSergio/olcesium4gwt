@@ -82,7 +82,7 @@ public class MeasureEx extends AbstractExample {
                  */
                 _mapPanel = new MapPanelAbstract(olConfiguration) {
                     @Override
-                    public Map create(Element element) {
+                    public Map createMap(Element element) {
                         TileLayerOptions tileLayerOptions = TileLayerOptions.create();
                         tileLayerOptions.setSource(OSMSource.create());
                         TileLayer tileLayer = TileLayer.create(tileLayerOptions);
@@ -116,7 +116,7 @@ public class MeasureEx extends AbstractExample {
         }
         
         public Map getMap() {
-            return _mapPanel.get();
+            return _mapPanel.getMap();
         }
     }
     
