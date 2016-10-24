@@ -31,6 +31,7 @@ public class OpenLayers3 {
         Initializer initializer = Initializer.get(document);
         if (initializer != null) {
             initializer.addCallback(callback);
+            initializer.invokeCallback();
         } else {
             for (String style : styles) {
                 LinkElement linkElement = Document.get().createLinkElement();

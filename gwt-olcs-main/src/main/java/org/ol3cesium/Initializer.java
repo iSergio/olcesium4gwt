@@ -82,7 +82,7 @@ public class Initializer {
         _callbacks.add(callback);
     }
 
-    private void invokeCallback() {
+    public void invokeCallback() {
         for (Callback<Void, Exception> callback : _callbacks) {
             try {
                 callback.onSuccess(null);
