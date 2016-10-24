@@ -35,12 +35,10 @@ public abstract class MapPanelAbstract extends SimplePanel {
 
     public MapPanelAbstract(Configuration configuration) {
         _configuration = configuration;
-        super.addAttachHandler(new Handler() {
+        super.addAttachHandler(new AttachEvent.Handler() {
             @Override
-            public void onAttachOrDetach(AttachEvent event) {
-                if (event.isAttached()) {
-                    inject(getElement());
-                }
+            public void onAttachOrDetach(AttachEvent attachEvent) {
+                inject(getElement());
             }
         });
     }

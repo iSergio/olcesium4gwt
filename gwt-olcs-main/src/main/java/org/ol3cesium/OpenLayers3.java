@@ -28,15 +28,15 @@ import java.util.List;
 public class OpenLayers3 {
 
     public static void initialize(String path, String name, List<String> styles, Document document, Callback<Void, Exception> callback) {
-        Initializer olInitializer = Initializer.get(document);
-        if (olInitializer != null) {
-            olInitializer.addCallback(callback);
+        Initializer initializer = Initializer.get(document);
+        if (initializer != null) {
+            initializer.addCallback(callback);
         } else {
             for (String style : styles) {
-                LinkElement link = Document.get().createLinkElement();
-                link.setRel("stylesheet");
-                link.setHref(style);
-                document.getElementsByTagName("head").getItem(0).appendChild(link);
+                LinkElement linkElement = Document.get().createLinkElement();
+                linkElement.setRel("stylesheet");
+                linkElement.setHref(style);
+                document.getElementsByTagName("head").getItem(0).appendChild(linkElement);
             }
             new Initializer(path, name, document, callback).initialize();
         }
