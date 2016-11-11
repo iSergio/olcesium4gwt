@@ -19,7 +19,7 @@ import org.ol3cesium.ol.Map;
 import org.ol3cesium.ol.Object;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. User actions that change the state of the map. 
  * Some are similar to controls, but are not associated with a DOM element. 
  * For example, ol.interaction.KeyboardZoom is functionally the same as 

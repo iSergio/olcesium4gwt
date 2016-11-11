@@ -16,7 +16,9 @@
 package org.ol3cesium.olcs;
 
 import com.google.gwt.core.client.JsArray;
-import org.cesiumjs.cesium.*;
+import org.cesiumjs.cs.core.*;
+import org.cesiumjs.cs.scene.ImageryLayer;
+import org.cesiumjs.cs.scene.Scene;
 import org.ol3cesium.ol.Coordinate;
 import org.ol3cesium.ol.Extent;
 import org.ol3cesium.ol.geom.Geometry;
@@ -136,7 +138,7 @@ public class OLCesiumCore {
      * @param coordinates Ol3 coordinates.
      * @return 
      */
-    public static native JsArray<Cartesian3> ol4326CoordinateArrayToCsCartesians(JsArray<Coordinate> coordinates) /*-{
+    public static native Cartesian3[] ol4326CoordinateArrayToCsCartesians(JsArray<Coordinate> coordinates) /*-{
         return olcs.core.ol4326CoordinateArrayToCsCartesians(coordinates);
     }-*/;
     

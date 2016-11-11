@@ -22,7 +22,7 @@
 package org.ol3cesium.ol.format;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for JSON feature formats.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

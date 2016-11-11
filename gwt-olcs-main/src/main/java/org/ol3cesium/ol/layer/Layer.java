@@ -21,7 +21,7 @@ import org.ol3cesium.ol.source.Source;
 import org.ol3cesium.olx.layer.LayerOptions;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. A visual representation of raster or vector map data. 
  * Layers group together those properties that pertain to how the data is to be 
  * displayed, irrespective of the source of that data.

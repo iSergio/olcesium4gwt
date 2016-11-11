@@ -19,7 +19,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import org.ol3cesium.olx.style.ImageStyleOptions;
 
 /**
- * A base class used for creating subclasses and not instantiated in apps. 
+ * A basic class used for creating subclasses and not instantiated in apps.
  * Base class for ol.style.Icon, ol.style.Circle and ol.style.RegularShape.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

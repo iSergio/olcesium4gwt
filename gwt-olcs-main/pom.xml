@@ -2,12 +2,13 @@
     <parent>
         <groupId>org.ol3cesium</groupId>
         <artifactId>gwt-olcs</artifactId>
-        <version>1.0.1</version>
+        <version>2.0.0</version>
     </parent>
     
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gwt-olcs-main</artifactId>
     <description>OpenLayers3 and OL3-Cesium Wrapper fro GWT (Main)</description>
+    <version>${parent.version}</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +22,8 @@
         </dependency>
         <dependency>
             <groupId>org.cesiumjs</groupId>
-            <artifactId>cesium-gwt-main</artifactId>
-            <version>0.2.0</version>
+            <artifactId>gwt-cs-main</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     

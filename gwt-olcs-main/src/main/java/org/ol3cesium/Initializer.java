@@ -38,7 +38,7 @@ public class Initializer {
      */
     private final String _path;
     /**
-     * OpenLayers3 library (ol3cesium.js | ol3cesium-debug.js | ol3.js | ol3-debug.js)
+     * OpenLayers3 library (examples.js | examples-debug.js | ol3.js | ol3-debug.js)
      */
     private final String _name;
     private final Document _document;

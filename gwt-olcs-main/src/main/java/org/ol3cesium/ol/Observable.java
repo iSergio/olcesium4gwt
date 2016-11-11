@@ -18,7 +18,7 @@ package org.ol3cesium.ol;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. An event target providing convenient methods for 
  * listener registration and unregistration. A generic change event is always 
  * available through ol.Observable#changed.

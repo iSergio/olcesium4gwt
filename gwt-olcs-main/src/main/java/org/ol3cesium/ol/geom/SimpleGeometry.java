@@ -18,7 +18,7 @@ package org.ol3cesium.ol.geom;
 import org.ol3cesium.ol.Coordinate;
 
 /**
- * Abstract base class; only used for creating subclasses; do not instantiate 
+ * Abstract basic class; only used for creating subclasses; do not instantiate
  * in apps, as cannot be rendered.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

@@ -16,7 +16,7 @@
 package org.ol3cesium.ol.source;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for sources providing a single image.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

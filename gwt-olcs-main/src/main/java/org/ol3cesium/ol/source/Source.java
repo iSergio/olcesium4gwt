@@ -22,7 +22,7 @@ import org.ol3cesium.ol.proj.Projection;
 import org.ol3cesium.olx.source.SourceOptions;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for ol.layer.Layer sources.
  * A generic change event is triggered when the state of the source changes.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>

@@ -19,7 +19,7 @@ import org.ol3cesium.ol.tilegrid.TileGrid;
 import org.ol3cesium.olx.source.TileSourceOptions;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for sources providing images divided into a tile grid.
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */

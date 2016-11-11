@@ -77,7 +77,7 @@ public class GroupLayer extends BaseLayer {
 //                var length = this.__groupLayerChangeEventListeners.length;
 //                for (var i = 0; i < length; i++) {
 //                    var listener = this.__groupLayerChangeEventListeners[i];
-//                    listener.@org.ol3cesium.ol.event.GroupLayerChangeEventListener::onGroupLayerChange(Lorg/ol3cesium/ol/event/GroupLayerChangeEvent;)(event);
+//                    listener.@org.examples.ol.event.GroupLayerChangeEventListener::onGroupLayerChange(Lorg/examples/ol/event/GroupLayerChangeEvent;)(event);
 //                }
 //            };
 //        }

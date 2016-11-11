@@ -22,7 +22,7 @@ import org.ol3cesium.ol.event.GeometryChangeEventListener;
 import org.ol3cesium.ol.proj.Projection;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for vector geometries.
  * 
  * To get notified of changes to the geometry, register a listener for the 

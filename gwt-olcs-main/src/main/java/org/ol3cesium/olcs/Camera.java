@@ -16,7 +16,7 @@
 package org.ol3cesium.olcs;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import org.cesiumjs.cesium.Scene;
+import org.cesiumjs.cs.scene.Scene;
 import org.ol3cesium.ol.Coordinate;
 import org.ol3cesium.ol.Map;
 

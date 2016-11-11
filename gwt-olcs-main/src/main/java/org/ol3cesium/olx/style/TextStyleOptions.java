@@ -174,7 +174,7 @@ public class TextStyleOptions extends JavaScriptObject {
     }-*/;
 
     /**
-     * Text base line. Possible values: 'bottom', 'top', 'middle', 'alphabetic', 
+     * Text basic line. Possible values: 'bottom', 'top', 'middle', 'alphabetic',
      * 'hanging', 'ideographic'. Default is 'alphabetic'.
      * @param textBaseline 
      */

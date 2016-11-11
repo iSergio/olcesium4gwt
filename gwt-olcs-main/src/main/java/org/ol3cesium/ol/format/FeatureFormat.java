@@ -18,7 +18,7 @@ package org.ol3cesium.ol.format;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Abstract base class; normally only used for creating subclasses and not 
+ * Abstract basic class; normally only used for creating subclasses and not
  * instantiated in apps. Base class for feature formats. {ol.format.Feature} 
  * subclasses provide the ability to decode and encode ol.Feature objects from 
  * a variety of commonly used geospatial file formats. 
