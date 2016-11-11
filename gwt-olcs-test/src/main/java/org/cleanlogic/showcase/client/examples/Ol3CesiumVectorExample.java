@@ -445,7 +445,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                 var geo = feature.getGeometry();
                 if (geo == null) return null;
                 var type = geo.getType();
-                return that.@org.cleanlogic.showcase.ol3cesium.Ol3CesiumVectorExample.MapWidget::getStyle(Ljava/lang/String;)(type);
+                return that.@org.cleanlogic.showcase.client.examples.Ol3CesiumVectorExample.MapWidget::getStyle(Ljava/lang/String;)(type);
             };
         }-*/;
         
