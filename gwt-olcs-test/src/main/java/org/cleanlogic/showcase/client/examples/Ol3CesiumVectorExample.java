@@ -651,7 +651,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
     @Override
     public String[] getSourceCodeURLs() {
         String[] sourceCodeURLs = new String[1];
-        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/examples/" + "Ol3CesiumVectorExample.txt";
+        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/" + "Ol3CesiumVectorExample.txt";
         return sourceCodeURLs;
     }
 }

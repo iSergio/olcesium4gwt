@@ -202,20 +202,15 @@ public class MeasureEx extends AbstractExample {
 
         initWidget(contentPanel);
     }
-
-//    @Override
-//    public String getSourceCodeURL() {
-//        return GWT.getModuleBaseURL() + "examples/examples/" + "MeasureEx.txt";
-//    }
     
     @Override
     public String[] getSourceCodeURLs() {
         String[] sourceCodeURLs = new String[4];
         
-        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/examples/measureex/MeasureEx.txt";
-        sourceCodeURLs[1] = GWT.getModuleBaseURL() + "examples/examples/measureex/Measure.txt";
-        sourceCodeURLs[2] = GWT.getModuleBaseURL() + "examples/examples/measureex/MeasureOverlay.txt";
-        sourceCodeURLs[3] = GWT.getModuleBaseURL() + "examples/examples/measureex/GreatCircle.txt";
+        sourceCodeURLs[0] = GWT.getModuleBaseURL() + "examples/measureex/MeasureEx.txt";
+        sourceCodeURLs[1] = GWT.getModuleBaseURL() + "examples/measureex/Measure.txt";
+        sourceCodeURLs[2] = GWT.getModuleBaseURL() + "examples/measureex/MeasureOverlay.txt";
+        sourceCodeURLs[3] = GWT.getModuleBaseURL() + "examples/measureex/GreatCircle.txt";
         
         return sourceCodeURLs;
     }
