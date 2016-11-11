@@ -74,7 +74,7 @@ public class Ol3CesiumExample extends AbstractExample {
             if (_mapPanel == null) {
                 Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
-                olConfiguration.setName("examples-debug.js");
+                olConfiguration.setName("ol3cesium-debug.js");
                 List<String> styles = new ArrayList<String>();
                 styles.add(GWT.getModuleBaseURL() + "JavaScript/ol3/ol.css");
                 olConfiguration.setStyles(styles);

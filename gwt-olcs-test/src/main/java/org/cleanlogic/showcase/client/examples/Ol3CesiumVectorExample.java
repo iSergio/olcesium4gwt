@@ -43,6 +43,7 @@ import org.cesiumjs.cs.core.SkyBoxSources;
 import org.cesiumjs.cs.core.options.SkyBoxOptions;
 import org.cesiumjs.cs.core.providers.EllipsoidTerrainProvider;
 import org.cesiumjs.cs.core.providers.TerrainProvider;
+import org.cesiumjs.cs.scene.Label;
 import org.cesiumjs.cs.scene.LabelCollection;
 import org.cesiumjs.cs.scene.Sun;
 import org.cesiumjs.cs.scene.options.LabelOptions;
@@ -126,7 +127,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
             if (_mapPanel == null) {
                 Configuration olConfiguration = new Configuration();
                 olConfiguration.setPath(GWT.getModuleBaseURL() + "JavaScript/");
-                olConfiguration.setName("examples-debug.js");
+                olConfiguration.setName("ol3cesium-debug.js");
                 List<String> styles = new ArrayList<String>();
                 styles.add(GWT.getModuleBaseURL() + "JavaScript/ol.css");
                 olConfiguration.setStyles(styles);
@@ -444,7 +445,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
                 var geo = feature.getGeometry();
                 if (geo == null) return null;
                 var type = geo.getType();
-                return that.@org.cleanlogic.showcase.client.examples.Ol3CesiumVectorExample.MapWidget::getStyle(Ljava/lang/String;)(type);
+                return that.@org.cleanlogic.showcase.ol3cesium.Ol3CesiumVectorExample.MapWidget::getStyle(Ljava/lang/String;)(type);
             };
         }-*/;
         
