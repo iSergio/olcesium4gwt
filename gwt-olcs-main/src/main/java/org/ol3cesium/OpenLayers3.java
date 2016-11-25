@@ -18,6 +18,8 @@ package org.ol3cesium;
 import com.google.gwt.core.client.Callback;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.LinkElement;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 
 import java.util.List;
 
@@ -26,12 +28,20 @@ import java.util.List;
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
 public class OpenLayers3 {
+    @JsProperty(namespace = JsPackage.GLOBAL, name = "ol")
+    public static native boolean isOlInitialized();
+
+    @JsProperty(namespace = JsPackage.GLOBAL, name = "olcs")
+    public static native boolean isOlCsInitialized();
+
+    @JsProperty(namespace = "ol", name = "VERSION")
+    public static native String version();
 
     public static void initialize(String path, String name, List<String> styles, Document document, Callback<Void, Exception> callback) {
         Initializer initializer = Initializer.get(document);
         if (initializer != null) {
             initializer.addCallback(callback);
-            initializer.invokeCallback();
+            initializer.invokeCallback(callback);
         } else {
             for (String style : styles) {
                 LinkElement linkElement = Document.get().createLinkElement();

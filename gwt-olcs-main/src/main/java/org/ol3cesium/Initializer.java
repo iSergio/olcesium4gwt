@@ -41,14 +41,12 @@ public class Initializer {
      * OpenLayers3 library (examples.js | examples-debug.js | ol3.js | ol3-debug.js)
      */
     private final String _name;
-    private final Document _document;
     private List<Callback<Void, Exception>> _callbacks = new ArrayList<>();
     private static Map<Document, Initializer> _initializerMap = new HashMap<>();
 
     public Initializer(String path, String name, Document document, Callback<Void, Exception> callback) {
         _path = path;
         _name = name;
-        _document = document;
         addCallback(callback);
         _initializerMap.put(document, this);
     }
@@ -56,7 +54,7 @@ public class Initializer {
     public void initialize() {
         String path = _path + _name;
 
-        ScriptInjector.fromUrl(path).setWindow(getWindow(_document)).setCallback(new Callback<Void, Exception>() {
+        ScriptInjector.fromUrl(path).setWindow(ScriptInjector.TOP_WINDOW).setCallback(new Callback<Void, Exception>() {
             @Override
             public void onFailure(Exception e) {
                 for (Callback<Void, Exception> callback : _callbacks) {
@@ -66,14 +64,9 @@ public class Initializer {
 
             @Override
             public void onSuccess(Void aVoid) {
-                createSetter(_document);
-
-                if (olcsDefined()) {
-                    ScriptInjector.fromString("document.setGlobalInGWT(ol, olcs);").setWindow(getWindow(_document)).inject();
-                } else {
-                    ScriptInjector.fromString("document.setGlobalInGWT(ol, undefined);").setWindow(getWindow(_document)).inject();
-                }
-
+                setOl(getOl());
+                setOlcs(getOlcs());
+                invokeCallback();
             }
         }).inject();
     }
@@ -84,39 +77,32 @@ public class Initializer {
 
     public void invokeCallback() {
         for (Callback<Void, Exception> callback : _callbacks) {
-            try {
-                callback.onSuccess(null);
-            } catch (Throwable t) {
-                LOGGER.log(Level.SEVERE, "Error initialization : " + t.getMessage(), t);
-            }
+            invokeCallback(callback);
         }
     }
 
-    public static native boolean olDefined() /*-{
-        return (typeof $wnd.ol != "undefined");
-    }-*/;
-
-    public static native boolean olcsDefined() /*-{
-        return (typeof $wnd.olcs != "undefined");
-    }-*/;
-
-    public static native boolean csDefined() /*-{
-        return (typeof $wnd.Cesium != "undefined");
-    }-*/;
-
-    private static native JavaScriptObject getWindow(Document document) /*-{
-        var win = document.parentWindow || document.defaultView;
-        return win;
-    }-*/;
-
-    private native void createSetter(Document document) /*-{
-        var outerThis = this
-
-        document.setGlobalInGWT = function(olToSet, olcsToSet) {
-            ol   = olToSet;
-            olcs = olcsToSet;
-            outerThis.@org.ol3cesium.Initializer::invokeCallback()();
+    public void invokeCallback(Callback<Void, Exception> callback) {
+        try {
+            callback.onSuccess(null);
+        } catch (Throwable t) {
+            LOGGER.log(Level.SEVERE, "Error initialization : " + t.getMessage(), t);
         }
+    }
+
+    private native void setOl(JavaScriptObject olToSet) /*-{
+        ol = olToSet;
+    }-*/;
+
+    private native JavaScriptObject getOl() /*-{
+        return $wnd.ol;
+    }-*/;
+
+    private native void setOlcs(JavaScriptObject olcsToSet) /*-{
+        olcs = olcsToSet;
+    }-*/;
+
+    private native JavaScriptObject getOlcs() /*-{
+        return $wnd.olcs;
     }-*/;
 
     public static Initializer get(Document document) {
