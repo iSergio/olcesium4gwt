@@ -20,10 +20,13 @@ import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.logical.shared.AttachEvent;
 import com.google.gwt.event.logical.shared.AttachEvent.Handler;
+import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.SimplePanel;
 import org.ol3cesium.Configuration;
 import org.ol3cesium.OpenLayers3;
+
+import java.util.logging.Logger;
 
 /**
  *
@@ -31,20 +34,29 @@ import org.ol3cesium.OpenLayers3;
  */
 public abstract class MapPanelAbstract extends SimplePanel {
     private final Configuration _configuration;
-    private Map _map;
+    protected Map _map;
 
     public MapPanelAbstract(Configuration configuration) {
         _configuration = configuration;
-        super.addAttachHandler(new AttachEvent.Handler() {
+        getElement().setClassName("map");
+        getElement().setId(Random.nextInt() + "-" + Random.nextInt() + "-" + Random.nextInt());
+        this.addAttachHandler(new AttachEvent.Handler() {
             @Override
             public void onAttachOrDetach(AttachEvent attachEvent) {
-                inject(getElement());
+                Logger.getLogger("").info(attachEvent.isAttached() + "");
+                if (attachEvent.isAttached()) {
+                    inject(getElement());
+                } else {
+                    getElement().removeAllChildren();
+                    getElement().removeFromParent();
+                }
             }
         });
     }
     
     protected void inject(final Element element) {
         Document document = element.getOwnerDocument();
+
         OpenLayers3.initialize(_configuration.getPath(), _configuration.getName(), _configuration.getStyles(), document, new Callback<Void, Exception>() {
             @Override
             public void onFailure(Exception reason) {
