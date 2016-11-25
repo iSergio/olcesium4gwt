@@ -43,7 +43,6 @@ public abstract class MapPanelAbstract extends SimplePanel {
         this.addAttachHandler(new AttachEvent.Handler() {
             @Override
             public void onAttachOrDetach(AttachEvent attachEvent) {
-                Logger.getLogger("").info(attachEvent.isAttached() + "");
                 if (attachEvent.isAttached()) {
                     inject(getElement());
                 } else {
