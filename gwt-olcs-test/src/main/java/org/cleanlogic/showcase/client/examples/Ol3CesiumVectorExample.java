@@ -48,6 +48,7 @@ import org.cesiumjs.cs.scene.LabelCollection;
 import org.cesiumjs.cs.scene.Sun;
 import org.cesiumjs.cs.scene.options.LabelOptions;
 import org.cleanlogic.showcase.client.components.store.ShowcaseExampleStore;
+import org.ol3cesium.OpenLayers3;
 import org.ol3cesium.ol.Coordinate;
 import org.ol3cesium.ol.Feature;
 import org.ol3cesium.ol.Map;
@@ -462,7 +463,7 @@ public class Ol3CesiumVectorExample extends AbstractExample {
          * @param enable 
          */
         public void set3D(final boolean enable) {
-            if (!Initializer.olcsDefined()) {
+            if (!OpenLayers3.isOlCsInitialized()) {
                 Window.alert("OpenLayers3 Cesium plugin not initialized");
             } else {
                 if (_olCesium == null) {

@@ -42,6 +42,7 @@ import org.ol3cesium.Configuration;
 import org.ol3cesium.Initializer;
 import org.cleanlogic.showcase.client.basic.AbstractExample;
 import org.cleanlogic.showcase.client.components.store.ShowcaseExampleStore;
+import org.ol3cesium.OpenLayers3;
 import org.ol3cesium.ol.Coordinate;
 import org.ol3cesium.ol.Map;
 import org.ol3cesium.ol.MapPanelAbstract;
@@ -124,7 +125,7 @@ public class Ol3CesiumExample extends AbstractExample {
          * @param enable 
          */
         public void set3D(final boolean enable) {
-            if (!Initializer.olcsDefined()) {
+            if (!OpenLayers3.isOlCsInitialized()) {
                 Window.alert("OpenLayers3 Cesium plugin not initialized");
             } else {
                 if (_olCesium == null) {
