@@ -15,114 +15,104 @@
  */
 package org.ol3cesium.olcs;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.cesiumjs.cs.datasources.DataSourceCollection;
+import jsinterop.annotations.*;
+import org.cesiumjs.cs.collections.DataSourceCollection;
+import org.cesiumjs.cs.datasources.DataSourceDisplay;
 import org.cesiumjs.cs.scene.Scene;
-import org.ol3cesium.ol.Map;
+import org.ol3cesium.olcs.options.OLCesiumOptions;
+import org.openlayers.ol.Map;
 
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class OLCesium extends JavaScriptObject {
-    protected OLCesium() {
-        //
-    }
-    
-    public static native OLCesium create(OLCesiumOptions options) /*-{
-        var olCesium = new olcs.OLCesium(options);
-        return olCesium;
-    }-*/;
-    
-    public final native void disableRootEvents(boolean disableRootEvents) /*-{
-        this.canvas_.disableRootEvents = true;
-    }-*/;
-    
+@JsType(isNative = true, namespace = "olcs", name = "OLCesium")
+public class OLCesium {
+    @JsConstructor
+    public OLCesium(OLCesiumOptions options) {}
+
+    @JsProperty(namespace = JsPackage.GLOBAL, name = "olcs")
+    public static native boolean isInitialized();
+
+    public native void disableRootEvents(boolean disableRootEvents);
+
     /**
      * Render the globe only when necessary in order to save resources. Experimental.
      */
-    public final native void enableAutoRenderLoop() /*-{
-        this.enableAutoRenderLoop();
-    }-*/;
-    
+    @JsMethod
+    public native void enableAutoRenderLoop();
+
     /**
      * Get the autorender loop.
      * @return autorender loop.
      */
-    public final native AutoRenderLoop getAutoRenderLoop() /*-{
-        return this.getAutoRenderLoop();
-    }-*/;
-    
+    @JsMethod
+    public native AutoRenderLoop getAutoRenderLoop();
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
-    public final native Camera getCamera() /*-{
-        return this.getCamera();
-    }-*/;
-    
+    @JsMethod
+    public native Camera getCamera();
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
-    public final native Scene getCesiumScene() /*-{
-        return this.getCesiumScene();
-    }-*/;
-    
+    @JsMethod
+    public native Scene getCesiumScene();
+
+    @JsMethod
+    public native DataSourceDisplay getDataSourceDisplay();
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
-    public final native DataSourceCollection getDataSources() /*-{
-        return this.getDataSources();
-    }-*/;
-    
-    public final native boolean getEnabled() /*-{
-        return this.getEnabled();
-    }-*/;
-    
-    public final native Map getOlMap() /*-{
-        return this.getOlMap();
-    }-*/;
-    
+    @JsMethod
+    public native DataSourceCollection getDataSources();
+
+    @JsMethod
+    public native boolean getEnabled();
+
+    @JsMethod
+    public native Map getOlMap();
+
     /**
      * Block Cesium rendering to save resources. Block if you use tab widget or overlay widgets.
      * @param block True to block.
      */
-    public final native void setBlockCesiumRendering(boolean block) /*-{
-        this.setBlockCesiumRendering(block);
-    }-*/;
-    
+    @JsMethod
+    public native void setBlockCesiumRendering(boolean block);
+
     /**
      * Enables/disables the Cesium. This modifies the visibility style of the container element.
-     * @param enable 
+     * @param enable
      */
-    public final native void setEnabled(boolean enable) /*-{
-        this.setEnabled(enable);
-    }-*/;
-    
+    @JsMethod
+    public native void setEnabled(boolean enable);
+
     /**
-     * The 3D Cesium globe is rendered in a canvas with two different 
-     * dimensions: clientWidth and clientHeight which are the dimension on the 
+     * The 3D Cesium globe is rendered in a canvas with two different
+     * dimensions: clientWidth and clientHeight which are the dimension on the
      * screen and width and height which are the dimensions of the drawing buffer.
-     * By using a resolution scale lower than 1.0, it is possible to render 
-     * the globe in a buffer smaller than the canvas client dimensions and 
+     * By using a resolution scale lower than 1.0, it is possible to render
+     * the globe in a buffer smaller than the canvas client dimensions and
      * improve performance, at the cost of quality.
-     * Pixel ratio should also be taken into account; by default, a 
-     * device with pixel ratio of 2.0 will have a buffer surface 4 
+     * Pixel ratio should also be taken into account; by default, a
+     * device with pixel ratio of 2.0 will have a buffer surface 4
      * times bigger than the client surface.
-     * @param value 
+     * @param value
      */
-    public final native void setResolutionScale(float value) /*-{
-        this.setResolutionScale(value);
-    }-*/;
-    
+    @JsMethod
+    public native void setResolutionScale(float value);
+
     /**
      * Preload Cesium so that it is ready when transitioning from 2D to 3D.
      * @param height Target height of the camera.
      * @param timeout Milliseconds after which the warming will stop.
      */
-    public final native void warmUp(double height, int timeout) /*-{
-        this.warmUp(height, timeout);
-    }-*/;
+    @JsMethod
+    public native void warmUp(double height, int timeout);
 }

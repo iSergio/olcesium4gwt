@@ -4,32 +4,24 @@
         <artifactId>gwt-olcs</artifactId>
         <version>2.0.0</version>
     </parent>
-    
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gwt-olcs-main</artifactId>
-    <description>OpenLayers3 and OL3-Cesium Wrapper fro GWT (Main)</description>
+    <description>OpenLayers and OL-Cesium Wrapper fro GWT (Main)</description>
     <version>${parent.version}</version>
 
     <properties>
+        <!-- GWT -->
+        <gwt.version>2.8.0</gwt.version>
+        <gwt.style>OBF</gwt.style>
+
+        <!-- Maven -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
-    
-    <dependencies>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-user</artifactId>
-            <version>${gwt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.cesiumjs</groupId>
-            <artifactId>gwt-cs-main</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-    
+
     <build>
         <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
-        
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -68,6 +60,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <excludeResources>true</excludeResources>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -88,4 +83,40 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- GWT (BOM or Bill of Materials) -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt</artifactId>
+                <version>${gwt.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openlayers</groupId>
+            <artifactId>gwt-ol-main</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cesiumjs</groupId>
+            <artifactId>gwt-cs-main</artifactId>
+            <version>1.31.0</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -17,11 +17,8 @@
 package org.cleanlogic.showcase.client.components;
 
 import com.google.gwt.safehtml.shared.SafeHtmlUtils;
-import com.google.gwt.user.client.ui.Anchor;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.*;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -44,7 +41,7 @@ public class ShowcaseTopPanel extends HorizontalPanel {
         logo.setSize("32px", "32px");
         super.add(logo);
         Anchor anchor = new Anchor();
-        String text = "<div class=\"brand\"><a href=\"http://openlayers.org\">Ol3-Cesium</a>, <a href=\"https://github.com/richkadel/cesium-gwt\">Cesium-GWT</a> and <a href=\"http://openlayers.org/ol3-cesium/\">OpenLayers 3</a> Examples</div>";
+        String text = "<div class=\"brand\"><a href=\"http://cesiumjs.org\">Cesium</a> on GWT Examples</div>";
         anchor.setHTML(SafeHtmlUtils.fromTrustedString(text));
         super.add(anchor);
         super.add(searchPanel);

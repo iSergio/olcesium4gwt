@@ -11,6 +11,7 @@
     </properties>
 
     <modules>
+        <module>gwt-ol/gwt-ol-main</module>
         <module>gwt-cs/gwt-cs-main</module>
         <module>gwt-olcs-main</module>
         <module>gwt-olcs-test</module>
