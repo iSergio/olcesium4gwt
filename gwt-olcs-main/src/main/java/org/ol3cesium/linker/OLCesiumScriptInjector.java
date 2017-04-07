@@ -62,7 +62,7 @@ public class OLCesiumScriptInjector extends AbstractLinker {
         String result = "if (!window." + LOADED_SCRIPTS + ") window." + LOADED_SCRIPTS + " = {};\n";
         for (ScriptReference script : scriptsToLoad) {
             String src = script.getSrc();
-            if (!src.startsWith("ol/")) {
+            if (!src.startsWith("olcs/")) {
                 continue;
             }
             result += "if (!" + LOADED_SCRIPTS + "['" + src + "']) {\n  " +

@@ -2,8 +2,9 @@
     <inherits name="com.google.gwt.user.User" />
     <inherits name="com.google.gwt.json.JSON" />
 
-    <inherits name="org.cesiumjs.Cesium"/>
-    <inherits name="org.openlayers.OpenLayers"/>
+    <inherits name="org.cesiumjs.CesiumNoScript"/>
+    <inherits name="org.openlayers.OpenLayersNoScript"/>
+    <inherits name="org.ol3cesium.OLCesiumScript"/>
 
     <entry-point class="org.ol3cesium.olcs.OLCesiumEntryPoint" />
 
