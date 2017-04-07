@@ -21,29 +21,26 @@
  */
 package org.ol3cesium.olcs;
 
-import com.google.gwt.core.client.JavaScriptObject;
+import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsType;
 
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class AutoRenderLoop extends JavaScriptObject {
-    protected AutoRenderLoop() {
-        //
-    }
+@JsType(isNative = true, namespace = "olcs", name = "AutoRenderLoop")
+public class AutoRenderLoop {
+    @JsConstructor
+    public AutoRenderLoop(OLCesium olCesium, boolean debug) {}
 
     /**
      * Restart render loop. Force a restart of the render loop.
      */
-    public final native void restartRenderLoop() /*-{
-        this.restartRenderLoop();
-    }-*/;
+    public native void restartRenderLoop();
     
     /**
      * 
      * @param debug Set out put debug information flag.
      */
-    public final native void setDebug(boolean debug) /*-{
-        this.setDebug(debug);
-    }-*/;
+    public native void setDebug(boolean debug);
 }

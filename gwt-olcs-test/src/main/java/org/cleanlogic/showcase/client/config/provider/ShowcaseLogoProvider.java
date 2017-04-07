@@ -17,8 +17,9 @@
 package org.cleanlogic.showcase.client.config.provider;
 
 import com.google.gwt.user.client.ui.Image;
-import javax.inject.Provider;
 import org.cleanlogic.showcase.client.Resources;
+
+import javax.inject.Provider;
 
 /**
  *

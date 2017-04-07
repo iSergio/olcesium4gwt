@@ -18,14 +18,9 @@ package org.cleanlogic.showcase.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Overflow;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.*;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FocusPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.ScrollPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.*;
 import org.cleanlogic.showcase.client.i18n.I18NMessages;
 
 /**
@@ -46,14 +41,33 @@ public class ExamplePanel extends Composite {
      */
     public ExamplePanel(final ExampleBean example) {
         final VerticalPanel vp = new VerticalPanel();
+        vp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         vp.setSpacing(5);
 
         final ScrollPanel sp = new ScrollPanel();
+        sp.addDomHandler(new MouseOverHandler() {
+            @Override
+            public void onMouseOver(MouseOverEvent mouseOverEvent) {
+                sp.getElement().getStyle().setOverflowX(Overflow.AUTO);
+                sp.getElement().getStyle().setOverflowY(Overflow.AUTO);
+            }
+        }, MouseOverEvent.getType());
+        sp.addDomHandler(new MouseOutHandler() {
+            @Override
+            public void onMouseOut(MouseOutEvent mouseOutEvent) {
+                sp.getElement().getStyle().setOverflowX(Overflow.HIDDEN);
+                sp.getElement().getStyle().setOverflowY(Overflow.HIDDEN);
+            }
+        }, MouseOutEvent.getType());
         sp.getElement().getStyle().setOverflowX(Overflow.HIDDEN);
-        sp.setSize("350px", "100px");
+        sp.getElement().getStyle().setOverflowY(Overflow.HIDDEN);
+//        sp.setSize("350px", "100px");
+        sp.setWidth("250px");
+        sp.setHeight("250px");
         sp.setWidget(vp);
 
         final Label lblName = new Label(example.getName());
+        final Image lblImage = new Image(GWT.getModuleBaseURL() + "examples/" + example.getName() + ".jpg");
         final Label lblDescription = new Label(example.getDescription());
         final StringBuffer sb = new StringBuffer();
         final String[] tags = example.getTags();
@@ -66,6 +80,7 @@ public class ExamplePanel extends Composite {
 
         lblName.setStyleName("examplename");
         vp.add(lblName);
+        vp.add(lblImage);
         vp.add(lblDescription);
         vp.add(lblTags);
 

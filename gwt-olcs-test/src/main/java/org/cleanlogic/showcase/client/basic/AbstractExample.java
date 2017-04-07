@@ -21,19 +21,21 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import java.util.ArrayList;
-import java.util.List;
 import org.cleanlogic.showcase.client.ExampleBean;
 import org.cleanlogic.showcase.client.components.store.ExampleStore;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
 /**
- * The abstract basic for each Example
+ * The abstract base for each Example
  *
  * @author Frank Wynants
  *
  */
 public abstract class AbstractExample extends Composite {
-
+    public static final Logger LOGGER = Logger.getLogger(AbstractExample.class.getName());
     protected VerticalPanel contentPanel = new VerticalPanel();
     protected HorizontalPanel horizontalPanel = new HorizontalPanel();
     private final List<ShowSourceButton> showSourceButtons = new ArrayList<ShowSourceButton>();
@@ -83,4 +85,8 @@ public abstract class AbstractExample extends Composite {
     public ExampleBean getExample() {
         return example;
     }
+
+    public static native void log(Object object) /*-{
+        console.log(object);
+    }-*/;
 }

@@ -17,14 +17,14 @@
 package org.cleanlogic.showcase.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import org.cleanlogic.showcase.client.components.responsibility.GwtOpenLayersBuilderManager;
+import org.cleanlogic.showcase.client.components.responsibility.BuilderManager;
 
 /**
  * Entry point for GWT OpenLayers showcase.
  */
 public class Showcase implements EntryPoint {
 
-    final GwtOpenLayersBuilderManager showcaseBuilder = new GwtOpenLayersBuilderManager();
+    final BuilderManager showcaseBuilder = new BuilderManager();
 
     @Override
     public void onModuleLoad() {

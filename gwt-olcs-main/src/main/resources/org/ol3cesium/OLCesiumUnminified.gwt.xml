@@ -1,0 +1,4 @@
+<module>
+    <inherits name="org.ol3cesium.OLCesiumNoScript" />
+    <inherits name="org.ol3cesium.OLCesiumUnminifiedScript" />
+</module>

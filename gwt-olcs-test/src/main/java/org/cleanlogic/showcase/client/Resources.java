@@ -36,7 +36,7 @@ public interface Resources extends ClientBundle {
     /**
      * The GWT-OL logo.
      *
-     * @return The image resource.
+     * @return The imagery resource.
      */
     @Source("resources/gwt-ol-a.png")
     ImageResource gwtOlLogo();
@@ -44,7 +44,7 @@ public interface Resources extends ClientBundle {
     /**
      * The info icon
      *
-     * @return The image resource.
+     * @return The imagery resource.
      */
     @Source("resources/icon-info.png")
     ImageResource icon_info();

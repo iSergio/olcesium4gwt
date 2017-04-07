@@ -15,29 +15,30 @@
  */
 package org.ol3cesium.olcs;
 
-import com.google.gwt.core.client.JsArray;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsType;
 import org.cesiumjs.cs.core.*;
 import org.cesiumjs.cs.scene.ImageryLayer;
 import org.cesiumjs.cs.scene.Scene;
-import org.ol3cesium.ol.Coordinate;
-import org.ol3cesium.ol.Extent;
-import org.ol3cesium.ol.geom.Geometry;
-import org.ol3cesium.ol.layer.BaseLayer;
-import org.ol3cesium.ol.proj.Projection;
+import org.openlayers.ol.Coordinate;
+import org.openlayers.ol.Extent;
+import org.openlayers.ol.geom.Geometry;
+import org.openlayers.ol.layer.BaseLayer;
+import org.openlayers.ol.proj.Projection;
 
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
+@JsType(isNative = true, namespace = "olcs", name = "core")
 public class OLCesiumCore {
     /**
      * 
      * @param geometry
      * @param height 
      */
-    public static native void applyHeightOffsetToGeometry(Geometry geometry, double height) /*-{
-        olcs.core.applyHeightOffsetToGeometry(geometry, height);
-    }-*/;
+    @JsMethod
+    public static native void applyHeightOffsetToGeometry(Geometry geometry, double height);
     
     /**
      * Compute the rotation angle around a given point, needed to reach the 
@@ -49,9 +50,8 @@ public class OLCesiumCore {
      * @param pivot Point around which the camera rotates.
      * @return 
      */
-    public static native double computeAngleToZenith(Scene scene, Cartesian3 pivot) /*-{
-        olcs.core.computeAngleToZenith(scene, pivot);
-    }-*/;
+    @JsMethod
+    public static native double computeAngleToZenith(Scene scene, Cartesian3 pivot);
     
     /**
      * Compute the pixel width and height of a point in meters using the camera frustum.
@@ -59,9 +59,8 @@ public class OLCesiumCore {
      * @param target
      * @return 
      */
-    public static native Cartesian2 computePixelSizeAtCoordinate(Scene scene, Cartesian3 target) /*-{
-        olcs.core.computePixelSizeAtCoordinate(scene, target);
-    }-*/;
+    @JsMethod
+    public static native Cartesian2 computePixelSizeAtCoordinate(Scene scene, Cartesian3 target);
     
     /**
      * Compute the signed tilt angle on globe, between the opposite of the camera 
@@ -70,27 +69,24 @@ public class OLCesiumCore {
      * @param scene
      * @return 
      */
-    public static native double computeSignedTiltAngleOnGlobe(Scene scene) /*-{
-        olcs.core.computeSignedTiltAngleOnGlobe(scene);
-    }-*/;
+    @JsMethod
+    public static native double computeSignedTiltAngleOnGlobe(Scene scene);
     
     /**
      * Convert an OpenLayers color to Cesium.
      * @param olColor
      * @return 
      */
-    public static native Color convertColorToCesium(String olColor) /*-{
-        return olcs.core.convertColorToCesium(olColor);
-    }-*/;
+    @JsMethod
+    public static native Color convertColorToCesium(String olColor);
     
     /**
      * Convert an OpenLayers color to Cesium.
      * @param olColor
      * @return 
      */
-    public static native Color convertColorToCesium(org.ol3cesium.ol.Color olColor) /*-{
-        return olcs.core.convertColorToCesium(olColor);
-    }-*/;
+    @JsMethod
+    public static native Color convertColorToCesium(org.openlayers.ol.Color olColor);
     
     /**
      * Convert an OpenLayers extent to a Cesium rectangle.
@@ -98,9 +94,8 @@ public class OLCesiumCore {
      * @param projection Extent projection.
      * @return The corresponding Cesium rectangle.
      */
-    public static native Rectangle extentToRectangle(Extent extent, Projection projection) /*-{
-        return olcs.core.extentToRectangle(extent, projection);
-    }-*/;
+    @JsMethod
+    public static native Rectangle extentToRectangle(Extent extent, Projection projection);
     
     /**
      * Convert an OpenLayers extent to a Cesium rectangle.
@@ -108,9 +103,8 @@ public class OLCesiumCore {
      * @param projection Extent projection.
      * @return The corresponding Cesium rectangle.
      */
-    public static native Rectangle extentToRectangle(Extent extent, String projection) /*-{
-        return olcs.core.extentToRectangle(extent, projection);
-    }-*/;
+    @JsMethod
+    public static native Rectangle extentToRectangle(Extent extent, String projection);
     
     /**
      * Rotate the camera so that its direction goes through the target point. 
@@ -119,37 +113,33 @@ public class OLCesiumCore {
      * @param target
      * @param globe 
      */
-    public static native void lookAt(Camera camera, Cartographic target, Globe globe) /*-{
-        olcs.core.lookAt(camera, target, globe);
-    }-*/;
+    @JsMethod
+    public static native void lookAt(Camera camera, Cartographic target, Globe globe);
     
-        /**
+    /**
      * Rotate the camera so that its direction goes through the target point. 
      * If a globe is given, the target height is first interpolated from terrain.
      * @param camera
      * @param target
      */
-    public static native void lookAt(Camera camera, Cartographic target) /*-{
-        olcs.core.lookAt(camera, target);
-    }-*/;
+        @JsMethod
+        public static native void lookAt(Camera camera, Cartographic target);
     
     /**
      * Convert an array of 2D or 3D OpenLayers coordinates to Cesium.
      * @param coordinates Ol3 coordinates.
      * @return 
      */
-    public static native Cartesian3[] ol4326CoordinateArrayToCsCartesians(JsArray<Coordinate> coordinates) /*-{
-        return olcs.core.ol4326CoordinateArrayToCsCartesians(coordinates);
-    }-*/;
+    @JsMethod
+    public static native Cartesian3[] ol4326CoordinateArrayToCsCartesians(Coordinate[] coordinates);
     
     /**
      * Convert a 2D or 3D OpenLayers coordinate to Cesium.
      * @param coordinate Ol3 coordinate.
      * @return 
      */
-    public static native Cartesian3 ol4326CoordinateToCesiumCartesian(Coordinate coordinate) /*-{
-        return olcs.core.ol4326CoordinateToCesiumCartesian(coordinate);
-    }-*/;
+    @JsMethod
+    public static native Cartesian3 ol4326CoordinateToCesiumCartesian(Coordinate coordinate);
     
     /**
      * Reproject an OpenLayers geometry to EPSG:4326 if needed. 
@@ -159,27 +149,24 @@ public class OLCesiumCore {
      * @param projection
      * @return 
      */
-    public static native Geometry olGeometryCloneTo4326(Geometry geometry, Projection projection) /*-{
-        return olcs.core.olGeometryCloneTo4326(geometry, projection);
-    }-*/;
+    @JsMethod
+    public static native Geometry olGeometryCloneTo4326(Geometry geometry, Projection projection);
     
     /**
      * Get the 3D position of the point at the bottom-center of the screen.
      * @param scene
      * @return 
      */
-    public static native Cartesian3 pickBottomPoint(Scene scene) /*-{
-        return olcs.core.pickBottomPoint(scene);
-    }-*/;
+    @JsMethod
+    public static native Cartesian3 pickBottomPoint(Scene scene);
     
     /**
      * Get the 3D position of the point at the center of the screen.
      * @param scene
      * @return 
      */
-    public static native Cartesian3 pickCenterPoint(Scene scene) /*-{
-        return olcs.core.pickCenterPoint(scene);
-    }-*/;
+    @JsMethod
+    public static native Cartesian3 pickCenterPoint(Scene scene);
     
     /**
      * Get the 3D position of the given pixel of the canvas.
@@ -187,9 +174,8 @@ public class OLCesiumCore {
      * @param pixel
      * @return 
      */
-    public static native Cartesian3 pickOnTerrainOrEllipsoid(Scene scene, Cartesian2 pixel) /*-{
-        return olcs.core.pickOnTerrainOrEllipsoid(scene, pixel);
-    }-*/;
+    @JsMethod
+    public static native Cartesian3 pickOnTerrainOrEllipsoid(Scene scene, Cartesian2 pixel);
     
     /**
      * 
@@ -198,9 +184,8 @@ public class OLCesiumCore {
      * @param axis
      * @param transform 
      */
-    public static native void rotateAroundAxis(Camera camera, double angle, Cartesian3 axis, Matrix4 transform) /*-{
-        olcs.core.rotateAroundAxis(camera, angle, axis, transform);
-    }-*/;
+    @JsMethod
+    public static native void rotateAroundAxis(Camera camera, double angle, Cartesian3 axis, Matrix4 transform);
     
     /**
      * 
@@ -208,9 +193,8 @@ public class OLCesiumCore {
      * @param heading
      * @param bottomCenter 
      */
-    public static native void setHeadingUsingBottomCenter(Scene scene, double heading, Cartesian3 bottomCenter) /*-{
-        olcs.core.setHeadingUsingBottomCenter(scene, heading, bottomCenter);
-    }-*/;
+    @JsMethod
+    public static native void setHeadingUsingBottomCenter(Scene scene, double heading, Cartesian3 bottomCenter);
     
     /**
      * Creates Cesium.ImageryLayer best corresponding to the given ol.layer.Layer. Only supports raster layers
@@ -218,16 +202,14 @@ public class OLCesiumCore {
      * @param viewProj Projection of the view.
      * @return 
      */
-    public static native ImageryLayer tileLayerToImageryLayer(BaseLayer olLayer, Projection viewProj) /*-{
-        return olcs.core.tileLayerToImageryLayer(olLayer, viewProj);
-    }-*/;
+    @JsMethod
+    public static native ImageryLayer tileLayerToImageryLayer(BaseLayer olLayer, Projection viewProj);
     
     /**
      * Synchronizes the layer rendering properties (opacity, visible) to the given Cesium ImageryLayer.
      * @param olLayer
      * @param csLayer 
      */
-    public static native void updateCesiumLayerProperties(BaseLayer olLayer, ImageryLayer csLayer) /*-{
-        olcs.core.updateCesiumLayerProperties(olLayer, csLayer);
-    }-*/;
+    @JsMethod
+    public static native void updateCesiumLayerProperties(BaseLayer olLayer, ImageryLayer csLayer);
 }

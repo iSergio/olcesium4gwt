@@ -16,23 +16,24 @@
 package org.ol3cesium.olcs;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsType;
 import org.cesiumjs.cs.scene.Scene;
-import org.ol3cesium.ol.Map;
+import org.openlayers.ol.Map;
 
 /**
  *
  * @author Serge Silaev aka iSergio <s.serge.b@gmail.com>
  */
-public class AbstractSynchronizer extends JavaScriptObject {
-    protected AbstractSynchronizer() {
-        //
-    }
-    
-    public static native AbstractSynchronizer create(Map map, Scene scene) /*-{
-        return new olcs.AbstractSynchronizer(map, scene);
-    }-*/;
-    
-    public final native void synchronize() /*-{
-        this.synchronize();
-    }-*/;
+@JsType(isNative = true, namespace = "olcs", name = "AbstractSynchronizer")
+public class AbstractSynchronizer {
+    @JsConstructor
+    public AbstractSynchronizer(Map map, Scene scene) {}
+
+    /**
+     * Destroy all and perform complete synchronization of the layers.
+     */
+    @JsMethod
+    public native void synchronize();
 }

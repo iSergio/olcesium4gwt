@@ -17,21 +17,17 @@
 package org.cleanlogic.showcase.client.components;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.BlurEvent;
-import com.google.gwt.event.dom.client.BlurHandler;
-import com.google.gwt.event.dom.client.FocusEvent;
-import com.google.gwt.event.dom.client.FocusHandler;
-import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.event.dom.client.*;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import org.cleanlogic.showcase.client.i18n.I18NMessages;
 import org.cleanlogic.showcase.client.puregwt.ShowcaseEventBus;
 import org.cleanlogic.showcase.client.puregwt.event.ExamplePanelBuildEvent;
 import org.cleanlogic.showcase.client.puregwt.handler.ExampleNumberHandler;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  *

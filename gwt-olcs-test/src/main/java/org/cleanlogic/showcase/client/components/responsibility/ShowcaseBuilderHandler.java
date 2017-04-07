@@ -17,7 +17,7 @@
 package org.cleanlogic.showcase.client.components.responsibility;
 
 import com.google.gwt.core.client.GWT;
-import org.cleanlogic.showcase.client.config.GwtOpenlayersInjector;
+import org.cleanlogic.showcase.client.config.Injector;
 
 /**
  *
@@ -27,10 +27,10 @@ import org.cleanlogic.showcase.client.config.GwtOpenlayersInjector;
 public abstract class ShowcaseBuilderHandler {
 
     static {
-        injector = GWT.create(GwtOpenlayersInjector.class);
+        injector = GWT.create(Injector.class);
     }
 
-    protected static final GwtOpenlayersInjector injector;
+    protected static final Injector injector;
 
     private ShowcaseBuilderHandler successor;
 

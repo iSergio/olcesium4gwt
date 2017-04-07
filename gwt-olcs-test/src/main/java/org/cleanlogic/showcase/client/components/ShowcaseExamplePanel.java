@@ -18,13 +18,14 @@ package org.cleanlogic.showcase.client.components;
 
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.ui.FlowPanel;
-import javax.inject.Inject;
-import javax.inject.Singleton;
 import org.cleanlogic.showcase.client.ExampleBean;
 import org.cleanlogic.showcase.client.ExamplePanel;
 import org.cleanlogic.showcase.client.components.store.ShowcaseExampleStore;
 import org.cleanlogic.showcase.client.puregwt.ShowcaseEventBus;
 import org.cleanlogic.showcase.client.puregwt.event.ExampleNumberEvent;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  *

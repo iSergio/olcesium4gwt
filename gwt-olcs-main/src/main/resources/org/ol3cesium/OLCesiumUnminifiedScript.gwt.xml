@@ -1,0 +1,9 @@
+<module>
+    <script src="olcs/OLCesiumUnminified/olcesium-debug.js" />
+    <script src="cs/CesiumUnminified/Cesium.js" />
+    <script src="cs/GeoserverTerrainProvider.js" />
+    <script src="'cs/viewerCesiumNavigationMixin.js" />
+
+    <stylesheet src="olcs/OLCesiumUnminified/ol.css"/>
+    <stylesheet src="cs/Cesium/Widgets/widgets.css"/>
+</module>
