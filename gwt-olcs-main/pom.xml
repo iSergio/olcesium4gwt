@@ -116,7 +116,7 @@
         <dependency>
             <groupId>org.cesiumjs</groupId>
             <artifactId>gwt-cs-main</artifactId>
-            <version>1.31.0</version>
+            <version>1.32.0</version>
         </dependency>
     </dependencies>
 </project>
