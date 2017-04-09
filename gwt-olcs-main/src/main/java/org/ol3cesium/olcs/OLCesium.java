@@ -15,12 +15,14 @@
  */
 package org.ol3cesium.olcs;
 
+import com.google.gwt.dom.client.Element;
 import jsinterop.annotations.*;
 import org.cesiumjs.cs.collections.DataSourceCollection;
 import org.cesiumjs.cs.datasources.DataSourceDisplay;
 import org.cesiumjs.cs.scene.Scene;
 import org.ol3cesium.olcs.options.OLCesiumOptions;
 import org.openlayers.ol.Map;
+import org.openlayers.ol.MapPanel;
 
 /**
  *
@@ -30,6 +32,28 @@ import org.openlayers.ol.Map;
 public class OLCesium {
     @JsConstructor
     public OLCesium(OLCesiumOptions options) {}
+
+    @JsOverlay
+    public static OLCesium create(Map map) {
+        OLCesiumOptions options = new OLCesiumOptions();
+        options.map = map;
+        return new OLCesium(options);
+    }
+
+    @JsOverlay
+    public static OLCesium create(Map map, Element target) {
+        OLCesiumOptions options = new OLCesiumOptions();
+        options.map = map;
+        options.target = target;
+        return new OLCesium(options);
+    }
+
+    @JsOverlay
+    public static OLCesium create(MapPanel mapPanel) {
+        OLCesiumOptions options = new OLCesiumOptions();
+        options.map = mapPanel.getMap();
+        return new OLCesium(options);
+    }
 
     @JsProperty(namespace = JsPackage.GLOBAL, name = "olcs")
     public static native boolean isInitialized();
