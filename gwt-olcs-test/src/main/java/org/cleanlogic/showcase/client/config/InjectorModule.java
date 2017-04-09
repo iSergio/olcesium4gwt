@@ -42,5 +42,6 @@ public class InjectorModule extends AbstractGinModule {
         bind(List.class).toProvider(ShowcaseBrandsProvider.class).in(Singleton.class);
 
         bind(Vectors.class).asEagerSingleton();
+        bind(Exports.class).asEagerSingleton();
     }
 }
