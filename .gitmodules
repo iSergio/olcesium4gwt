@@ -1,6 +1,0 @@
-[submodule "gwt-cs"]
-	path = gwt-cs
-	url = https://github.com/iSergio/gwt-cs.git
-[submodule "gwt-ol"]
-	path = gwt-ol
-	url = https://github.com/iSergio/gwt-ol.git
