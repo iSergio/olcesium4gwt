@@ -1,5 +1,5 @@
-/gwt-olcs-main/target/
-/gwt-olcs-test/target/
+/olcesium4gwt-main/target/
+/olcesium4gwt-showcase/target/
 .idea
 *.iml
 .DS_Store
