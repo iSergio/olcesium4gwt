@@ -8,14 +8,13 @@
     <inherits name='com.google.gwt.user.theme.clean.Clean'/>
 
     <!-- Other module inherits -->
-    <inherits name="org.ol3cesium.OLCesium"/>
+    <inherits name="org.olcesium.OLCesium"/>
 
     <!-- Specify the app entry point class. -->
     <entry-point class='org.cleanlogic.olcesium4gwt.showcase.Showcase'/>
 
     <!-- Specify the paths for translatable code -->
-    <source path='client'/>
-    <source path='shared'/>
+    <source path='showcase'/>
 
     <set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE'/>
 

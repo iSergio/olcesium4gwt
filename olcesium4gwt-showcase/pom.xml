@@ -106,9 +106,22 @@
         </dependency>
 
         <dependency>
+            <groupId>org.cesiumjs</groupId>
+            <artifactId>cesiumjs4gwt-main</artifactId>
+            <version>1.48.20</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openlayers</groupId>
+            <artifactId>ol4gwt-main</artifactId>
+            <version>4.0.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.olcesium</groupId>
             <artifactId>olcesium4gwt-main</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

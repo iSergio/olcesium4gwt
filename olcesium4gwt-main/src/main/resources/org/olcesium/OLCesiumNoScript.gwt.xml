@@ -4,7 +4,7 @@
 
     <inherits name="org.cesiumjs.CesiumNoScript"/>
     <inherits name="org.openlayers.OpenLayersNoScript"/>
-    <inherits name="org.ol3cesium.OLCesiumScript"/>
+    <inherits name="org.olcesium.OLCesiumScript"/>
 
     <entry-point class="org.olcesium.olcs.OLCesiumEntryPoint" />
 
