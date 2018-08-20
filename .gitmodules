@@ -1,0 +1,6 @@
+[submodule "ol4gwt"]
+	path = ol4gwt
+	url = https://github.com/iSergio/ol4gwt.git
+[submodule "cesiumjs4gwt"]
+	path = cesiumjs4gwt
+	url = https://github.com/iSergio/cesiumjs4gwt.git
